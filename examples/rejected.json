@@ -1,0 +1,31 @@
+[
+  {
+    "id": "museum-change",
+    "kind": "natural",
+    "old": "The museum opens at nine on Monday. Entry is free for children.",
+    "new": "The museum opens at noon on Monday. Entry is free for children.",
+    "question": "When does the museum open on Monday? Reply with one word.",
+    "old_answers": [
+      "nine",
+      "9"
+    ],
+    "answers": [
+      "noon"
+    ],
+    "should_change": true
+  },
+  {
+    "id": "museum-invariant",
+    "kind": "natural",
+    "old": "The museum opens at nine on Monday. Entry is free for children.",
+    "new": "The museum opens at noon on Monday. Entry is free for children.",
+    "question": "Who gets free entry? Reply with one word.",
+    "old_answers": [
+      "children"
+    ],
+    "answers": [
+      "children"
+    ],
+    "should_change": false
+  }
+]

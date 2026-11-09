@@ -1,0 +1,5 @@
+[
+  {"id":"heldout-delivery","kind":"natural","old":"Parcel delivery takes 12 days. Returns require a receipt.","new":"Parcel delivery takes 18 days. Returns require a receipt.","question":"How many days does delivery take? Reply with only the number.","old_answers":["12"],"answers":["18"],"should_change":true},
+  {"id":"heldout-invariant","kind":"natural","old":"Parcel delivery takes 12 days. Returns require a receipt.","new":"Parcel delivery takes 18 days. Returns require a receipt.","question":"What is required for returns? Reply with one word.","old_answers":["receipt","a receipt"],"answers":["receipt","a receipt"],"should_change":false},
+  {"id":"heldout-derived","kind":"controlled-derived","old":"The selected bin is A. Catalog: A holds copper; B holds silver.","new":"The selected bin is B. Catalog: A holds copper; B holds silver.","question":"What does the selected bin hold? Reply with one word.","old_answers":["copper"],"answers":["silver"],"should_change":true}
+]

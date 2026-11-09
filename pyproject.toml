@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kvrepair"
+version = "0.1.0"
+description = "Controlled experiments in KV cache reuse after equal-token-length document edits"
+requires-python = ">=3.11"
+dependencies = ["torch==2.8.0", "transformers==5.2.0", "tokenizers==0.22.2", "safetensors>=0.4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+kvrepair = "kvrepair.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,13 @@
+refund-change edit [86,88) / 202 tokens
+  full: '�'; max logit delta=0; recomputed=202
+  prefix: '�'; max logit delta=0; recomputed=116
+refund-invariant edit [86,88) / 175 tokens
+  full: '�'; max logit delta=0; recomputed=175
+  prefix: '�'; max logit delta=0; recomputed=89
+controlled-direct edit [87,89) / 185 tokens
+  full: '�'; max logit delta=0; recomputed=185
+  prefix: '�'; max logit delta=0; recomputed=98
+controlled-derived REJECTED: Insertions/deletions or unequal token lengths are unsupported
+museum-change REJECTED: Insertions/deletions or unequal token lengths are unsupported
+museum-invariant REJECTED: Insertions/deletions or unequal token lengths are unsupported
+Report: artifacts/safe-default-smoke.json

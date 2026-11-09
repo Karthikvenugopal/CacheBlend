@@ -1,0 +1,2178 @@
+{
+  "config": {
+    "command": "demo",
+    "cases": "examples/development.json",
+    "output": "artifacts/development.json",
+    "model_path": null,
+    "device": "cpu",
+    "toy": false,
+    "include_naive": true,
+    "seed": 17,
+    "threads": 4,
+    "max_new_tokens": 12
+  },
+  "diagnostics": {
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 8,
+    "physical_memory_bytes": 17179869184,
+    "memory_note": "null means OS query unavailable; no RAM assumption made",
+    "mps_built": true,
+    "mps_available": false,
+    "cuda_available": false,
+    "versions": {
+      "torch": "2.8.0",
+      "transformers": "5.2.0",
+      "tokenizers": "0.22.2",
+      "safetensors": "0.7.0",
+      "pytest": "8.3.4"
+    },
+    "python": "3.13.1",
+    "cached_default_snapshot": "/Users/karthik/.cache/huggingface/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6"
+  },
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "revision": "fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+  "dtype": "torch.float32",
+  "attention": "eager",
+  "tolerance": {
+    "atol": 0.0002,
+    "rtol": 0.0002
+  },
+  "parameter_bytes": 4400193536,
+  "timing_note": "Single CPU/MPS functional measurements, fixed method order; not a speed benchmark. Tokenization excluded; snapshot copy/splice/sync included. Original prefill reported separately.",
+  "cases": [
+    {
+      "case": {
+        "id": "refund-change",
+        "kind": "natural",
+        "old": "Refunds are permitted within 30 days. Shipping is free.",
+        "new": "Refunds are permitted within 14 days. Shipping is free.",
+        "question": "Within how many days are refunds permitted? Reply with only the number.",
+        "old_answers": [
+          "30"
+        ],
+        "answers": [
+          "14"
+        ],
+        "should_change": true
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRefunds are permitted within 30 days. Shipping is free.\nQuestion: Within how many days are refunds permitted? Reply with only the number.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRefunds are permitted within 14 days. Shipping is free.\nQuestion: Within how many days are refunds permitted? Reply with only the number.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        5620,
+        870,
+        29879,
+        526,
+        21905,
+        2629,
+        29871,
+        29941,
+        29900,
+        3841,
+        29889,
+        1383,
+        17347,
+        338,
+        3889,
+        29889,
+        13,
+        16492,
+        29901,
+        23732,
+        920,
+        1784,
+        3841,
+        526,
+        2143,
+        870,
+        29879,
+        21905,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        1353,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        5620,
+        870,
+        29879,
+        526,
+        21905,
+        2629,
+        29871,
+        29896,
+        29946,
+        3841,
+        29889,
+        1383,
+        17347,
+        338,
+        3889,
+        29889,
+        13,
+        16492,
+        29901,
+        23732,
+        920,
+        1784,
+        3841,
+        526,
+        2143,
+        870,
+        29879,
+        21905,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        1353,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 26,
+        "end": 28,
+        "length": 65
+      },
+      "affected_tokens": [
+        {
+          "position": 26,
+          "old_id": 29941,
+          "new_id": 29896,
+          "old_piece": "3",
+          "new_piece": "1"
+        },
+        {
+          "position": 27,
+          "old_id": 29900,
+          "new_id": 29946,
+          "old_piece": "0",
+          "new_piece": "4"
+        }
+      ],
+      "original_prefill_ms": 335.9444589877967,
+      "kv_bytes_per_snapshot": 2928640,
+      "original_answer": "Refunds are permitted within 30 days.",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 65,
+          "prefill_ms_including_copy": 286.10954101895913,
+          "continuation_ms_including_copy": 936.306459014304,
+          "edit_to_answer_ms": 1222.4160000332631,
+          "answer": "Refunds are permitted within 14 days.",
+          "generated_ids": [
+            5620,
+            870,
+            29879,
+            526,
+            21905,
+            2629,
+            29871,
+            29896,
+            29946,
+            3841,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 1.0511455535888672
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              26
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              26,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 39,
+          "prefill_ms_including_copy": 282.75299997767434,
+          "continuation_ms_including_copy": 913.8421669777017,
+          "edit_to_answer_ms": 1196.595166955376,
+          "answer": "Refunds are permitted within 14 days.",
+          "generated_ids": [
+            5620,
+            870,
+            29879,
+            526,
+            21905,
+            2629,
+            29871,
+            29896,
+            29946,
+            3841,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 1.0511455535888672
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              26
+            ],
+            [
+              28,
+              64
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              26,
+              28
+            ],
+            [
+              64,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 3,
+          "prefill_ms_including_copy": 245.8313750103116,
+          "continuation_ms_including_copy": 874.771790986415,
+          "edit_to_answer_ms": 1120.6031659967266,
+          "answer": "Refunds are permitted within 14 days.",
+          "generated_ids": [
+            5620,
+            870,
+            29879,
+            526,
+            21905,
+            2629,
+            29871,
+            29896,
+            29946,
+            3841,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.2201249599456787,
+            "mean_abs": 0.029969600960612297,
+            "kl_full_to_candidate": 0.000646405853331089,
+            "total_variation": 0.01495902705937624,
+            "top1_equal": true,
+            "within_tolerance": false,
+            "full_top1_margin": 1.0511455535888672
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        }
+      },
+      "exact_check_passed": true
+    },
+    {
+      "case": {
+        "id": "refund-invariant",
+        "kind": "natural",
+        "old": "Refunds are permitted within 30 days. Shipping is free.",
+        "new": "Refunds are permitted within 14 days. Shipping is free.",
+        "question": "Is shipping free? Reply with only yes or no.",
+        "old_answers": [
+          "yes"
+        ],
+        "answers": [
+          "yes"
+        ],
+        "should_change": false
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRefunds are permitted within 30 days. Shipping is free.\nQuestion: Is shipping free? Reply with only yes or no.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRefunds are permitted within 14 days. Shipping is free.\nQuestion: Is shipping free? Reply with only yes or no.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        5620,
+        870,
+        29879,
+        526,
+        21905,
+        2629,
+        29871,
+        29941,
+        29900,
+        3841,
+        29889,
+        1383,
+        17347,
+        338,
+        3889,
+        29889,
+        13,
+        16492,
+        29901,
+        1317,
+        528,
+        17347,
+        3889,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        4874,
+        470,
+        694,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        5620,
+        870,
+        29879,
+        526,
+        21905,
+        2629,
+        29871,
+        29896,
+        29946,
+        3841,
+        29889,
+        1383,
+        17347,
+        338,
+        3889,
+        29889,
+        13,
+        16492,
+        29901,
+        1317,
+        528,
+        17347,
+        3889,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        4874,
+        470,
+        694,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 26,
+        "end": 28,
+        "length": 61
+      },
+      "affected_tokens": [
+        {
+          "position": 26,
+          "old_id": 29941,
+          "new_id": 29896,
+          "old_piece": "3",
+          "new_piece": "1"
+        },
+        {
+          "position": 27,
+          "old_id": 29900,
+          "new_id": 29946,
+          "old_piece": "0",
+          "new_piece": "4"
+        }
+      ],
+      "original_prefill_ms": 219.27616698667407,
+      "kv_bytes_per_snapshot": 2748416,
+      "original_answer": "Yes, shipping is free.",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              61
+            ]
+          ],
+          "prefill_tokens_recomputed": 61,
+          "prefill_ms_including_copy": 223.55245900689624,
+          "continuation_ms_including_copy": 855.9798750211485,
+          "edit_to_answer_ms": 1079.5323340280447,
+          "answer": "Document:\nRefunds are permitted within 14",
+          "generated_ids": [
+            6268,
+            29901,
+            13,
+            5620,
+            870,
+            29879,
+            526,
+            21905,
+            2629,
+            29871,
+            29896,
+            29946
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.025859832763671875
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": true
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              26
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              26,
+              61
+            ]
+          ],
+          "prefill_tokens_recomputed": 35,
+          "prefill_ms_including_copy": 210.81079199211672,
+          "continuation_ms_including_copy": 830.3493339917623,
+          "edit_to_answer_ms": 1041.160125983879,
+          "answer": "Document:\nRefunds are permitted within 14",
+          "generated_ids": [
+            6268,
+            29901,
+            13,
+            5620,
+            870,
+            29879,
+            526,
+            21905,
+            2629,
+            29871,
+            29896,
+            29946
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.025859832763671875
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": true
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              26
+            ],
+            [
+              28,
+              60
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              26,
+              28
+            ],
+            [
+              60,
+              61
+            ]
+          ],
+          "prefill_tokens_recomputed": 3,
+          "prefill_ms_including_copy": 225.19337499397807,
+          "continuation_ms_including_copy": 536.6179160191678,
+          "edit_to_answer_ms": 761.8112910131458,
+          "answer": "Yes, shipping is free.",
+          "generated_ids": [
+            8241,
+            29892,
+            528,
+            17347,
+            338,
+            3889,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.13281536102294922,
+            "mean_abs": 0.019248798489570618,
+            "kl_full_to_candidate": 0.0006600958295166492,
+            "total_variation": 0.013539601117372513,
+            "top1_equal": false,
+            "within_tolerance": false,
+            "full_top1_margin": 0.025859832763671875
+          },
+          "greedy_equal": false,
+          "first_divergent_step": 0,
+          "reuse_introduced_failure": null,
+          "teacher_forced_divergence_investigation": [
+            {
+              "step": 0,
+              "max_abs": 0.13281536102294922,
+              "mean_abs": 0.019248798489570618,
+              "kl_full_to_candidate": 0.0006600958295166492,
+              "total_variation": 0.013539601117372513,
+              "top1_equal": false,
+              "within_tolerance": false,
+              "full_top1_margin": 0.025859832763671875
+            },
+            {
+              "step": 1,
+              "max_abs": 0.1309211254119873,
+              "mean_abs": 0.022806061431765556,
+              "kl_full_to_candidate": 7.2080970312526915e-06,
+              "total_variation": 0.0001883957884274423,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 5.649359703063965
+            },
+            {
+              "step": 2,
+              "max_abs": 0.1597445011138916,
+              "mean_abs": 0.024245116859674454,
+              "kl_full_to_candidate": 1.2167118256911635e-05,
+              "total_variation": 0.0006417037802748382,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 4.191154479980469
+            },
+            {
+              "step": 3,
+              "max_abs": 0.15597820281982422,
+              "mean_abs": 0.024446265771985054,
+              "kl_full_to_candidate": 0.00021862558787688613,
+              "total_variation": 0.0060219597071409225,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 2.7354297637939453
+            },
+            {
+              "step": 4,
+              "max_abs": 0.13177120685577393,
+              "mean_abs": 0.02233291231095791,
+              "kl_full_to_candidate": 3.857868691170552e-08,
+              "total_variation": 2.9562368553115448e-08,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 14.243509292602539
+            },
+            {
+              "step": 5,
+              "max_abs": 0.2037034034729004,
+              "mean_abs": 0.03478863090276718,
+              "kl_full_to_candidate": 1.6821604731376283e-06,
+              "total_variation": 2.3569815311930142e-05,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 8.931062698364258
+            },
+            {
+              "step": 6,
+              "max_abs": 0.24164223670959473,
+              "mean_abs": 0.03291916474699974,
+              "kl_full_to_candidate": 6.652359297731891e-05,
+              "total_variation": 0.0011627241037786007,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 5.208348274230957
+            },
+            {
+              "step": 7,
+              "max_abs": 0.2028212547302246,
+              "mean_abs": 0.029356345534324646,
+              "kl_full_to_candidate": 1.0221905540674925e-05,
+              "total_variation": 0.0004615100333467126,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 4.912660598754883
+            },
+            {
+              "step": 8,
+              "max_abs": 0.4596433639526367,
+              "mean_abs": 0.05843782797455788,
+              "kl_full_to_candidate": 6.656169716734439e-05,
+              "total_variation": 0.0010868982644751668,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 5.245941162109375
+            },
+            {
+              "step": 9,
+              "max_abs": 1.5448129177093506,
+              "mean_abs": 0.1500636339187622,
+              "kl_full_to_candidate": 1.3709006452700123e-05,
+              "total_variation": 0.0001796596625354141,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 5.757480621337891
+            },
+            {
+              "step": 10,
+              "max_abs": 2.2974770069122314,
+              "mean_abs": 0.2027362734079361,
+              "kl_full_to_candidate": 0.0003261955571360886,
+              "total_variation": 0.0005161542794667184,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 7.191165924072266
+            },
+            {
+              "step": 11,
+              "max_abs": 1.6503725051879883,
+              "mean_abs": 0.1555919349193573,
+              "kl_full_to_candidate": 2.1799994556204183e-06,
+              "total_variation": 8.216520654968917e-06,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 10.580541610717773
+            }
+          ],
+          "hit_token_limit": false
+        }
+      },
+      "exact_check_passed": true
+    },
+    {
+      "case": {
+        "id": "controlled-direct",
+        "kind": "controlled",
+        "old": "Record: Mira's access code is 42. The office is in Rome.",
+        "new": "Record: Mira's access code is 73. The office is in Rome.",
+        "question": "What is Mira's access code? Reply with only the code.",
+        "old_answers": [
+          "42"
+        ],
+        "answers": [
+          "73"
+        ],
+        "should_change": true
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRecord: Mira's access code is 42. The office is in Rome.\nQuestion: What is Mira's access code? Reply with only the code.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nRecord: Mira's access code is 73. The office is in Rome.\nQuestion: What is Mira's access code? Reply with only the code.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        9182,
+        29901,
+        29422,
+        29915,
+        29879,
+        2130,
+        775,
+        338,
+        29871,
+        29946,
+        29906,
+        29889,
+        450,
+        8034,
+        338,
+        297,
+        9184,
+        29889,
+        13,
+        16492,
+        29901,
+        1724,
+        338,
+        29422,
+        29915,
+        29879,
+        2130,
+        775,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        775,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        9182,
+        29901,
+        29422,
+        29915,
+        29879,
+        2130,
+        775,
+        338,
+        29871,
+        29955,
+        29941,
+        29889,
+        450,
+        8034,
+        338,
+        297,
+        9184,
+        29889,
+        13,
+        16492,
+        29901,
+        1724,
+        338,
+        29422,
+        29915,
+        29879,
+        2130,
+        775,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        775,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 28,
+        "end": 30,
+        "length": 65
+      },
+      "affected_tokens": [
+        {
+          "position": 28,
+          "old_id": 29946,
+          "new_id": 29955,
+          "old_piece": "4",
+          "new_piece": "7"
+        },
+        {
+          "position": 29,
+          "old_id": 29906,
+          "new_id": 29941,
+          "old_piece": "2",
+          "new_piece": "3"
+        }
+      ],
+      "original_prefill_ms": 276.7629170266446,
+      "kv_bytes_per_snapshot": 2928640,
+      "original_answer": "Mira's access code is 42.",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 65,
+          "prefill_ms_including_copy": 254.66862501343712,
+          "continuation_ms_including_copy": 838.461625011405,
+          "edit_to_answer_ms": 1093.130250024842,
+          "answer": "Mira's access code is 73.",
+          "generated_ids": [
+            29924,
+            3055,
+            29915,
+            29879,
+            2130,
+            775,
+            338,
+            29871,
+            29955,
+            29941,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.9473352432250977
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              28
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              28,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 37,
+          "prefill_ms_including_copy": 206.35641700937413,
+          "continuation_ms_including_copy": 842.6963750098366,
+          "edit_to_answer_ms": 1049.0527920192108,
+          "answer": "Mira's access code is 73.",
+          "generated_ids": [
+            29924,
+            3055,
+            29915,
+            29879,
+            2130,
+            775,
+            338,
+            29871,
+            29955,
+            29941,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.9473352432250977
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              28
+            ],
+            [
+              30,
+              64
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              28,
+              30
+            ],
+            [
+              64,
+              65
+            ]
+          ],
+          "prefill_tokens_recomputed": 3,
+          "prefill_ms_including_copy": 234.63295900728554,
+          "continuation_ms_including_copy": 863.6003340070602,
+          "edit_to_answer_ms": 1098.2332930143457,
+          "answer": "Mira's access code is 73.",
+          "generated_ids": [
+            29924,
+            3055,
+            29915,
+            29879,
+            2130,
+            775,
+            338,
+            29871,
+            29955,
+            29941,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.24072834849357605,
+            "mean_abs": 0.03636079654097557,
+            "kl_full_to_candidate": 0.0008826274424791336,
+            "total_variation": 0.01777001842856407,
+            "top1_equal": true,
+            "within_tolerance": false,
+            "full_top1_margin": 0.9473352432250977
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        }
+      },
+      "exact_check_passed": true
+    },
+    {
+      "case": {
+        "id": "controlled-derived",
+        "kind": "controlled-derived",
+        "old": "The active label is red. Lookup: red means Rome; blue means Lima.",
+        "new": "The active label is blue. Lookup: red means Rome; blue means Lima.",
+        "question": "Which city does the active label mean? Reply with only the city.",
+        "old_answers": [
+          "Rome"
+        ],
+        "answers": [
+          "Lima"
+        ],
+        "should_change": true
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe active label is red. Lookup: red means Rome; blue means Lima.\nQuestion: Which city does the active label mean? Reply with only the city.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe active label is blue. Lookup: red means Rome; blue means Lima.\nQuestion: Which city does the active label mean? Reply with only the city.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        6136,
+        3858,
+        338,
+        2654,
+        29889,
+        7419,
+        786,
+        29901,
+        2654,
+        2794,
+        9184,
+        29936,
+        7254,
+        2794,
+        27832,
+        29889,
+        13,
+        16492,
+        29901,
+        8449,
+        4272,
+        947,
+        278,
+        6136,
+        3858,
+        2099,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        4272,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        6136,
+        3858,
+        338,
+        7254,
+        29889,
+        7419,
+        786,
+        29901,
+        2654,
+        2794,
+        9184,
+        29936,
+        7254,
+        2794,
+        27832,
+        29889,
+        13,
+        16492,
+        29901,
+        8449,
+        4272,
+        947,
+        278,
+        6136,
+        3858,
+        2099,
+        29973,
+        10088,
+        368,
+        411,
+        871,
+        278,
+        4272,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 23,
+        "end": 24,
+        "length": 64
+      },
+      "affected_tokens": [
+        {
+          "position": 23,
+          "old_id": 2654,
+          "new_id": 7254,
+          "old_piece": "red",
+          "new_piece": "blue"
+        }
+      ],
+      "original_prefill_ms": 224.5377919753082,
+      "kv_bytes_per_snapshot": 2883584,
+      "original_answer": "The active label means Lima, as it is the city with",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              64
+            ]
+          ],
+          "prefill_tokens_recomputed": 64,
+          "prefill_ms_including_copy": 222.998249984812,
+          "continuation_ms_including_copy": 848.7592919846065,
+          "edit_to_answer_ms": 1071.7575419694185,
+          "answer": "The active label means Lima, as it is blue and is",
+          "generated_ids": [
+            1576,
+            6136,
+            3858,
+            2794,
+            27832,
+            29892,
+            408,
+            372,
+            338,
+            7254,
+            322,
+            338
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 1.6317691802978516
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": true
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              64
+            ]
+          ],
+          "prefill_tokens_recomputed": 41,
+          "prefill_ms_including_copy": 214.8585419927258,
+          "continuation_ms_including_copy": 882.7609159925487,
+          "edit_to_answer_ms": 1097.6194579852745,
+          "answer": "The active label means Lima, as it is blue and is",
+          "generated_ids": [
+            1576,
+            6136,
+            3858,
+            2794,
+            27832,
+            29892,
+            408,
+            372,
+            338,
+            7254,
+            322,
+            338
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 1.6317691802978516
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": true
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ],
+            [
+              24,
+              63
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              24
+            ],
+            [
+              63,
+              64
+            ]
+          ],
+          "prefill_tokens_recomputed": 2,
+          "prefill_ms_including_copy": 151.26912499545142,
+          "continuation_ms_including_copy": 834.392291988479,
+          "edit_to_answer_ms": 985.6614169839304,
+          "answer": "The active label means Lima, as it is blue and means",
+          "generated_ids": [
+            1576,
+            6136,
+            3858,
+            2794,
+            27832,
+            29892,
+            408,
+            372,
+            338,
+            7254,
+            322,
+            2794
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.7389039993286133,
+            "mean_abs": 0.08046074211597443,
+            "kl_full_to_candidate": 0.0023201610893011093,
+            "total_variation": 0.013817768543958664,
+            "top1_equal": true,
+            "within_tolerance": false,
+            "full_top1_margin": 1.6317691802978516
+          },
+          "greedy_equal": false,
+          "first_divergent_step": 11,
+          "reuse_introduced_failure": null,
+          "teacher_forced_divergence_investigation": [
+            {
+              "step": 0,
+              "max_abs": 0.7389039993286133,
+              "mean_abs": 0.08046074211597443,
+              "kl_full_to_candidate": 0.0023201610893011093,
+              "total_variation": 0.013817768543958664,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 1.6317691802978516
+            },
+            {
+              "step": 1,
+              "max_abs": 0.5993738174438477,
+              "mean_abs": 0.09867911785840988,
+              "kl_full_to_candidate": 0.00026734001585282385,
+              "total_variation": 0.005362331867218018,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 2.7458553314208984
+            },
+            {
+              "step": 2,
+              "max_abs": 0.6241664886474609,
+              "mean_abs": 0.11011159420013428,
+              "kl_full_to_candidate": 5.205673915043008e-06,
+              "total_variation": 3.3385073038516566e-05,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 8.689099311828613
+            },
+            {
+              "step": 3,
+              "max_abs": 0.8122124671936035,
+              "mean_abs": 0.1160145103931427,
+              "kl_full_to_candidate": 0.005305914208292961,
+              "total_variation": 0.03513175994157791,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 0.5750312805175781
+            },
+            {
+              "step": 4,
+              "max_abs": 0.9630179405212402,
+              "mean_abs": 0.14337125420570374,
+              "kl_full_to_candidate": 0.0961223840713501,
+              "total_variation": 0.20736271142959595,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 1.1099958419799805
+            },
+            {
+              "step": 5,
+              "max_abs": 0.8162031173706055,
+              "mean_abs": 0.1235920712351799,
+              "kl_full_to_candidate": 0.00532264169305563,
+              "total_variation": 0.0361514538526535,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 0.4651641845703125
+            },
+            {
+              "step": 6,
+              "max_abs": 0.9054793119430542,
+              "mean_abs": 0.10966148972511292,
+              "kl_full_to_candidate": 0.0027514095418155193,
+              "total_variation": 0.025167662650346756,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 1.2388191223144531
+            },
+            {
+              "step": 7,
+              "max_abs": 1.3951139450073242,
+              "mean_abs": 0.2229606807231903,
+              "kl_full_to_candidate": 0.02924089878797531,
+              "total_variation": 0.07788890600204468,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 0.1314077377319336
+            },
+            {
+              "step": 8,
+              "max_abs": 1.1379036903381348,
+              "mean_abs": 0.19124466180801392,
+              "kl_full_to_candidate": 0.013255458325147629,
+              "total_variation": 0.040138572454452515,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 1.9291667938232422
+            },
+            {
+              "step": 9,
+              "max_abs": 1.211921215057373,
+              "mean_abs": 0.20351451635360718,
+              "kl_full_to_candidate": 0.13663345575332642,
+              "total_variation": 0.22978579998016357,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 0.40929317474365234
+            },
+            {
+              "step": 10,
+              "max_abs": 1.8792619705200195,
+              "mean_abs": 0.28920799493789673,
+              "kl_full_to_candidate": 0.048068780452013016,
+              "total_variation": 0.11788319051265717,
+              "top1_equal": true,
+              "within_tolerance": false,
+              "full_top1_margin": 0.6496429443359375
+            },
+            {
+              "step": 11,
+              "max_abs": 2.0086662769317627,
+              "mean_abs": 0.2972553074359894,
+              "kl_full_to_candidate": 0.13749325275421143,
+              "total_variation": 0.1990668922662735,
+              "top1_equal": false,
+              "within_tolerance": false,
+              "full_top1_margin": 0.6104269027709961
+            }
+          ],
+          "hit_token_limit": true
+        }
+      },
+      "exact_check_passed": true
+    },
+    {
+      "case": {
+        "id": "museum-change",
+        "kind": "natural",
+        "old": "The museum opens at nine on Monday. Entry is free for children.",
+        "new": "The museum opens at ten on Monday. Entry is free for children.",
+        "question": "When does the museum open on Monday? Reply with one word.",
+        "old_answers": [
+          "nine",
+          "9"
+        ],
+        "answers": [
+          "ten"
+        ],
+        "should_change": true
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe museum opens at nine on Monday. Entry is free for children.\nQuestion: When does the museum open on Monday? Reply with one word.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe museum opens at ten on Monday. Entry is free for children.\nQuestion: When does the museum open on Monday? Reply with one word.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        19133,
+        13246,
+        472,
+        14183,
+        373,
+        27822,
+        29889,
+        28236,
+        338,
+        3889,
+        363,
+        4344,
+        29889,
+        13,
+        16492,
+        29901,
+        1932,
+        947,
+        278,
+        19133,
+        1722,
+        373,
+        27822,
+        29973,
+        10088,
+        368,
+        411,
+        697,
+        1734,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        19133,
+        13246,
+        472,
+        3006,
+        373,
+        27822,
+        29889,
+        28236,
+        338,
+        3889,
+        363,
+        4344,
+        29889,
+        13,
+        16492,
+        29901,
+        1932,
+        947,
+        278,
+        19133,
+        1722,
+        373,
+        27822,
+        29973,
+        10088,
+        368,
+        411,
+        697,
+        1734,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 23,
+        "end": 24,
+        "length": 60
+      },
+      "affected_tokens": [
+        {
+          "position": 23,
+          "old_id": 14183,
+          "new_id": 3006,
+          "old_piece": "nine",
+          "new_piece": "ten"
+        }
+      ],
+      "original_prefill_ms": 236.47520801750943,
+      "kv_bytes_per_snapshot": 2703360,
+      "original_answer": "Answer: Monday at 9:00 AM",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              60
+            ]
+          ],
+          "prefill_tokens_recomputed": 60,
+          "prefill_ms_including_copy": 217.56729198386893,
+          "continuation_ms_including_copy": 844.0013749932405,
+          "edit_to_answer_ms": 1061.5686669771094,
+          "answer": "Answer: Monday at 10:00 AM",
+          "generated_ids": [
+            22550,
+            29901,
+            27822,
+            472,
+            29871,
+            29896,
+            29900,
+            29901,
+            29900,
+            29900,
+            13862,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.8597869873046875
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              60
+            ]
+          ],
+          "prefill_tokens_recomputed": 37,
+          "prefill_ms_including_copy": 203.75675000832416,
+          "continuation_ms_including_copy": 856.8677080038469,
+          "edit_to_answer_ms": 1060.624458012171,
+          "answer": "Answer: Monday at 10:00 AM",
+          "generated_ids": [
+            22550,
+            29901,
+            27822,
+            472,
+            29871,
+            29896,
+            29900,
+            29901,
+            29900,
+            29900,
+            13862,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.8597869873046875
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ],
+            [
+              24,
+              59
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              24
+            ],
+            [
+              59,
+              60
+            ]
+          ],
+          "prefill_tokens_recomputed": 2,
+          "prefill_ms_including_copy": 152.96904201386496,
+          "continuation_ms_including_copy": 831.5794999944046,
+          "edit_to_answer_ms": 984.5485420082696,
+          "answer": "Answer: Monday at 10:00 AM",
+          "generated_ids": [
+            22550,
+            29901,
+            27822,
+            472,
+            29871,
+            29896,
+            29900,
+            29901,
+            29900,
+            29900,
+            13862,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.3596787452697754,
+            "mean_abs": 0.05197858065366745,
+            "kl_full_to_candidate": 0.0016434772405773401,
+            "total_variation": 0.020305242389440536,
+            "top1_equal": true,
+            "within_tolerance": false,
+            "full_top1_margin": 0.8597869873046875
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        }
+      },
+      "exact_check_passed": true
+    },
+    {
+      "case": {
+        "id": "museum-invariant",
+        "kind": "natural",
+        "old": "The museum opens at nine on Monday. Entry is free for children.",
+        "new": "The museum opens at ten on Monday. Entry is free for children.",
+        "question": "Who gets free entry? Reply with one word.",
+        "old_answers": [
+          "children"
+        ],
+        "answers": [
+          "children"
+        ],
+        "should_change": false
+      },
+      "old_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe museum opens at nine on Monday. Entry is free for children.\nQuestion: Who gets free entry? Reply with one word.</s>\n<|assistant|>\n",
+      "new_prompt": "<|user|>\nUse only this document to answer the question.\nDocument:\nThe museum opens at ten on Monday. Entry is free for children.\nQuestion: Who gets free entry? Reply with one word.</s>\n<|assistant|>\n",
+      "old_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        19133,
+        13246,
+        472,
+        14183,
+        373,
+        27822,
+        29889,
+        28236,
+        338,
+        3889,
+        363,
+        4344,
+        29889,
+        13,
+        16492,
+        29901,
+        11644,
+        4947,
+        3889,
+        6251,
+        29973,
+        10088,
+        368,
+        411,
+        697,
+        1734,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "new_ids": [
+        529,
+        29989,
+        1792,
+        29989,
+        29958,
+        13,
+        11403,
+        871,
+        445,
+        1842,
+        304,
+        1234,
+        278,
+        1139,
+        29889,
+        13,
+        6268,
+        29901,
+        13,
+        1576,
+        19133,
+        13246,
+        472,
+        3006,
+        373,
+        27822,
+        29889,
+        28236,
+        338,
+        3889,
+        363,
+        4344,
+        29889,
+        13,
+        16492,
+        29901,
+        11644,
+        4947,
+        3889,
+        6251,
+        29973,
+        10088,
+        368,
+        411,
+        697,
+        1734,
+        29889,
+        2,
+        29871,
+        13,
+        29966,
+        29989,
+        465,
+        22137,
+        29989,
+        29958,
+        13
+      ],
+      "edit": {
+        "prefix": 23,
+        "end": 24,
+        "length": 57
+      },
+      "affected_tokens": [
+        {
+          "position": 23,
+          "old_id": 14183,
+          "new_id": 3006,
+          "old_piece": "nine",
+          "new_piece": "ten"
+        }
+      ],
+      "original_prefill_ms": 224.81633300776593,
+      "kv_bytes_per_snapshot": 2568192,
+      "original_answer": "Free entry for children.",
+      "original_baseline_correct": false,
+      "methods": {
+        "full": {
+          "approximate": false,
+          "reused_ranges": [],
+          "recomputed_ranges": [
+            [
+              0,
+              57
+            ]
+          ],
+          "prefill_tokens_recomputed": 57,
+          "prefill_ms_including_copy": 220.42562498245388,
+          "continuation_ms_including_copy": 380.9150410233997,
+          "edit_to_answer_ms": 601.3406660058536,
+          "answer": "Free entry for children.",
+          "generated_ids": [
+            20475,
+            6251,
+            363,
+            4344,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.7025184631347656
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "prefix": {
+          "approximate": false,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              57
+            ]
+          ],
+          "prefill_tokens_recomputed": 34,
+          "prefill_ms_including_copy": 206.48362499196082,
+          "continuation_ms_including_copy": 381.13791699288413,
+          "edit_to_answer_ms": 587.621541984845,
+          "answer": "Free entry for children.",
+          "generated_ids": [
+            20475,
+            6251,
+            363,
+            4344,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "kl_full_to_candidate": 0.0,
+            "total_variation": 0.0,
+            "top1_equal": true,
+            "within_tolerance": true,
+            "full_top1_margin": 0.7025184631347656
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        },
+        "naive": {
+          "approximate": true,
+          "reused_ranges": [
+            [
+              0,
+              23
+            ],
+            [
+              24,
+              56
+            ]
+          ],
+          "recomputed_ranges": [
+            [
+              23,
+              24
+            ],
+            [
+              56,
+              57
+            ]
+          ],
+          "prefill_tokens_recomputed": 2,
+          "prefill_ms_including_copy": 155.3968329972122,
+          "continuation_ms_including_copy": 364.3930419930257,
+          "edit_to_answer_ms": 519.7898749902379,
+          "answer": "Free entry for children.",
+          "generated_ids": [
+            20475,
+            6251,
+            363,
+            4344,
+            29889,
+            2
+          ],
+          "answer_correct": false,
+          "logits_vs_full": {
+            "max_abs": 0.4379303455352783,
+            "mean_abs": 0.053879447281360626,
+            "kl_full_to_candidate": 0.0037979530170559883,
+            "total_variation": 0.03053029254078865,
+            "top1_equal": true,
+            "within_tolerance": false,
+            "full_top1_margin": 0.7025184631347656
+          },
+          "greedy_equal": true,
+          "first_divergent_step": null,
+          "reuse_introduced_failure": null,
+          "hit_token_limit": false
+        }
+      },
+      "exact_check_passed": true
+    }
+  ],
+  "all_exact_checks_passed": true,
+  "answer_scoring": "Strict normalized short-answer equality; inspect factual content separately. Verbose/truncated answers may fail this check without stating a wrong fact.",
+  "accepted_cases": 6,
+  "rejected_cases": 0,
+  "metadata_note": "Token-limit flags, accepted counts and scoring explanation derived after inference; original outputs and timings unchanged."
+}

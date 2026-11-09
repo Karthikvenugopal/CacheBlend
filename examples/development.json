@@ -1,0 +1,87 @@
+[
+  {
+    "id": "refund-change",
+    "kind": "natural",
+    "old": "Refunds are permitted within 30 days. Shipping is free.",
+    "new": "Refunds are permitted within 14 days. Shipping is free.",
+    "question": "Within how many days are refunds permitted? Reply with only the number.",
+    "old_answers": [
+      "30"
+    ],
+    "answers": [
+      "14"
+    ],
+    "should_change": true
+  },
+  {
+    "id": "refund-invariant",
+    "kind": "natural",
+    "old": "Refunds are permitted within 30 days. Shipping is free.",
+    "new": "Refunds are permitted within 14 days. Shipping is free.",
+    "question": "Is shipping free? Reply with only yes or no.",
+    "old_answers": [
+      "yes"
+    ],
+    "answers": [
+      "yes"
+    ],
+    "should_change": false
+  },
+  {
+    "id": "controlled-direct",
+    "kind": "controlled",
+    "old": "Record: Mira's access code is 42. The office is in Rome.",
+    "new": "Record: Mira's access code is 73. The office is in Rome.",
+    "question": "What is Mira's access code? Reply with only the code.",
+    "old_answers": [
+      "42"
+    ],
+    "answers": [
+      "73"
+    ],
+    "should_change": true
+  },
+  {
+    "id": "controlled-derived",
+    "kind": "controlled-derived",
+    "old": "The active label is red. Lookup: red means Rome; blue means Lima.",
+    "new": "The active label is blue. Lookup: red means Rome; blue means Lima.",
+    "question": "Which city does the active label mean? Reply with only the city.",
+    "old_answers": [
+      "Rome"
+    ],
+    "answers": [
+      "Lima"
+    ],
+    "should_change": true
+  },
+  {
+    "id": "museum-change",
+    "kind": "natural",
+    "old": "The museum opens at nine on Monday. Entry is free for children.",
+    "new": "The museum opens at ten on Monday. Entry is free for children.",
+    "question": "When does the museum open on Monday? Reply with one word.",
+    "old_answers": [
+      "nine",
+      "9"
+    ],
+    "answers": [
+      "ten"
+    ],
+    "should_change": true
+  },
+  {
+    "id": "museum-invariant",
+    "kind": "natural",
+    "old": "The museum opens at nine on Monday. Entry is free for children.",
+    "new": "The museum opens at ten on Monday. Entry is free for children.",
+    "question": "Who gets free entry? Reply with one word.",
+    "old_answers": [
+      "children"
+    ],
+    "answers": [
+      "children"
+    ],
+    "should_change": false
+  }
+]
