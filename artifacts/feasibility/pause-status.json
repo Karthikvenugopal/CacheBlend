@@ -1,0 +1,8 @@
+{
+  "status": "paused_at_user_request",
+  "gate1": "passed",
+  "development": "completed",
+  "heldout_completed_questions": 2,
+  "heldout_finished": false,
+  "note": "Experiment terminated to free resources for the user assignment. Preserve partial held-out results and freeze manifest; do not silently restart or overwrite the pilot."
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_inference_source_unchanged": true,
+  "original_baseline_source_tests_and_package_config_unchanged": true,
+  "heldout_fixture_matches_frozen_definition": true,
+  "all_24_cases_completed": true,
+  "case_order_and_definitions_match": true,
+  "matched_budget_all_selectors": true,
+  "two_timing_repeats_complete": true,
+  "pre_pause_completed_records_preserved": true,
+  "no_pilot_cases_rejected": true,
+  "metadata_byte_counts_match": true
+}

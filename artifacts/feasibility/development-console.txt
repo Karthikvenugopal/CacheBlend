@@ -1,0 +1,8 @@
+development-delivery-direct old/full correct= True True full= 'The active route is west.' delta= 'The active route is west.'
+development-delivery-derived old/full correct= True False full= 'The active route is west, which means it uses Rome as' delta= 'The active route is west, which means it uses Rome as'
+development-delivery-invariant old/full correct= True True full= 'The answer is: A receipt is required for returns.' delta= 'The answer is: A receipt is required for returns.'
+development-refund-direct old/full correct= True True full= 'The answer is within 14 days.' delta= 'The answer is within 14 days.'
+development-refund-invariant old/full correct= True True full= 'The answer is Monday.' delta= 'The answer is Monday.'
+development-record-direct old/full correct= True True full= 'The active code in the given document is 73.' delta= 'The active code in the given document is 73.'
+development-record-derived old/full correct= True True full= 'The active code in the given document means silver, as indicated' delta= 'The active code in the given document means silver, as indicated'
+development-record-invariant old/full correct= False False full= 'The active code in the given document is 73,' delta= 'The active code in the given document is 73,'

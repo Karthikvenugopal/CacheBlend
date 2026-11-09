@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-09T23:47:23.462584+00:00",
+  "preserved_checkpoint": "heldout-paused-4e8839533c7b.json",
+  "batch": "heldout-resume-1.json",
+  "original_completed_records_sha256": "d75238e4a5d374672b57cd3d36a8111b4d4a73a51d7b4b964536409922fab090",
+  "frozen_inference_source_unchanged": true
+}

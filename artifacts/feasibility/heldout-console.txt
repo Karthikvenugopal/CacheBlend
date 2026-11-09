@@ -1,0 +1,2 @@
+heldout-dispatch-direct old/full correct= True True full= 'The selected direction is west.' delta= 'The selected direction is west.'
+heldout-dispatch-derived old/full correct= False False full= 'For this dispatch, east goes to York and west goes to' delta= 'This dispatch goes to York and Oslo.'

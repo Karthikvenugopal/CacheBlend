@@ -1,0 +1,3 @@
+development-delivery-direct old/full correct= True True full= 'The active route is west.' delta= 'The active route is west.'
+development-delivery-derived old/full correct= True False full= 'The active route is west, which means it uses Rome as' delta= 'The active route is west, which means it uses Rome as'
+development-delivery-invariant old/full correct= True True full= 'The answer is: A receipt is required for returns.' delta= 'The answer is: A receipt is required for returns.'

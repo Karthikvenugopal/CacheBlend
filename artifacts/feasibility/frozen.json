@@ -1,0 +1,40 @@
+{
+  "frozen_utc": "2026-11-09T04:21:18.033797+00:00",
+  "config": {
+    "seed": 17,
+    "threads": 4,
+    "budget": 32,
+    "region_size": 16,
+    "fallback_threshold": 0.0001,
+    "atol": 0.0002,
+    "rtol": 0.0002,
+    "max_new_tokens": 12,
+    "repeats": 2,
+    "random_seeds": [
+      17,
+      29,
+      43
+    ],
+    "max_prompt_tokens": 1024,
+    "clean_reliability_threshold": 0.8
+  },
+  "source_hashes": {
+    "src/kvrepair/__init__.py": "78f3f67d91922430667e6309b511a16bb4ffac5653177a147fccd20186b4a6c5",
+    "src/kvrepair/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "src/kvrepair/cli.py": "ac1c589e17e1d87c3d4b0ccf1f7ebd53293284e179d43ac12b9fad67f359c45d",
+    "src/kvrepair/engine.py": "f08e3755da03cc34b74a770c43b888a7938bf0635ed64493871ee938c7488191",
+    "src/kvrepair/feasibility.py": "9bfbccdcb6dd22a769727ee3dbbcdacae16caf335cee2b31973ac0971c467b01",
+    "src/kvrepair/feasibility_cases.py": "73e4cddc4f5855f7473a3299a651f9f2bb51e47baea09712cd51fccbaceff546",
+    "src/kvrepair/models.py": "268256d6bf9d4c1b6bab4ec446e85b3daf5aa7b0c6063993ec92becd2d1ccb68",
+    "src/kvrepair/repair_probe.py": "6f6c00930cf185719c0d0e257fbde3c95d37be69e0349ab09a5e2e91dce30b39",
+    "src/kvrepair/report.py": "e0144fc4b1712f3fa618e5139d20c1bbebe90800974e10177b0296764f3acb01"
+  },
+  "gate1_sha256": "9052c3b058b531be556336e965578aeeac6fbd6913ef7f2ad2d9ddf5440394d5",
+  "development_sha256": "56f338f3a1d01b1b3db72a799a593ebbd57d38f4c757094725a5167f2ebe3a53",
+  "development_dataset_sha256": "7209392a400ebbaa885cff1fc95f55cf7fec01cdf31d6aa5c6dfc26db824d03e",
+  "heldout_dataset_sha256": "2b288cb068552818e80fd0b458ec04780a77f921b4bae24631ad6cb2e5e8896f",
+  "selection": "16-token disjoint regions anchored at actual edit end; sum token scores; budget 32; ascending-position tie break",
+  "utility": "Expected answer phrase present and predefined competing phrase absent; retain old/new baseline failures and clean-pair subset",
+  "decision_rule": "Arithmetic gate must pass. Factual efficacy inconclusive below 80% clean-pair reliability overall or in any case kind. Distribution gains alone do not establish useful repair; selector and metadata costs must be counted.",
+  "heldout_inference_performed_before_freeze": false
+}

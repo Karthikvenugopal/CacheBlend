@@ -1,0 +1,37 @@
+{
+  "local": {
+    "kl_wins": 0,
+    "kl_ties": 24,
+    "kl_losses": 0,
+    "identical_support": 24,
+    "median_delta_minus_control_kl": 0.0
+  },
+  "attention": {
+    "kl_wins": 0,
+    "kl_ties": 24,
+    "kl_losses": 0,
+    "identical_support": 24,
+    "median_delta_minus_control_kl": 0.0
+  },
+  "random-17": {
+    "kl_wins": 4,
+    "kl_ties": 6,
+    "kl_losses": 14,
+    "identical_support": 6,
+    "median_delta_minus_control_kl": 0.00019225417054258287
+  },
+  "random-29": {
+    "kl_wins": 17,
+    "kl_ties": 6,
+    "kl_losses": 1,
+    "identical_support": 6,
+    "median_delta_minus_control_kl": -0.00011005415581166744
+  },
+  "random-43": {
+    "kl_wins": 12,
+    "kl_ties": 6,
+    "kl_losses": 6,
+    "identical_support": 6,
+    "median_delta_minus_control_kl": -7.743015885353088e-06
+  }
+}
