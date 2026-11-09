@@ -1,0 +1,6 @@
+no-edit passed=True max_abs=0 metadata=2778880 B fallback=[0, 0, 0]
+early-edit passed=True max_abs=5.96e-08 metadata=2778880 B fallback=[0, 0, 0]
+middle-numeric passed=True max_abs=5.96e-08 metadata=5674240 B fallback=[0, 0, 0]
+late-edit passed=True max_abs=2.98e-08 metadata=2895360 B fallback=[0, 0, 0]
+token-boundary passed=True max_abs=4.84e-08 metadata=2812160 B fallback=[0, 0, 0]
+semantic-reversal passed=True max_abs=4.47e-08 metadata=5557760 B fallback=[0, 0, 0]
