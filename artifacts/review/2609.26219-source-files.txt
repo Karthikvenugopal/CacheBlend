@@ -1,0 +1,15 @@
+00README.json
+figures
+figures/agent_dynamic_context_scenario.pdf
+figures/fig_precision_sensitivity_concentration.pdf
+figures/fig_qwen_attention_edit_severity_ablation.pdf
+figures/fig_qwen_sensitivity_analysis.pdf
+figures/fig_summary_compression_cross_dataset_latency_quality.pdf
+figures/fig_summary_compression_llama_quant_allfused_3datasets.pdf
+figures/fig_three_model_compression_kv_similarity_motivation.pdf
+figures/introduction_method_comparison.pdf
+figures/patchkv_design_overview.pdf
+figures/token_to_block_partition.pdf
+macro.tex
+main.tex
+references.bib

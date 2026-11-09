@@ -1,0 +1,9 @@
+00README.json
+aaai2027.bib
+aaai2027.bst
+aaai2027.sty
+AnonymousSubmission2027.tex
+Figures
+Figures/figure1_overview.pdf
+Figures/figure3_kcurves.pdf
+Figures/figure2_ai.pdf

@@ -1,0 +1,25 @@
+{
+  "2609.26219": [
+    {
+      "file": "macro.tex",
+      "github_links": [],
+      "appendix_commands": []
+    },
+    {
+      "file": "main.tex",
+      "github_links": [],
+      "appendix_commands": [
+        "\\input{macro}"
+      ]
+    }
+  ],
+  "2609.17983": [
+    {
+      "file": "AnonymousSubmission2027.tex",
+      "github_links": [],
+      "appendix_commands": [
+        "\\input{ReproducibilityChecklist.tex}"
+      ]
+    }
+  ]
+}

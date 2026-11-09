@@ -1,0 +1,523 @@
+                                         Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document
+                                                                             Edits
+                                                                                 Mingyang Mao1 , Wyatt Mackey2 , Xiaomin Lin1∗
+                                                                           1
+                                                                               University of South Florida, Electrical and Computer Engineering
+                                                                                            2
+                                                                                              DEVCOM Army Research Laboratory
+                                                                                   {mmao, xlin2}@usf.edu, wyatt.t.mackey.civ@army.mil
+
+
+                                                                        Abstract                                        (a) In-place edit stales the KV cache
+
+
+
+
+arXiv:2609.17983v1 [cs.AI] 16 Sep 2026
+                                           KV-cache reuse can reduce inference cost in retrieval-
+                                           augmented generation and agentic systems, but cached con-                           valid       edited stale (attended to old text)
+                                           texts may become stale when retrieved knowledge, working                                Cached support-policy document
+                                           memory, or user state is edited. Under causal self-attention,                           Plan: Enterprise Gold
+                                           even a local edit can affect downstream KV states. A full                               Initial response SLA: 24 hours   edited field
+                                                                                                                                   Data retention: 90 days
+                                           re-prefill reliably restores consistency but is costly, whereas                         Monthly API quota: 10 million requests
+                                           refreshing only the edited span can leave downstream depen-                             Escalation channel: Priority Support
+                                           dencies stale. We formulate in-place repair as budgeted recom-               (b) Benchmark construction: direct vs derived
+                                           putation and compare training-free position-selection policies
+                                           on a factual RAG benchmark with matched direct and derived                       Direct probe: answer span = edit span
+                                           edits. Across three model families, all policies repair direct                   [Entity Record]
+                                           cases, but derived cases clearly separate them. At the pri-
+                                                                                                                            The registry value for X is D668                       J651
+                                           mary budget, a contiguous edit-local window recovers at least
+                                           0.94 of the post-edit answer margin and substantially outper-
+                                           forms attention-based, KV-deviation, and structural selectors.                   Derived probe: answer span ≠ edit span
+                                           Mechanistic analysis shows that position sets effective under                       [Alias Record]
+                                           clean-state transplantation can fail under actual recomputation
+                                                                                                                               X uses alias A           B edit span
+                                           because scattered positions inherit surrounding staleness. The
+                                           edit-local advantage also depends on adjacency and largely                                    D tokens downstream
+                                           disappears when the answer-bearing text moves downstream.
+                                                                                                                               [Lookup Table]
+                                           Because answer-relevant edits almost always corrupt model
+                                           behavior, failure severity is difficult to predict, and repair is                  A has value 4471
+                                           13–21× faster than full re-prefill, our results support uncon-                     B has value 8730            Answer span unedited
+
+                                           ditional edit-local repair when the dependent text remains
+                                           adjacent to the edit.                                                              Q: What value does X’s alias map to?
+                                                                                                                              A: 8730 without repair: 4471
+                                                                  Introduction
+                                         RAG pipelines and LLM-based agents increasingly reuse KV
+                                                                                                                 Figure 1: Problem and probe design. (a) An in-place edit
+                                         states for retrieved documents or memory blocks across re-
+                                                                                                                 to a cached document leaves the edited span’s KV entries
+                                         quests, avoiding repeated prefill (Yao et al. 2025; Bergman
+                                                                                                                 encoding old text and all downstream entries stale. (b) Each
+                                         et al. 2025; Ye et al. 2026; Pan et al. 2026). This optimiza-
+                                                                                                                 benchmark item pairs the same question with two context
+                                         tion assumes cached source content does not change. In de-
+                                                                                                                 structures: a direct probe, where the edit rewrites the answer
+                                         ployment, that assumption breaks when a factual record is
+                                                                                                                 text, and a derived probe, where the answer sits in an unedited
+                                         corrected (Ouyang et al. 2025; Cohen et al. 2024), a policy
+                                                                                                                 lookup entry downstream of the edited alias. Without repair
+                                         is revised, or an agent’s working memory is updated (Packer
+                                                                                                                 the cache returns the pre-edit answer.
+                                         et al. 2023). The source text then carries the update, while
+                                         retained KV tensors encode the older version. A request can
+                                         therefore be answered from a representation that no longer
+                                         matches the knowledge base. Existing document-level reuse               leaves every downstream KV state dependent on the old con-
+                                         methods optimize reuse and composition, but do not syn-                 tent. A full re-prefill restores consistency but re-encodes an
+                                         chronize cached representations after a source edit.                    entire long context after an edit of only a few tokens. Re-
+                                            Repairing this mismatch is not confined to the edited span.          cent work has begun to repair the cache in place after such
+                                         Continuing to serve from a stale cache can reduce response              small edits, but each proposed method carries a limitation.
+                                         accuracy (Ouyang et al. 2025), and causal self-attention                KVEraser replaces a target span with learned steering states,
+                                            ∗                                                                    yet requires per-model training and targets deletion rather
+                                                Corresponding author.
+than factual replacement(Li et al. 2026). MTN recomputes               severity is hard to predict, and repair is inexpensive.
+downstream notes ranked by their causal effect, using an ora-
+cle signal in controlled agent tasks (Li 2026). Neither answers                           Related Works
+the matched-budget question for factual RAG under actual
+                                                                    Document-level KV reuse. RAGCache stores intermedi-
+recomputation. To build a low-budget, training-free repair
+                                                                    ate states of retrieved knowledge, while TurboRAG precom-
+policy, we therefore first ask which downstream positions
+                                                                    putes per-chunk KV caches for reuse across queries (Jin et al.
+matter most once the edited span itself has been refreshed.
+                                                                    2025; Lu et al. 2025). Both reduce repeated prefill by reusing
+   Our study pairs factual edits with contexts of roughly 5000
+                                                                    stored states of retrieved text. Neither addresses how those
+retrieved tokens. Each question either asks for the edited fact
+                                                                    states should be updated after the source text changes. HoH
+directly or requires a two-hop derivation through unchanged
+                                                                    shows that outdated retrieved evidence can reduce RAG ac-
+downstream text. Starting from the stale cache, every policy
+                                                                    curacy even when current evidence is available (Ouyang et al.
+refreshes the known edit span and selects K downstream
+                                                                    2025), but it studies stale information at the text level rather
+positions under the same recomputation budget. We com-
+                                                                    than repair of an already cached representation. We study the
+pare an edit-local window, structural delimiters (Li 2026),
+                                                                    systems problem that follows a source edit: how much of one
+stale-query attention (Wang et al. 2026), CacheBlend-based
+                                                                    stale document cache must be recomputed?
+KV deviation (Yao et al. 2025), and random selection. A
+transplant-derived causal ranking is included only as a non-        Selective recomputation. Selective recomputation ad-
+deployable diagnostic. Evaluation covers development and            dresses a different cache mismatch. CacheBlend restores
+held-out cohorts across Llama, Qwen, and Mistral, plus a            missing cross-attention by recomputing positions with large
+1099-item variant that moves the answer-carrying text down-         KV deviations, while ProphetKV prioritizes positions us-
+stream. We use pre-specified criteria and report held-out mar-      ing query relevance (Yao et al. 2025; Wang et al. 2026).
+gin recovery and flip rate.                                         EPIC recomputes a small, fixed set of initial chunk tokens,
+   Three results define the baseline. At K=32, every policy         Cache-Craft repairs reusable chunk caches through limited
+saturates on direct questions, while derived answers sepa-          recomputation, and KVShare selects high-deviation states
+rate them. The edit-local window recovers 0.94–1.01 of the          during prefill and decoding (Hu et al. 2025; Agarwal et al.
+answer margin and flips 0.95–1.00 of held-out items, beat-          2025; Yang et al. 2025). Across these methods, the source
+ing every alternative by 0.46–1.00 margin recovery (Holm-           chunks are unchanged and the mismatch comes from reusing
+corrected p ≤ 3 × 10−9 ). This advantage depends on adja-           their caches in a new context. Our experiments transfer the
+cency. Moving the answer-carrying text 250 tokens down-             deviation- and query-based selection signals to a cache whose
+stream reduces edit-local recovery to 0.01–0.09, with stale-        source text has changed and compare them at the same
+query attention helping on only one model family. Transplant        downstream-position budget.
+recoverability also fails to predict repair under recomputa-
+tion. The causal ranking recovers 0.92–0.97 of the margin           KV-cache editing. KV-cache editing is closest to our set-
+when clean states are transplanted, but the same positions          ting. KVEraser replaces a target span with learned steering
+recover only 0.01–0.21 when recomputed at K=8. Recom-               states to erase its influence (Li et al. 2026). Li (2026) shows
+putation is worse on every held-out item. A transplanted state      that changing a field can leave old conclusions in downstream
+imports information from a correct cache, whereas a recom-          states and ranks those states by causal effect. Leyline pro-
+puted state reads stale surrounding states. A contiguous edit-      vides serving primitives for removing or replacing cached
+local window succeeds by rebuilding that dependency chain           spans, including positional correction for length-changing
+in order. Finally, answer-relevant edits almost always break        edits (Ma, Eitzinger, and Koestler 2026). We isolate length-
+the stale cache (base rate ≥ 0.988), and cheap features poorly      preserving factual replacement and ask which training-free
+predict failure severity (best out-of-fold ρ = 0.17). Because       selector works when its chosen positions are actually re-
+repair runs 13–21× faster than re-prefill, applying edit-local      computed at a matched budget. This separates our setting
+repair unconditionally is the practical policy within this set-     from learned erasure, cache splicing, and position sets ranked
+ting. It is also the training-free baseline that future selection   through oracle-state transplantation.
+methods must beat.
+   In summary, this paper makes the following key contribu-            Cache Repair as Budgeted Recomputation
+tions:                                                              Question Setting. A serving system prefills a context C
+ • We formulate stale-cache repair as budgeted recomputa-           and stores its key–value states for reuse. After an edit pro-
+   tion and introduce paired direct, derived, and distance-         duces C ′ , the stored cache K(C) is stale; a full prefill K(C ′ )
+   controlled factual edits.                                        is the oracle repair target, not a competing method. In-place
+                                                                    repair instead refreshes selected entries of K(C) toward this
+ • We compare five training-free selectors at a matched bud-
+                                                                    target.
+   get across three model families, establishing EditLocal
+                                                                       We isolate one contiguous, length-preserving edit: |C| =
+   as a strong adjacent-block baseline.
+                                                                    |C ′ | = n and ci = c′i outside the half-open span S =
+ • We separate localization under clean-state transplant from       [sstart , send ). Positions and rotary phases therefore remain
+   repair under recomputation.                                      fixed; length-changing edits, which also require positional
+ • We show that answer-relevant edits warrant unconditional         correction, are outside our scope (Ma, Eitzinger, and Koestler
+   repair within this benchmark because failure is frequent,        2026). Each benchmark item pairs a direct condition, whose
+answer lies in S, with a derived condition, whose answer           Policy               Rule (all pick       K    positions   from
+lies in unchanged downstream text but depends on the edited                             [send , n−1))
+fact (Figure 1b). The pair otherwise shares its retrieved doc-     EditLocal            the K positions immediately after the
+uments, insertion point, subject, value pair, and query, and                            span
+we report the conditions separately.                               Structural           structural tokens, nearest to the span first
+                                                                   Attention            top-K by stale-cache attention from the
+The repair interface. Every policy uses the same op-
+                                                                                        query
+erator and differs only in its K selected positions. Let           CacheBlend           top-K by layer-2 key/value deviation
+D = [send , n − 1) be the downstream candidate pool and            Random               uniform from the pool, 5 seeds
+let Aπ ⊆ D, |Aπ | = K, be the positions chosen by policy π.
+The repaired set is Pπ = S ∪ Aπ , and                              CausalOracle         top-K by measured causal effect (needs
+                                                                                        oracle cache)
+                   e = R K(C), C ′ , Pπ .
+                                       
+                  K                                                CarrierWindow        contiguous window at the true carrier
+The operator recomputes Pπ from C ′ layer by layer and                                  block (needs its location)
+leaves all other states unchanged, using the same selective-
+recomputation primitive as prior systems (Yao et al. 2025).       Table 1: Selection policies, frozen before held-out evaluation.
+Its full-position endpoint is                                     Only K varies; grey rows are diagnostics.
+          R K(C), C ′ , {0, . . . , n − 1} = K(C ′ ).
+                                          
+                                                          (1)
+   The known edit span is always recomputed and shared            Selection policies. Table 1 compares four deployable
+across policies, while the fresh query is never cached and is     signals—edit proximity, structure, stale-query attention
+recomputed during scoring. Thus, K counts only additional         (Wang et al. 2026), and KV deviation (Yao et al. 2025)—
+downstream positions. We exclude upstream positions be-           with a matched random control. These policies may use the
+cause causal attention prevents them from depending on the        stale cache, edited context, edit location, and query, but never
+edit, and verify this invariant numerically. The question is      the oracle cache or answers. Grey rows use unavailable ora-
+which deployable rule chooses Aπ most effectively.                cle or carrier information and are diagnostics, not deployable
+Cost accounting. We separate three costs: common work             methods or upper bounds on recomputation.
+for the edit span and fresh query, the matched repair budget of      The primary budget is K=32; curves over K ∈
+K · L token-layers, and selector overhead. The common term        {8, 16, 32, 64} are descriptive. The structural EditLocal@∂
+cancels in policy comparisons, while overhead is reported         variant in Section is exploratory because it was inferred from
+outside K. Text- and position-only rules have no selector         those curves. Full policy definitions and provenance appear
+forward; Attention adds a stale-cache scoring pass (Wang          in the appendix.
+et al. 2026), and CacheBlend adds roughly one prefill layer       Transplant is not recomputation. A selected position set
+over the prefix (Yao et al. 2025). We use wall-clock latency as   can be used in two ways. Transplant copies its KV states from
+the headline systems measure and token-layers as a device-        the oracle cache into the stale cache, while recomputation
+independent secondary measure; Section reports both. The          rebuilds them within the stale cache. Only recomputation is
+full construction, interface invariants, and cost decomposi-      deployable because transplant requires the oracle cache. We
+tion appear in the supplementary appendix.                        use transplant only as a localization diagnostic.
+What counts as repaired. Answer accuracy alone cannot                The two operators provide different information. A trans-
+distinguish caches that emit the same string with different       planted state was computed with an otherwise correct cache
+underlying preferences. Each item therefore defines a pre-        and can therefore import information from outside the se-
+edit answer aold and a post-edit answer anew . For cache state    lected set. A recomputed state must instead read the still-
+x, let mx be the difference between their length-averaged,        stale cache around it. Positions that appear sufficient under
+teacher-forced log probabilities. Our primary metric is           transplant may therefore fail under recomputation. We apply
+                          mrepaired − mstale                      both operators to identical position sets to measure this gap.
+                 MR =                        ,             (2)
+                           moracle − mstale
+where 0 denotes no change from the stale cache and 1 reaches                        Experimental Setup
+the oracle. MR is unclipped, and zero-gap items are excluded.     Paired edit benchmark. Each item contains roughly 5000
+   We pair this internal measure with visible behavior. Let yb    tokens of shuffled HotpotQA fullwiki validation para-
+be the greedy continuation of at most 16 tokens for retained      graphs (Yang et al. 2018), used only as realistic retrieval
+item b. The flip rate is                                          background; HotpotQA questions and answers are not used.
+                   1 X                                          We insert one synthetic record at a document boundary about
+       Flip =             1 anew ∈ yb ∧ aold ∈  / yb .     (3)    30% into the context. Background denotes the filler para-
+                  |B|
+                     b∈B                                          graphs, whereas item denotes the full construction and is the
+MR captures partial recovery before the decision boundary,        unit of every paired comparison. The direct block states the
+whereas flip records whether generation exposes only the          queried field and rewrites its value. The derived block instead
+new answer. We report both, with KL recovery as a sec-            rewrites an alias that selects between two downstream lookup
+ondary distributional measure. The appendix gives the com-        rows; both rows are present before the edit and remain un-
+plete scoring and edge-case rules.                                changed. Thus, only the location of the answer relative to the
+  (a)                                                                                                                       (b)
+
+                                                                         next document             MR
+                                                                                                                                          EditLocal@32
+    EditLocal                                                                                      1.01
+                                                                                                                            1.0
+                                                                                                                                            CausalOracle
+     Attention                                                                                     0.64
+
+
+
+
+                                                                                                          margin recovery
+  CacheBlend                                                                                       0.25
+                                                                                                                            0.5
+    Structural                                                                                     0.15
+                                                                                                                                                                 @32
+     Random                                                                                        0.13                                   Random@32
+                                                                                                                                                                 @8
+CausalOracle                                                                                       0.35                     0.0
+                                                         answer tokens
+                 edit 0            10            20              30           40    100    1000                              transplant                    recompute
+                          token offset from the end of the edit span
+
+Figure 2: Contiguity, not localization, decides repair. (a) Selections for a representative held-out Llama item at K=32. Orange
+marks the edit span, repaired outside the budget, and grey marks states left stale. Only EditLocal forms an unbroken path from
+the edit through the answer. (b) Margin recovery under transplant and recomputation on identical sets from 15 development
+items. Lines connect the two operators. Solid lines denote Llama and dashed lines Qwen. Grey CausalOracle results are
+mechanism diagnostics without tests.
+
+
+edit differs between the conditions. All synthetic subjects,                       indices disjoint from development. A candidate-pool expan-
+aliases, and values are absent from the background.                                sion rule is fixed in advance, preventing retention shortfalls
+    Build-time filters require the old and edited prefixes to                      from being repaired by loosening filters. Retention is 75 di-
+have equal length under every tokenizer, differ in one span                        rect and 34 derived for Llama, 75 in each condition for Qwen,
+of at most six tokens, and place that span between 25% and                         and 60 direct and 58 derived for Mistral. Llama’s lower de-
+40% of the context. Direct and derived pairs must match                            rived count reflects failure to solve some two-hop items even
+within 3% in relative edit position. At evaluation, we retain                      from a clean prefill.
+only items for which the oracle answers correctly and a stale-                        All comparisons are paired by item. We report 95% per-
+to-oracle margin gap exists. These model-dependent filters                         centile intervals from 10,000 bootstrap resamples. A policy
+define retention. The appendix gives the full construction and                     mean is resampled directly; a contrast is formed per item be-
+filter provenance.                                                                 fore resampling so that pairing is preserved. Paired Wilcoxon
+                                                                                   tests accompany the contrasts. At K=32, all 15 comparisons
+Distance-controlled variant. The main derived block                                among six policies form one Holm-corrected family within
+makes the edit and answer-carrying text adjacent. To vary this                     each model and condition; CarrierWindow appears only
+geometry, we split its alias and lookup records into two doc-                      in the distance variant. Curves over K are descriptive and
+uments, leave the alias in place, and move the lookup record                       are not tested. Win–tie–loss uses a primary MR tie band of
+downstream. We define d = scarrier −send ∈ {0, 250, 1500}.                         0.05, fixed before held-out evaluation from the spread of se-
+The direct condition appears only at d=0. At d=0, the de-                          mantically equivalent arms, with 0.01 and 0.10 as appendix
+rived construction is byte-identical to the main benchmark.                        sensitivities. Direct and derived conditions are never pooled.
+The distance axis extends rather than replaces the main set-                       The appendix records the cohort and statistical details.
+ting; all policies, budgets, and metrics remain fixed.
+                                                                                                                              Results
+Models and decoding. We use Llama-3.1-8B-Instruct,
+Qwen3-8B, and Mistral-7B-Instruct-v0.3 in bfloat16 with                            Across all three model families, every policy saturates in the
+SDPA attention, decoding greedily with no chain of thought.                        direct condition, which serves as a sanity check. The derived
+Qwen3 receives an empty think block so that it answers di-                         condition separates the methods: EditLocal nearly restores
+rectly. Because the three tokenizers map the same text to dif-                     the full answer margin when the dependent text is adjacent
+ferent token counts, a fixed K does not cover identical text                       to the edit, but its advantage largely disappears once that text
+spans across families. Before evaluation, a frozen harness                         moves downstream. Transplant-ranked positions also lose
+gate compares the repaired cached path with a full forward                         most of their value under actual recomputation. Together
+at the answer position under a bfloat16 tolerance fixed after                      with near-universal stale-cache failure and the low cost of
+the initial smoke test.                                                            repair, these results support unconditional edit-local repair
+                                                                                   within the adjacent-block setting.
+Pre-specified held-out evaluation. Development uses 100
+items. The policy roster, metrics, budgets, and tests are pre-                     The Edit-Local Window Wins
+specified and applied consistently across all three model                          At the frozen K=32, EditLocal recovers 0.993, 1.007, and
+families. Held-out items use different seeds and HotpotQA                          0.937 of the margin on Llama, Qwen, and Mistral and flips
+                                        Llama-3.1-8B (n=34)        Qwen3-8B (n=75)        Mistral-7B (n=58)
+                      Policy                      MR      Flip             MR     Flip              MR     Flip
+                      EditLocal         0.993 ± 0.008    0.97     1.007 ± 0.005   1.00    0.937 ± 0.032    0.95
+                      Structural        0.126 ± 0.065    0.03     0.008 ± 0.011   0.01    0.012 ± 0.012    0.00
+                      Attention         0.533 ± 0.068    0.03     0.015 ± 0.014   0.01    0.019 ± 0.014    0.00
+                      CacheBlend        0.238 ± 0.080    0.03     0.076 ± 0.030   0.03    0.012 ± 0.012    0.00
+                      Random            0.078 ± 0.054    0.00     0.004 ± 0.010   0.00    0.004 ± 0.009    0.00
+                      CausalOracle      0.409 ± 0.064    0.00     0.187 ± 0.037   0.09    0.096 ± 0.035    0.05
+
+Table 2: Held-out results for the derived condition at K=32. MR is Eq. 2, reported as the mean ± the half-width of a 95%
+percentile interval from 10,000 bootstrap resamples, which is symmetric to within 0.003; Flip is Eq. 3. Every paired contrast
+against EditLocal is Holm-significant within its model’s 15-pair family (p ≤ 3 × 10−9 ). The grey row is a transplant-ranked
+diagnostic, not a method or an upper bound under recomputation. Direct rows are omitted because all policies achieve 0.98–1.00.
+
+
+95–100% of held-out items (Table 2). The best rival, Atten-           Moving the Answer Away from the Edit
+tion on Llama, reaches 0.533. No deployable rival clears              The byte-identical d=0 tier reproduces the main results, rul-
+0.08 on Qwen or Mistral. The grey CausalOracle reaches                ing out the two-document builder as the source of the dis-
+only 0.10–0.41. On Llama, rivals can move probability to-             tance effect. For example, Qwen EditLocal scores 1.002
+ward the new answer, but none flips more than one of 34               rather than 1.007, and CacheBlend scores 0.075 rather than
+items. MR thus captures partial internal repair, while Flip           0.076. Tests are Holm-corrected within each four-pair cell
+records whether generation exposes the new value.                     family.
+   Figure 2a makes the geometric difference visible. Causa-              Adjacency is load-bearing. At d ≥ 250, EditLocal falls
+lOracle includes the answer token but recovers only 0.35,             to 0.01–0.09 MR and 0.00–0.04 Flip. It mostly ties Random
+and CacheBlend stops inside the row holding the old value.            on Qwen and Mistral, while Llama’s remaining advantage
+Only EditLocal rebuilds an unbroken path from the edit                is only +0.07. EditLocal@∂ also stops before the carrier.
+through the dependent text. It beats the oracle on all 34, 75,        Attention retains useful signal only on Llama, reaching
+and 58 held-out items, and its weakest record against any             0.39 at d=250 and 0.84 at K=64. It stays at or below 0.11
+rival is 32 wins, 2 ties, and no losses. KL recovery follows          on Qwen and Mistral. The main win is therefore an adjacency
+MR at 0.999, 1.000, and 0.943.                                        effect, not a general advantage of the selector.
+   Qwen’s mean MR above one reflects slight overshoot be-                Search is only part of the problem. Even with the true lo-
+yond the oracle margin, which Eq. 2 leaves visible. Mistral           cation, CarrierWindow recovers just 0.43–0.74 on Llama
+reaches 1.002 at K=64, consistent with its tokenizer requir-          and Mistral, compared with 0.89–0.95 on Qwen. The probe
+ing more than 32 tokens to cover the same text.                       still moves the dependency as intended: 61–71% of the ora-
+                                                                      cle’s positive effect mass lies in the carrier block, and at most
+                                                                      3% remains in the edited block. Recovery from a correctly
+How Far the Window Should Extend                                      placed window is thus model-dependent.
+                                                                         Llama retains only 118 solvable items at d=250, about
+Direct results stay near one at every budget and are omitted          one third of the pool, so its distance cells cover only solv-
+from Figure 3. In the derived condition, EditLocal rises              able examples. Distance also changes absolute position and
+from 0.11 to 1.00 on Llama, from 0.01 to 1.01 on Qwen,                recency, which partly confounds the attention result.
+and from 0.01 to 1.00 on Mistral as K increases from 8 to
+64. The transition occurs at K=32. At K=64, Attention                 Transplant Recoverability Does Not Imply
+reaches 0.94 on Llama but only 0.18 and 0.30 on Qwen and              Recompute Repairability
+Mistral, and every other rule remains at or below 0.45. More          The grey oracle ranks positions by causal effect under trans-
+budget alone does not produce the same gain.                          plant, but the same sets behave differently under recompu-
+   The threshold matches the block geometry, an exploratory           tation (Figure 2b). On 15 development items, transplant re-
+observation made after unblinding the curves. From the edit           covers 0.93–0.99 of the margin, while recomputation reaches
+to the block boundary, the dependent text spans a median              only 0.03–0.41. The gap is specific to scattered sets: EditLo-
+of 24 Llama tokens (maximum 26) and 28 Qwen tokens                    cal and Random differ by less than 0.02 between operators,
+(maximum 30). A window of 16 tokens is incomplete, while              and all direct cells differ by less than 0.003.
+32 covers the path. This motivates EditLocal@∂, which                    Held-out results repeat the gap on all three families. At
+recomputes to the next document boundary with no selector             K=8, transplant recovers 0.918, 0.952, and 0.969 on Llama,
+forward. It coincides with K=32 on Llama and Qwen, while              Qwen, and Mistral, compared with 0.209, 0.011, and 0.008
+Mistral needs a slightly larger budget. This structural rule is       under recomputation. Recomputation is worse on every held-
+an interpretation of the curves, not a separately tested arm,         out item, and all 167 recorded position sets match when
+and still assumes that dependent text begins where the edit           replayed. Even at K=32, recomputation reaches only 0.10–
+ends.                                                                 0.41.
+                             Llama-3.1-8B                                          Qwen3-8B                                          Mistral-7B
+                  1.00
+
+
+
+
+margin recovery
+                  0.75
+
+                  0.50
+
+                  0.25
+
+                  0.00
+                         8   16             32        64         8                16          32          64      8              16           32        64
+                                                       K (extra recomputed downstream positions)
+
+                                  EditLocal      Structural           Attention         CacheBlend       Random           CausalOracle
+
+
+Figure 3: Margin recovery against the budget K on the held-out set, derived condition. Budgets double along a logarithmic
+axis, and bands are 95% bootstrap intervals. The direct condition is omitted because every policy lies between 0.98 and 1.00
+from K=8 on. The curves are descriptive, and the specification reserves testing for K=32. EditLocal is threshold-shaped and
+saturates once the window covers the remainder of the injected block. The grey dashed line is the transplant-ranked oracle, a
+diagnostic rather than a method.
+
+                                                              Llama                    Qwen                    Mistral
+                                   Policy               d=0          250    d=0        250    1500      d=0       250        1500
+                                   EditLocal            1.00     0.09       1.00       0.01   0.01      0.94      0.01       0.02
+                                   Structural           0.08     0.08       0.01       0.00   0.01      0.01      0.01       0.02
+                                   Attention            0.51     0.39       0.01       0.02   0.05      0.01      0.02       0.11
+                                   CacheBlend           0.19     0.08       0.09       0.01   0.01      0.01      0.01       0.02
+                                   Random               0.04     0.02       0.00       0.00   0.00     −0.00     −0.01      −0.00
+                                   CausalOracle         0.35     0.42       0.22       0.22   0.22      0.09      0.10        0.13
+                                   CarrierWindow        0.61     0.43       0.95       0.90   0.89      0.74      0.64        0.60
+
+Table 3: Mean MR at K=32 as the lookup table moves d tokens downstream. Sample sizes are 191/118 (Llama), 372/359/354
+(Qwen), and 343/216/221 (Mistral). Bootstrap intervals are omitted. Every half-width is at most 0.06. The post-hoc Llama
+d=1500 cell is excluded. Grey rows are diagnostics, and CarrierWindow receives the true carrier location.
+
+
+   A transplanted state comes from a fully correct cache and                              Model            Ctx        Full prefill    Repair@32    Speedup
+can import information from outside the chosen set. A re-                                 Llama-3.1-8B     4096        382.8 ms          27.8 ms    13.8×
+computed state reads the stale cache around it, so scattered                                               8192        818.1 ms          39.6 ms    20.7×
+positions inherit staleness. A contiguous window instead re-                              Qwen3-8B         4096        412.1 ms          31.6 ms    13.0×
+builds the forward chain in order. Transplant recoverability                                               8192        884.1 ms          44.9 ms    19.7×
+therefore shows where clean information can act, not what                                 Mistral-7B       4096        374.3 ms          28.0 ms    13.4×
+sparse recomputation can reconstruct. Development diagnos-                                                 8192        802.3 ms          39.8 ms    20.2×
+tics support this account: Structural omits content tokens
+carrying most positive effect mass, while stale-query atten-                             Table 4: Wall-clock cost of repair (span plus K=32 down-
+tion ranks them too deep to fit the budget.                                              stream positions, all layers) against a full re-prefill of the
+                                                                                         edited prefix. Median of 20 timed runs after 3 warmup runs,
+Repair Should Be Unconditional                                                           on one RTX 5090, bfloat16, batch 1. Both sides exclude the
+                                                                                         fresh-query forward, which is identical for every method. Re-
+We tested cheap repair triggers on Llama and Qwen without
+                                                                                         pair includes a defensive cache copy (< 2 ms), and in-place
+retention filters (n=175 per condition). After an answer-
+                                                                                         repair is marginally faster.
+relevant edit, the stale cache fails on at least 98.8% of items
+per condition, reaches 100% in both direct conditions, and
+never falls below 97.3% in any split. This result is limited to
+edits that touch the answer chain, but within that scope there
+is little for a gate to separate.
+   Severity is no easier to predict. Ridge and random-forest                             guishes direct from derived cases, but the remaining features
+models using text, position, edit, and embedding features                                do not support a useful severity gate. Near-certain failure,
+reach a best out-of-fold Spearman ρ = 0.17 (R2 = 0.05)                                   weak predictability, and low repair cost favor unconditional
+under grouped five-fold cross-validation. Edit type distin-                              repair.
+What Repair Costs                                                Search is not the whole problem: CarrierWindow knows
+At roughly 5,000 tokens, repair takes 31–35 ms versus 458–       the carrier location yet remains far below full recovery on
+502 ms for re-prefill, about 15× faster on all three models      Llama and Mistral. A second pass or a window spanning
+(Table 4). The ratio reaches about 20× at 8K. Raising K          the edit-to-carrier path may restore the missing inputs, but
+from 8 to 64 adds only 1–4 ms, making a structural boundary      neither is tested here. Qwen’s stronger result also shows that
+such as EditLocal@∂ inexpensive. The token-layer proxy           the boundary is model-dependent.
+gives 117×–234× but overstates the measured gain. Selector       Limitations. Edits are single, contiguous, and length-
+overhead also favors local rules, which require no scoring       preserving, and the synthetic blocks make every edit answer-
+forward, unlike Attention and CacheBlend.                        relevant. The failure rate therefore does not extend to arbi-
+Sanity checks. No frozen guard fired on the held-out batch.      trary edits, and the two-value metrics do not measure long
+Stale and oracle outputs reproduced byte-equal generations       free-form answers. Llama retains 34 of 75 held-out derived
+with margins within 10−3 , and all oracle rankings replayed      items and about one third at d=250, so those cells cover only
+without mismatches. The endpoint identity in Eq. 1 passes        solvable examples, and distance also changes recency. The
+on Llama. Qwen passes in margin (0.997–1.013) but exceeds        transplant panel uses 15 development items without Mistral,
+the frozen value-tensor L2 tolerance. A null-content con-        although the operator gap is also measured on held-out data.
+trol places the discrepancy within bfloat16 numerical noise.     EditLocal@∂ was inferred from unblinded curves rather
+We retain the failed label. On Mistral, three of 80 bfloat16     than tested as a registered arm. The models are dense and
+smoke states changed argmax, and all three matched exactly       near 8B, and timing uses one GPU at batch 1 while excluding
+in float32.                                                      the identical query forward. Multi-edit and length-changing
+                                                                 updates, larger or sparse models, and production serving re-
+                        Discussion                               main open.
+What to deploy. For a direct question, refreshing the edited
+span completes the repair. For an answer derived through                                Conclusion
+adjacent text, recompute through the end of the block. This      We framed in-place repair of a stale KV cache as budgeted
+rule reads only text and position, and its forward is 13–        recomputation and compared training-free selection policies
+21× cheaper than re-prefill. A structural stopping point such    at a matched budget on paired factual edits across three model
+as EditLocal@∂ avoids tuning K, and repair should be             families. Recomputing a contiguous window from the edit
+unconditional because failure is nearly certain while severity   to the end of its block restores post-edit behavior almost
+is hard to predict. This recommendation applies when the         completely wherever the dependent text is adjacent, beats
+answer dependency remains in the edited block. Beyond that       every signal-based rule by a wide margin, and runs 13–21×
+boundary, a system needs a different repair operator, not only   faster than a re-prefill. The result carries a mechanism and a
+a larger fixed budget.                                           boundary. Repair works by rebuilding a forward dependency
+                                                                 chain, so position sets that look sufficient under transplant
+Coverage, not importance. Chunk-composition methods              fail under recomputation, and the same window fails once the
+repair states computed from correct inputs but missing cross-    chain grows long. Edit-local recomputation is the baseline
+chunk attention, so large KV deviations can be useful signals    that any future policy for this problem has to beat.
+(Yao et al. 2025). An edit inside a cached document creates a
+different defect: a broken dependency chain. Scattered high-
+scoring positions are recomputed from stale inputs, while                               References
+a contiguous window rebuilds the path in order. Selection        Agarwal, S.; Sundaresan, S.; Mitra, S.; Mahapatra, D.; Gupta,
+quality is therefore a property of the set, not each position    A.; Sharma, R.; Kapu, N. J.; Yu, T.; and Saini, S. 2025.
+in isolation. Deviation and attention scores can help when       Cache-craft: Managing chunk-caches for efficient retrieval-
+surrounding states are sound. When they are stale, repair        augmented generation. Proceedings of the ACM on Manage-
+must cover the path that produces the answer.                    ment of Data, 3(3): 1–28.
+Localization evidence overstates what repair can do.             Bergman, S.; Kermarrec, A.-M.; Petrescu, D.; Pires, R.;
+Cache-editing work can rank positions by patching clean          Randl, M.; De Vos, M.; and Zhang, J. 2025. Leveraging
+states into a corrupted run (Li 2026), but that ranking need     approximate caching for faster retrieval-augmented genera-
+not transfer to recomputation. Transplant imports states pro-    tion. In Proceedings of the 26th International Middleware
+duced in a correct context, including information from out-      Conference, 340–353.
+side the chosen set. Recomputation must rebuild those states     Cohen, R.; Biran, E.; Yoran, O.; Globerson, A.; and Geva, M.
+from the stale cache. The operator gap shows that a rule         2024. Evaluating the Ripple Effects of Knowledge Editing
+intended for recomputation must be tested under recompu-         in Language Models. Transactions of the Association for
+tation. Transplant locates where clean information can influ-    Computational Linguistics, 12.
+ence the output, but it is not an upper bound on deployable
+                                                                 Hu, J.; Huang, W.; Wang, W.; Wang, H.; Hu, T.; Qin, Z.; Feng,
+repair.
+                                                                 H.; Chen, X.; Shan, Y.; and Xie, T. 2025. EPIC: Efficient
+Where repair still fails. Once dependent text moves 250          Position-Independent Caching for Serving Large Language
+tokens away, EditLocal collapses and only stale-query at-        Models. In International Conference on Machine Learning,
+tention on Llama provides a useful deployable alternative.       24391–24402. PMLR.
+Jin, C.; Zhang, Z.; Jiang, X.; Liu, F.; Liu, S.; Liu, X.; and
+Jin, X. 2025. Ragcache: Efficient knowledge caching for
+retrieval-augmented generation. ACM Transactions on Com-
+puter Systems, 44(1): 1–27.
+Li, B. 2026. Models Take Notes at Prefill: KV Cache Can Be
+Editable and Composable. arXiv preprint arXiv:2606.17107.
+Li, M.; Liu, S.; Fu, D.; Wang, H.; Xia, Y.; Li, H.; Yan, H.;
+and Li, P. 2026. KVEraser: Learning to Steer KV Cache
+for Efficient Localized Context Erasing. arXiv preprint
+arXiv:2606.17034.
+Lu, S.; Wang, H.; Rong, Y.; Chen, Z.; and Tang, Y. 2025.
+Turborag: Accelerating retrieval-augmented generation with
+precomputed kv caches for chunked text. In Proceedings
+of the 2025 Conference on Empirical Methods in Natural
+Language Processing, 6599–6612.
+Ma, B.; Eitzinger, J.; and Koestler, H. 2026. Leyline: KV
+Cache Directives for Agentic Inference. arXiv:2606.01065.
+Ouyang, J.; Pan, T.; Cheng, M.; Yan, R.; Luo, Y.; Lin, J.; and
+Liu, Q. 2025. Hoh: A dynamic benchmark for evaluating
+the impact of outdated information on retrieval-augmented
+generation. In Proceedings of the 63rd Annual Meeting of the
+Association for Computational Linguistics (Volume 1: Long
+Papers), 6036–6063.
+Packer, C.; Wooders, S.; Lin, K.; Fang, V.; Patil, S. G.; Stoica,
+I.; and Gonzalez, J. E. 2023. MemGPT: Towards LLMs as
+operating systems. arXiv preprint arXiv:2310.08560.
+Pan, Z.; PATEL, A. D.; Shen, Y.; Hu, Z.; Guan, Y.; Li, W.-
+L.; Qin, L.; Wang, Y.; and Ding, Y. 2026. KVFlow: Efficient
+prefix caching for accelerating LLM-based multi-agent work-
+flows. Advances in Neural Information Processing Systems,
+38: 126246–126265.
+Wang, S.; Chen, J.; Pan, Y.; Huang, H.; Hao, Y.; Zou, X.;
+Xia, W.; Zhang, W.; Wang, H.; Li, J.; et al. 2026. ProphetKV:
+User-Query-Driven Selective Recomputation for Efficient
+KV Cache Reuse in Retrieval-Augmented Generation. arXiv
+preprint arXiv:2602.02579.
+Yang, H.; Zhang, R.; Huang, M.; Wang, W.; Tang, Y.; Li, Y.;
+Liu, Y.; and Zhang, D. 2025. Kvshare: An llm service system
+with efficient and effective multi-tenant kv cache reuse. arXiv
+preprint arXiv:2503.16525.
+Yang, Z.; Qi, P.; Zhang, S.; Bengio, Y.; Cohen, W. W.;
+Salakhutdinov, R.; and Manning, C. D. 2018. HotpotQA: A
+dataset for diverse, explainable multi-hop question answer-
+ing. In Proceedings of the 2018 Conference on Empirical
+Methods in Natural Language Processing, 2369–2380.
+Yao, J.; Li, H.; Liu, Y.; Ray, S.; Cheng, Y.; Zhang, Q.; Du, K.;
+Lu, S.; and Jiang, J. 2025. Cacheblend: Fast large language
+model serving for rag with cached knowledge fusion. In Pro-
+ceedings of the twentieth European conference on computer
+systems, 94–109.
+Ye, H.; Gao, Z.; Ma, M.; Wang, Q.; Fu, Y.; Chung, M.-Y.;
+Lin, Y.; Liu, Z.; Zhang, J.; Zhuo, D.; et al. 2026. Kvcomm:
+Online cross-context kv-cache communication for efficient
+llm-based multi-agent systems. Advances in Neural Infor-
+mation Processing Systems, 38: 17882–17928.
+

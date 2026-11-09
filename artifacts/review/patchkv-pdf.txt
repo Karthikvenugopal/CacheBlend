@@ -1,0 +1,742 @@
+                                                    PatchKV: Efficient KV Cache Recovery for
+                                                        Dynamically Edited LLM Contexts
+                                                                 Guotao Yang, Rui Guo, Siwei He, Sheng Chen, Yitao Hu∗ , and Keqiu Li
+                                                                                                Tianjin University, China
+
+
+
+                                            Abstract—Long-running LLM agent workflows often revise                     Unaffected             Recomputed        Affected           Important
+                                         interior context spans while retaining long suffixes. Although                KV Cache                KV Cache         KV Cache           KV Cache
+                                         suffix tokens remain unchanged, altered causal histories and
+                                                                                                               (a) Direct Reuse
+                                         rotary positions prevent exact reuse of their offloaded key–value
+
+
+
+
+arXiv:2609.26219v1 [cs.DC] 18 Aug 2026
+                                         (KV) states. Full suffix recomputation wastes prefill work, while                                                                         Low TTFT
+                                                                                                                 Prefix Cache     Edit                 Direct Reuse                Low Quality
+                                         indiscriminate reuse propagates stale states and full-precision
+                                                                                                               (b) Prefix Cache
+                                         restoration adds data movement. We present PatchKV, a profile-
+                                         guided recovery system for suffix-preserving revisions. PatchKV                                                                           High TTFT
+                                                                                                                 Prefix Cache     Edit               Recompute All                 High Quality
+                                         decomposes adjacent context versions into an exact prefix, an
+                                                                                                               (c) CacheBlend
+                                         updated span, and an aligned suffix. It predicts an edit-local
+                                         dirty region using an offline length-conditioned drift model,                                                                             Mid TTFT
+                                                                                                                 Prefix Cache     Edit                                             Mid Quality
+                                         augments this region with sparse nonlocal blocks selected from
+                                                                                                                (d) PatchKV (ours)               Recompute(Block-Level Affected)
+                                         stored attention, and block-rounds their union into a fixed
+                                         repair set. The remaining suffix blocks are restored from CPU                                                                              Low TTFT
+                                                                                                                 Prefix Cache        Edit                                          High Quality
+                                         memory using frozen per-block precision tags and a fused path
+                                                                                                                                            Recompute(Dirty window & Important)
+                                         for dequantization, RoPE correction, and KV-page placement.
+                                         Across three models and three long-context question-answering
+                                         workloads, PatchKV achieves a 2.51–3.85× speedup in mean                    Fig. 1. Recomputation coverage after a dynamic context update.
+                                         resume time-to-first-token over full suffix recomputation and
+                                         a 1.26–2.06× speedup over CacheBlend, while matching or
+                                         exceeding CacheBlend’s F1 score in six of nine settings and       work. Directly reusing all suffix KV avoids this computation but
+                                         remaining within 1.36 points in the others.
+                                                                                                           can propagate stale state into generation. When the checkpoint
+                                            Index Terms—large language models, KV cache, dynamic
+                                         context, selective recomputation                                  is off-GPU, even valid reused state must additionally be fetched
+                                                                                                           and reconstructed before decode. The central challenge is thus
+                                                                   I. I NTRODUCTION                        not to maximize cache hits, but to reconstruct only the states
+                                                                                                           that materially affect generation and restore the remaining
+                                            Large language model (LLM) services increasingly execute
+                                                                                                           states at the lowest possible movement cost.
+                                         long-lived, stateful workloads such as agents, coding assistants,
+                                         retrieval-augmented generation (RAG), and multi-turn conver-         Existing mechanisms address only parts of this challenge, as
+                                         sations [1]–[4]. Their prompts are not independent inputs; they   illustrated    by their recomputation scopes in Fig. 1. Direct
+                                         are successive versions of an evolving execution state. Between   KV    reuse    minimizes computation but retains suffix states
+                                         model invocations, an agent may wait seconds or minutes for       affected    by  the edit. Prefix and radix caches terminate reuse
+                                         tools, retrieval, or external services, during which its inactive at  the  first  mismatch     and consequently prefill the complete
+                                         key–value (KV) cache can be offloaded to CPU memory or            suffix   [10],   [11].  Prompt    Cache reuses statically declared
+                                         a remote tier to release scarce GPU capacity [5], [6]. Before     modules,     while    CacheBlend     composes cached chunks and
+                                         the agent resumes, the controller may replace a tool result,      selectively    recomputes     high-deviation    tokens across them to
+                                         refresh retrieved evidence, revise a plan, or compress earlier    recover    cross-chunk    dependencies   [12],   [13]. For a long suffix
+                                         history [7]. Such updates commonly modify an interior context     inherited   from   a revised  context, direct reuse   can preserve stale
+                                         span while preserving both a long prefix and a long textual       state, full  suffix  prefill repeats excessive    work,  and distributed
+                                         suffix; we refer to this operation as a middle edit.              token   repair  can  recompute   more  states  than  those that are both
+                                            Middle edits break the exact-match assumption underlying       invalid   and   consequential   to generation.    KV   quantization  and
+                                         conventional KV reuse. Although the retained suffix preserves     streaming     reduce   storage  or transfer cost   only  after a system
+                                         its token IDs, each suffix token now observes a different causal has decided which states are semantically reusable [14]–[16].
+                                         prefix and may occupy a different rotary position. Its cached None of these approaches jointly determines where edit-induced
+                                         state can therefore diverge from the state produced by an exact drift propagates, which distant states remain important, and
+                                         prefill of the revised context [8], [9]. Recomputing the entire how the reusable remainder should be represented. PatchKV
+                                         suffix restores exact dependencies but discards substantial prior concentrates exact reconstruction on the edit-affected region and
+                                                                                                           sparse nonlocal high-impact blocks, then restores the remaining
+                                            ∗ Corresponding author: Yitao Hu (e-mail: yitao@tju.edu.cn).   suffix at calibrated precision.
+   To address these limitations, we derive three observations                   P:         M old :
+                                                                    KV old                                   S: Long Retained Suffix
+from middle-edit traces and controlled interventions. First,                  Prefix Prior Span                                                Offload
+edit-induced value-cache deviation is concentrated near the
+                                                                                   Tool result / Retrieval /
+edited span and generally decays with suffix distance, while                        History Compression                                CPU Memory
+the transition to stable states varies across models. Second, Agent                                              Seconds to Minutes      or Remote
+state deviation alone does not identify every important token:                  P          M new                                               Restore
+distant instructions, query terms, or retrieved facts can remain KV new Exact New State S: Changed Causal History
+consequential when they receive high attention. Third, reusable
+blocks differ in their tolerance to reduced precision. These Fig. 2. Dynamic contexts in long-running agent workloads, where tool
+observations separate the recovery problem into local validity, execution and context updates create successive prompt versions while KV
+nonlocal influence, and representation cost.                        state may be offloaded.
+   These observations define the recovery order in PatchKV.
+Offline, paired exact prefills train a length-conditioned predictor agent controllers revise these contexts while execution is in
+for the edit-local dirty boundary and calibrate per-block progress. They may replace a stale tool result, refresh retrieved
+precision tags from reconstruction risk. During checkpoint evidence, revise a failed plan, or compact earlier history into
+creation for Cold , PatchKV also records compact attention a summary. RAG and prompt compression create the same
+statistics. At resume time, the predictor marks the local dirty update pattern [4], [7].
+region, attention-guided selection adds sparse nonlocal blocks,        Many such updates preserve most of the preceding context
+and their block-aligned union forms the repair set. PatchKV and a long textual suffix while changing an interior span. We
+recomputes this set under the revised context while restoring call the broader evolving-prompt setting a dynamic context and
+the remaining blocks at their stored precisions through a fused this operation a middle edit. Its reuse opportunity differs from
+path that combines dequantization, RoPE correction, and KV- independent requests or statically composed prompt fragments:
+page placement. Fixing semantic repair before representation the reusable state is inherited from adjacent versions of the same
+selection prevents low-cost transport from masking stale-state execution, but a potentially long retained suffix has observed
+errors.                                                             a different causal history. Version alignment permits recovery
+   We make three contributions:                                     without request-time comparison of old and revised KV tensors
+   • We characterize middle-edit KV recovery and identify           or reconstruction of the entire suffix. Fig. 2 illustrates this
+      three structures that make selective recovery tractable: setting.
+      distance-structured state drift, sparse nonlocal generation      We model two adjacent context versions as
+      impact, and heterogeneous precision tolerance among
+                                                                         Cold = P ⊕ Mold ⊕ S,                       Cnew = P ⊕ Mnew ⊕ S, (1)
+      reusable blocks.
+   • We design PatchKV, which combines length-conditioned           where P is the longest common prefix, S is the maximal aligned
+      drift profiling, attention-guided selective recomputation, token-identical suffix, and Mold and Mnew are the unmatched
+      and quality-constrained quantized transport into a block- spans. This decomposition exposes three distinct state classes.
+      aligned recovery policy for offloaded dynamic contexts. Tokens in P retain both position and causal history and are
+   • We implement a CPU-offload research prototype with             exact-prefix hits. Tokens in X = Tokens(Mnew ) have no prior
+      fused quantization and restoration kernels and evaluate KV states, so those states must be computed. Tokens in S
+      it across three model families and three long-context preserve their identities but not necessarily their positions or
+      workloads, observing up to a 3.85× TTFT speedup causal histories, making them candidates for recovery rather
+      over Prefix Cache and F1 scores that match or exceed than exact cache hits.
+      CacheBlend in six of nine settings.
+                                                                    B. KV Cache Reuse under Dynamic Updates
+                        II. BACKGROUND                                 Transformer serving materializes one key and one value
+   This section characterizes the long-lived agent workloads per layer and token during prefill and reads those states
+targeted by this work, defines the middle-edit context model, during autoregressive decode [8], [17]. At layer l, the content-
+and explains why recovering an aligned suffix incurs both dependent state and its rotary-positioned key are
+semantic and data-movement costs.                                      Ke l = W l hl−1 ,               V l = W l hl−1 ,             K l = R(p )K   e l,
+                                                                                 i       K i              i       V    i            i        i    i
+A. LLM Agents and Dynamic Contexts                                                                                                        (2)
+                                                                            where hl−1
+                                                                                     i    depends   on the causal  history through   token  i,
+   LLM agents interleave inference with tool calls, planning,
+                                                                            and R(pi ) is the rotary position embedding (RoPE) transform
+retrieval, memory management, and communication with other
+                                                                            at position pi [9]. Replacing Mold can therefore change both
+agents [1]–[3]. Their prompts are snapshots of a long-lived                  e l and V l for every aligned suffix token. If the old and new
+                                                                            K i        i
+execution state: system instructions, retrieved evidence, tool
+                                                                            positions are ωi and ρi , respectively, the known phase can be
+traces, intermediate plans, code state, and prior interactions
+                                                                            corrected analytically:
+accumulate as an episode progresses. Long contexts are there-
+                                                                                                                −1
+fore a routine operating regime for these workloads. Moreover,                       Kicorr,l = R(ρi )R(ωi )         Kiold,l = R(ρi )K
+                                                                                                                                     e old,l .
+                                                                                                                                      i               (3)
+This correction changes the stored phase but does not recon-                                               Stale K                 Stale V
+                         e l under the revised causal history;
+struct the content state K i
+                                                                                                           RoPE-corrected K        Exact state
+values have no analogous position-only correction. Hence                                            (a) GLM-4-9B K                   (d) GLM-4-9B V
+                                                                                         1.00
+token equality and position correction provide an alignment
+mechanism, not a certificate of KV validity.                                             0.75
+   Exact prefix caches remain valid for P because its tokens
+retain the same positions and causal histories [10], [11]. The                           0.50
+aligned suffix S does not satisfy this condition: even an                                           (b) Qwen3-32B K                 (e) Qwen3-32B V
+
+
+
+                                                                     Cosine similarity
+                                                                                         1.00
+unchanged suffix token can encode stale dependencies on
+Mold . Modern serving engines further organize KV rows into                              0.75
+fixed-size token blocks or pages. Paging does not change
+this causal property, but it makes a block the practical unit                            0.50
+of transfer and reconstruction. A token-level recovery policy                                       (c) Llama-70B K                     (f) Llama-70B V
+must therefore map its decisions onto block-aligned execution                            1.00
+without rebuilding the entire long suffix.
+                                                                                         0.75
+C. KV Cache Offloading and Transport
+   Agent execution can pause for seconds or minutes while                                0.50
+                                                                                                0        500          1000     0             500          1000
+waiting for tools, retrieval, or external services. Retaining the
+inactive request’s KV cache on the GPU during this interval                                               Distance from edit (tokens)
+consumes capacity that could serve other requests. A serving
+system may instead checkpoint the per-layer KV blocks in             Fig. 3. KV-state similarity versus suffix distance across three models. Lines
+CPU memory or a remote storage tier and restore them when            are medians and shading is P25–P75 over archived request–layer samples;
+the agent resumes [5], [6].                                          dashed and dotted guides mark exact-state similarity and 0.90, respectively.
+   Restoration lies on the resume time-to-first-token (TTFT)
+path: the serving engine must locate the checkpoint, transfer
+the required blocks over PCIe or the network, reconstruct their       Fig. 3 shows a consistent distance-dependent pattern across
+GPU representation, and combine them with any recomputed           all three models. Stale-value similarity rises from 0.68–0.75
+states before decoding. Low-bit KV formats can reduce payload      near the edit to 0.97–0.99 at the far end of the suffix, indicating
+and transfer cost [14]–[16], but representation efficiency and     that content-state drift is concentrated near the edit and
+semantic validity are distinct. Quantization changes how a         decreases with distance. The transition from unstable to stable
+reusable block is moved; it does not establish whether that        states varies across models, suggesting that a fixed distance
+block remains valid after its causal prefix changes. Middle-edit   threshold may not generalize.
+recovery must therefore first identify which suffix blocks require    Keys also contain position-induced error. RoPE correction
+state reconstruction and then choose an efficient representation   raises key similarity to 0.90–0.94 in the first distance block
+for the remainder.                                                 and 0.994–0.997 in the last, showing that it removes most
+                                                                   position-induced error but cannot recover content changed
+                       III. M OTIVATION                            by the revised causal history. Position correction therefore
+   We next examine middle-edit KV behavior through three removes deterministic key-phase shifts, whereas content-state
+observations. They show that edit-induced state drift is distance- drift remains in both keys and values.
+structured, generation impact extends sparsely beyond the local Takeaway. Middle-edit errors are spatially structured but not
+drift region, and reusable blocks differ in precision tolerance. purely positional: content-state drift decays with suffix distance,
+A. Observation 1: Edit-Induced Value Drift Is Distance- while RoPE correction removes only the key-phase error.
+Structured                                                         B. Observation 2: Attention Reveals Additional Quality-
+   Although a middle edit can affect every suffix state, the Critical States
+resulting content-state drift may decay with distance from the        Distance-structured drift identifies where KV states change
+edit. We therefore examine whether this drift exhibits a spatial most, but deviation alone does not determine their influence
+structure that can support localized repair. For an aligned, on generation. Distant instructions, retrieved facts, or query
+token-identical suffix token i, let di denote its token distance tokens may remain consequential even when they lie beyond
+from the end of Mnew in new-token coordinates:                     the local drift region. We therefore examine whether attention
+                     di = disttok (i, Mnew ).                 (4)    reveals such nonlocal quality-critical states.
+      i,l                               i,l                             To isolate this effect, we fix the drift-based repair set and
+Let Vold  be the checkpoint value and Vfull the value obtained
+                                                                     add an equal budget of blocks selected by attention, distance,
+by an exact prefill of Cnew . Paired old and revised prefills
+                                                                     or random sampling. Table I shows that, across all three
+measure the resulting content-state drift as
+                                                                   models, the highest-attention blocks lie deep in the suffix and
+                  l                i,l     i,l
+                δV,i = 1 − cos Vold    , Vfull   .            (5)    improve exact-continuation rate by 10–14 percentage points
+                              TABLE I                                                                 Measured sensitivity      Uniform sensitivity
+ E QUAL - BUDGET EXACT- STATE INTERVENTION ACROSS THREE MODELS .                            100
+
+
+                                                                        Cumulative output
+                                                                                             75
+                  Top-attn. blocks (%)     Exact continuation (%)
+                                                          Low Top                            50
+
+                                                                          deviation (%)
+                  Attn.                  Drift Near
+    Model         mass      Dist.        only edit Random attn. attn.
+                                                                                             25
+    Qwen3-32B     25.8      83.5          81   82     81    82   95
+    GLM-4-9B      33.0      72.2          86   86     89    85   97                           0
+    Llama-3.3-70B 14.3      75.8          87   87     89    87   97                               0       25             50             75            100
+                                                                                                               Fraction of blocks (%)
+
+                                                                          Fig. 4. Cumulative block-level precision sensitivity across three models.
+over the drift-only set; equally sized near-edit, random, and low-
+attention selections provide no consistent gain. Attention is not
+a causal certificate [18], but these results show that it provides a    Block rounding over D ∪ H yields the repair set R, and the
+complementary signal for sparse nonlocal influence, consistent          remaining suffix blocks form the reuse set F . ④ PatchKV
+with prior observations of persistent attention importance [19]–        exactly recomputes the updated tokens and blocks in R under
+[21].                                                                   the new context. ⑤ It restores blocks in F using their assigned
+Takeaway. State drift localizes where representations change            precisions, with fused dequantization, RoPE correction, and
+most, whereas attention reveals a sparse set of distant states          page placement. ⑥ The recomputed and restored blocks are
+whose stale representations remain consequential to generation.         assembled into the KV cache used for first-token decoding.
+C. Observation 3: Reusable KV Blocks Exhibit Heterogeneous
+                                                                        B. Length-Conditioned Offline Drift Profiling
+Precision Tolerance
+   Semantic reusability does not imply that every KV block              Insight and Approach. After accounting for the deterministic
+is equally robust to reduced numerical precision. We test this          RoPE shift in keys, value-cache deviation measures the content-
+through a controlled blockwise intervention, representing one           state changes caused by the revised causal history. This
+reusable block at lower precision while keeping every other             deviation is strongest near the edit and generally decays
+KV state exact. Fig. 4 shows that, across the three models,             along the retained suffix. PatchKV learns a conservative dirty
+the most sensitive 10% of blocks contribute 30.8%–42.4%                 boundary from exact paired prefills and predicts it from context
+of the cumulative first-token KL divergence. Thus, precision            lengths at resume time, avoiding online comparison of old and
+sensitivity is concentrated in a subset of reusable blocks,             revised KV states.
+motivating block-specific precision selection [14], [15].                  During offline profiling, PatchKV executes exact prefills for
+Takeaway. Reusable KV blocks are not uniformly compressible:            paired old and revised contexts, keeping adjacent revisions
+precision sensitivity is concentrated in a small subset of blocks.      from the same task in one calibration or validation split. For
+                                                                        each aligned suffix block b, it measures the layer-aggregated
+                     IV. PatchKV D ESIGN                                value deviation
+A. Overview
+                                                                                                                            
+                                                                                   V                              i,l     i,l
+                                                                                 δx,b = Aggl∈Ld , i∈b 1 − cos Vold    , Vfull    ,   (6)
+   Building on these observations, we present PatchKV, a uni-
+fied selective-recovery policy that exploits distance-structured where Ld is a small profiled layer set and Agg is a robust
+drift, sparse nonlocal influence, and heterogeneous precision aggregate across layers and tokens. Given a calibrated deviation
+tolerance. PatchKV combines offline KV-drift profiling with threshold τV and stability coverage γ, the oracle boundary for
+online selective KV recovery. Its offline profiler uses paired training pair x is
+exact prefills to fit a dirty-window predictor, calibrate model-                                                           
+specific precision thresholds, and assign a frozen precision                             1       X                         
+                                                                       ⋆                                     V
+tag to each block. A CPU-resident KV checkpoint stores               d x =  min    d :                   1[δ x,b ≤ τV ] ≥ γ   , (7)
+                                                                                  |Bx,≥d |                                 
+clustered suffix blocks together with compact attention and                                     b∈B x,≥d
+
+precision metadata. Upon a dynamic context update, the online Here, B
+                                                                          x,≥d contains the suffix blocks in pair x that are at
+recovery engine identifies the suffix blocks that require exact least d tokens from the edit, the minimum is taken only over
+recomputation and restores the remaining blocks at their nonempty tails, and we set d⋆ = |S| if no candidate distance
+                                                                                                  x
+calibrated precisions.                                           satisfies the stability criterion.
+   The execution follows the numbered path in Fig. 5. ①
+                                                                    The resulting labels train a high-quantile length model [22]
+Context differencing separates the exact prefix, updated span,
+and aligned suffix, and constructs the old-to-new position                      dbx = Qq (d⋆x | ϕ(|P |, |Mnew |, |S|)) ,        (8)
+mapping. ② PatchKV loads the suffix metadata from the
+CPU-resident checkpoint. ③ The frozen length-conditioned where ϕ contains the three log-scaled lengths and their interac-
+model predicts a local dirty window D, while attention- tions. An upper quantile penalizes underprediction, which can
+guided selection identifies nonlocal high-impact tokens H. expose stale state, more heavily than moderate overprediction,
+                                                               1
+                                                                      Middle Context Edit: Cold = P | Mold | S to Cnew = P | Mnew | S
+
+      3                                                                                                                                                                   2
+                                                                                                   PatchKV Recovery                                                             CPU-Offloaded
+                 Offline Profiling                      Context lengths
+                                                                                                                                                                                 Checkpoint
+                 Paired Exact Prefills                                                                                                                                                      Attention
+           old       P          Mold              S                   Design 1                              Design 2                               Design 3                                  Profile
+          new        P          Mnew              S                Dirty-Window                         Attention-Guided                     Quality-Constrained                              Ii(0)
+                                                                                                                                 D union H                                     KV
+                                                                     Prediction                             Selection                             Transport
+            V-Cache Drift vs. Distance
+                                                               D: predicted drift window               H: high-impact tokens                 R: block-rounded D   ∪H          Blocks
+                                                                                                                                                                                          Precision Tags
+                                                                                                                                                                                                pib
+                 large near edit; small in far suffix
+                                                                                                                                R                     F                           Aligned Suffix S
+                 Length Model
+                                                                          4                                          5                                                          old-to-new token map
+             d_hat = f(|P|, |Mnew|, |S|)                                                                                            Restore F              quantized KV
+                                                                              Recompute X and R
+                  Transport Calibration                                                                                        FP16 / K8V8 / K8V4
+                                                                               quality-critical KV blocks                                                                     FP16     K8/V8     K8/V4
+                       (tauL, tauH)                                                                                            dequantize + RoPE(K)
+
+                                                                          6
+                                                                                             Recovered KV Cache for Cnew                                                        First-Token Decode
+
+
+
+                                                                 Fig. 5. Overview of PatchKV components and recovery workflow.
+
+
+
+which only adds recomputation. At resume time, one model          only for execution so that work aligns with paged-KV blocks,
+evaluation yields                                                 as illustrated in Fig. 6.
+                                                                     The planner computes D and H before launching KV
+               D = {i ∈ S : di < min(dbx , |S|)}.             (9) reconstruction, so Eq. (12) fixes the request-level block partition
+New tokens in X remain mandatory because no prior KV exists (R, F ) independently of execution order. The serving engine
+for them. The runtime artifact for this stage is deliberately then recomputes the tokens in X and the blocks in R under
+compact: the fitted length predictor, its drift calibration, and Cnew and restores every block in F from the checkpoint. For
+the execution block size. Attention scoring and stored precision- a shifted suffix key, the restore kernel applies Eq. (3); values
+tag calibration belong to the following stages rather than to are never rotated. Decode starts only after both groups have
+the drift profile.                                                been placed in their destination KV rows.
+                                                                     Stored attention is used as a ranking signal rather than a
+C. Attention-Guided Selective Recomputation                       validity test. Because R = BlockRoundS (D ∪ H) includes
+Insight and Approach. Value deviation indicates whether a every block intersecting D independently of attention ranking,
+cached state has changed, but not how strongly that state can restricting the attention candidates to S \ D preserves the local
+affect generation. A drift-only policy may therefore miss an dirty region in the repair set, while the budget κ bounds the
+important distant instruction or retrieved fact. PatchKV uses additional nonlocal recomputation. Drift and attention therefore
+stored attention to rank candidates outside the local dirty set, retain distinct roles: the former identifies unsafe reuse near
+selects a bounded nonlocal set H, and block-rounds D ∪ H the edit, and the latter prioritizes potentially influential state
+once before reconstruction.                                       beyond that region.
+   During the Cold checkpoint-creation pass, PatchKV aggre- D. Quality-Constrained Quantized Transport
+gates attention mass āi over configured decode query positions,
+heads, and sampled layers, and stores the normalized score        Insight and Approach. Semantic reusability does not imply
+                                                                  uniform tolerance to low-bit reconstruction error. PatchKV
+                       Ii (0) = Norm(āi ).                  (10) therefore calibrates a frozen per-block precision policy from
+                                                                  attention-weighted reconstruction risk and stores reusable
+At resume time, the control plane selects the highest-scoring
+                                                                  blocks in FP16, K8/V8, or K8/V4 accordingly. Only blocks
+fraction outside the local dirty set:
+                                                                  in F enter this transport stage, where each block is restored
+                 H = Topκ {Ii (0) : i ∈ S \ D}.              (11) directly into its destination KV pages using its frozen precision
+                                                                  tag.
+Let B(S) denote the blocks covering S. For any token set             For token i, let A  ei = Ii (0) denote its normalized stored
+A ⊆ S, BlockRoundS (A) returns the blocks in B(S) that attention mass and let eV be the normalized reconstruction
+                                                                                              i
+intersect A. The planner fixes the block-aligned repair set and residual of a candidate low-bit value representation. PatchKV
+its reusable complement:                                          forms
+                                                                           q
+     R = BlockRoundS (D ∪ H),            F = B(S) \ R.       (12)   Zi = A    ei eV ,     rb = α max Zi + (1 − α) meani∈b Zi .
+                                                                                  i
+                                                                                                   i∈b
+This is a semantic partition, not a cost admission rule: every                                                                   (13)
+block in R is recomputed under Cnew , and every block in F is The maximum term protects a block containing a single fragile
+restored from the old cache. Token-aware selection is rounded token, while the mean term captures block-wide risk. Keys
+                                                                                      architecture for all models, while freezing model-specific block
+                                        Aligned suffix S
+                                        distance from edit                            sizes, attention fractions, and transport precision policies on
+      edit
+                B1        B2      B3       B4      B5         B6      B7       B8     disjoint calibration requests before formal evaluation. We
+                                                                                      test HotpotQA-E, 2WikiMQA-E, and TriviaQA-E [26]–[29].
+                Dirty window D             H    high-impact tokens      H             These long-context workloads cover multi-hop, cross-document,
+                                                                                      and open-domain question answering, respectively, and test
+                         R = BlockRound(D       ∪ H), F = B(S) \ R                    whether answer-relevant information survives middle edits amid
+                R         R
+                                  F
+                                           R
+                                                   F          F
+                                                                       R
+                                                                               F      substantial irrelevant context.
+                                K8/V8            K8/V4       FP16             K8/V4
+             selected blocks                                        reusable blocks      2) Hardware Environment: We run all experiments on one
+                 Recompute X and R                            Restore F
+                                                                                      server with 8× NVIDIA A800 GPUs, two Intel Xeon Gold
+                     exact KV under Cnew                dequant. + RoPE + scatter     5320 CPUs, and 503 GiB of host memory. CPU DRAM is the
+                                                                                      only KV offload tier. Measured host-to-device bandwidth is
+                               Recovered KV Cache for Cnew
+                                                                                      20.4–21.0 GiB/s for pageable memory and 23.2–23.3 GiB/s
+                                                                                      for pinned memory.
+                Fig. 6. Token-to-block partitioning in PatchKV.                         3) Baseline Methods: We compare PatchKV with three
+                                                                                      representative recovery strategies:
+
+remain at least 8-bit because key error perturbs attention logits;                      • Prefix Cache denotes the archived full-suffix-recompute
+only values enter the 4-bit tier [14], [15]. Calibration freezes                          reference, which reuses the exact prefix and rebuilds the
+the block policy                                                                          complete revised suffix; it therefore provides an exact-state
+                                                                                         but compute-intensive comparison.
+                   
+                    FP16,      rb ≥ τH ,                                               • Direct KV Reuse recomputes the mandatory tokens in
+                   
+                   K8/V8, τ ≤ r < τ ,
+                                 L     b     H                                            the revised span and any block-boundary tokens required
+            πb =                                             (14)
+                   
+                    K8/V4,     rb < τ L ∧ G 4 (b),                                       for aligned execution, then fetches all remaining suffix
+                                                                                          KV from CPU DRAM in FP16, exposing both stale-state
+                   
+                     K8/V8, rb < τL ∧ ¬G4 (b).
+                   
+                                                                                          quality loss and uncompressed movement cost.
+Here, α ∈ [0, 1] and τL < τH . For blocks with rb < τL , G4 (b)                         • CacheBlend starts from the same stale full-context KV,
+is the calibrated low-bit quality test: passing assigns K8/V4,                            uses check-layer value-cache drift to select additional
+while failure assigns K8/V8.                                                              tokens for layer-wise recomputation, and fetches the
+   The thresholds and the low-bit test are selected on calibration                        remaining KV in FP16 [13].
+data using measured payload and kernel cost under the
+configured quality target, then frozen during checkpoint offload.                        4) Implementation Details: We implement PatchKV as a
+At recovery time, PatchKV reads the stored πb tags and                                Python research prototype using PyTorch 2.7 [30], Hugging
+transports every block in F using its assigned representation.                        Face Transformers 5.3 [31], and Accelerate 1.14 [32]. The
+   During offload, a fused quantize_gather kernel gathers                             prototype captures per-layer KV tensors and attention statistics,
+block rows, computes scales, and packs the calibrated K8/V4,                          constructs block-aligned recovery plans, applies model-aware
+K8/V8, or FP16 payloads. Blocks with the same representation                          RoPE correction, and restores reusable KV from CPU memory.
+are clustered into contiguous runs, so metadata scales with                           CUDA streams and nonblocking memory copies implement
+block runs rather than tokens and the payload remains transfer-                       asynchronous host-to-device transfer, while CUDA kernels
+friendly. During resume, a fused dequantize_scatter                                   implement quantize-and-gather, INT4 packing, and fused
+kernel reads the payload, dequantizes it, applies RoPE cor-                           dequantize-and-scatter. KV payload construction, attention
+rection to shifted keys, and writes directly into the request’s                       profiling, and quantization execute before resume, during user
+destination KV pages. The old-to-new token map determines                             think time or tool execution.
+each destination offset when source and destination page                                 5) Metrics: We use task F1 as the quality metric and mean
+boundaries differ.                                                                    resume time-to-first-token (TTFT) as the primary latency metric.
+                                  V. E VALUATION                                      Resume TTFT is measured from the start of KV recovery
+                                                                                      execution, after repair-set construction, until the first output
+A. Experiment Setup                                                                   token and includes CPU fetch and dequantization, RoPE
+   1) Models and Datasets: We evaluate three instruction-tuned                        correction, layer-wise recomputation, and first-token decoding;
+models: Qwen3-32B, GLM-4-9B, and Llama-3.3-70B [23]–                                  repair-set construction and work completed before recovery
+[25]. They range in size from 9B to 70B parameters and differ in                      execution are reported separately. We additionally report recom-
+layer count, KV-head configuration, and RoPE implementation,                          putation ratio, CPU payload, fetch-and-dequantization latency,
+covering the model-dependent variation in KV drift, attention                         attention-profiling overhead, precision-planning overhead, and
+concentration, quantization sensitivity, and the cost ratio be-                       quantize-and-store overhead. All results come from real model
+tween recomputation and CPU fetch. We use the same PatchKV                            executions and measurements using local CPU DRAM offload.
+                                                    PatchKV (ours)      CacheBlend        Direct KV Reuse             Prefix Cache
+
+                                Qwen3-32B                                        GLM-4-9B                                            Llama-3.3-70B
+                                                                                                                 75
+
+    HotpotQA-E       40
+                                                               50                                Bet
+                                                                                                    ter          50
+
+   Official F1 (%)
+                                             Bet                                                                                                     Bet
+                                                   ter                                                           25                                     ter
+                     20                                        40
+                          0.5       1                    2            0.2                0.4              0.6            0.4                 0.8         1.2
+
+
+
+   2WikiMQA-E
+                     40                                        35                                                50
+                                                               30
+   Official F1 (%)
+                                             Bet                                                 Bet             25                                  Bet
+                     20                            ter                                              ter                                                 ter
+                                                               25
+
+                          0.5       1                    2            0.2                0.4              0.6            0.4                 0.8         1.2
+                  100                                         100                                               100
+
+ TriviaQA-E
+                     50                                                                                          50
+
+Official F1 (%)
+                                             Bet               50                                Bet                                                 Bet
+                                                   ter                                              ter                                                 ter
+                      0                                                                                           0
+                          0.5       1                    2            0.2                0.4              0.6            0.4                 0.8         1.2
+
+                                                                     Mean resume TTFT (s, log)
+
+                                 Fig. 7. End-to-end TTFT and F1 score across three models and three long-context QA workloads.
+
+
+
+B. End-to-End Latency and Quality                                                  Relative to Prefix Cache, the main opportunity is avoiding
+    Fig. 7 compares PatchKV with Prefix Cache, Direct KV                           reconstruction of most aligned suffix blocks. Relative to Direct
+Reuse, and CacheBlend over nine model–dataset combinations.                        KV Reuse, the quality recovery comes from repairing locally
+Better operating points have lower resume TTFT and higher                          drifted and nonlocal important state, while the latency reduction
+F1 score.                                                                          comes from lowering the representation cost of the remainder.
+    Across the nine cells, PatchKV is 2.51–3.85× faster than                       CacheBlend already performs selective recomputation, so the
+Prefix Cache (median 3.40×). It matches or improves the Prefix                     remaining difference reflects the combined effect of edit-local
+Cache F1 score on all Qwen3-32B tasks and on two Llama-3.3-                        repair and quantized restoration. The variation across models
+70B tasks. On GLM-4-9B, two quality gaps remain within 0.67                        and datasets also supports model-specific offline calibration
+points, while the HotpotQA-E score improves by 9.0 points.                         rather than one recovery ratio or precision policy shared by
+Across the three Llama-3.3-70B tasks, PatchKV recovers 51.5–                       every deployment.
+85.1 F1 score points over Direct KV Reuse while further
+reducing mean resume TTFT by 5.2%–14.5%, demonstrating C. Design Ablation
+that selective repair avoids both stale-state quality loss and
+full-precision KV movement. In several cells, PatchKV also          The following ablations isolate the three decisions in
+exceeds Prefix Cache in F1 score. Context compression is         PatchKV:   length-conditioned offline drift profiling, attention-
+lossy: Prefix Cache rebuilds suffix states under the summarized  guided  selective recomputation, and quality-constrained quan-
+context, whereas PatchKV retains stable KV states formed         tized transport.
+under the richer pre-compression history. Reusing these states      1) Length-Conditioned Offline Drift Profiling: We fix at-
+can preserve evidence omitted by the summary and thereby         tention selection, block size, and transport, and vary only the
+improve answer quality.                                          edit-local dirty-window length.
+    PatchKV is also 1.26–2.06× faster than CacheBlend; its F1       As shown in Table II, the profiler-selected dirty window has
+score is higher in three cells, tied in three, and at most 1.36 mean F1 scores that are 2.0, 1.0, and 2.0 points higher on
+points lower in the remaining cells. Against Direct KV Reuse, HotpotQA-E, 2WikiMQA-E, and TriviaQA-E, at incremental
+it improves F1 score by 6.85–88.99 points and lowers TTFT in TTFT costs of 24.1, 35.1, and 5.4 ms. Expanding the recom-
+eight cells by reducing the transferred payload through lower- putation range from 64 to 1,024 tokens provides no consistent
+precision block representations. Semantic repair and transport mean F1 improvement and adds 380.9–503.8 ms of TTFT
+reduction must therefore be optimized jointly.                   across the three workloads. These mean results identify the
+    The comparisons separate the sources of the end-to-end gain. selected window as a compact latency–quality operating point,
+                                                                      w/o attention         PatchKV (ours)
+
+                                   HotpotQA-E                                         2WikiMQA-E                                                               TriviaQA-E
+
+                 52.5
+
+
+  F1 Score (%)
+                                                                 45                                                                      94
+                 50.0
+                                                                                                                                         93
+                 47.5                                            40
+                                                                                                                                         92
+                 45.0
+
+                 1400
+
+                                                              1200
+
+TTFT (ms)
+                 1200                                                                                                                  1000
+
+                                                              1000
+                 1000                                                                                                                   800
+
+                                                                800
+                        64   128      256       512     1k             64       128      256                       512       1k                 64       128      256       512     1k
+                                                                            Edit Length (tokens)
+
+                                                 Fig. 8. Attention-guided selective recomputation ablation on Qwen3-32B.
+
+
+
+while the paired F1 intervals for all nontrivial comparisons                                                          TABLE II
+include zero.                                                                             E FFECT OF THE SELECTED 64- TOKEN DIRTY WINDOW ON Q WEN 3-32B.
+   2) Attention-Guided Selective Recomputation: To isolate
+                                                                                                                   Dataset             Metric        0 tokens 64 tokens Change
+attention-guided selective recomputation, we compare the dirty
+window alone with the same window augmented by the top-                                                                        F1 score               51.72     53.72    +2.00
+                                                                                                                   HotpotQA-E
+                                                                                                                              TTFT (ms)               618.92    643.01   +24.09
+scoring 1.5% of suffix tokens by attention, followed by block                                                                  F1 score               45.10     46.10    +1.00
+                                                                                                                   2WikiMQA-E
+rounding, across five edit lengths.                                                                                           TTFT (ms)               621.30    656.37   +35.07
+                                                                                                                               F1 score               92.67     94.67    +2.00
+   Fig. 8 shows that attention-guided repair improves mean                                                         TriviaQA-E
+                                                                                                                              TTFT (ms)               587.62    593.06   +5.44
+F1 score in every evaluated edit condition, with gains of 1.0–
+8.86 points (3.48 on average). The actual recomputation ratio
+increases by 0.29–0.60 percentage points, while mean TTFT                                                                 FP16          INT8           INT4        PatchKV (ours)
+increases by 5.3 ms on average. Paired bootstrap intervals [33]
+are nonnegative in most settings and strictly positive in several,
+                                                                                                                         HotpotQA-E                  2WikiMQA-E             TriviaQA-E
+supporting the positive mean trend. The dirty window repairs
+
+
+
+                                                                                             F1 change vs. FP16
+                                                                                                                   0
+locally unstable state, while attention selection recovers sparse
+distant state that remains consequential to generation.
+   3) Quality-Constrained Quantized Transport: We hold the                                                        −1
+repair set fixed and vary only the KV representation; all four
+methods use the same fused RoPE-remap kernel, pinned host
+                                                                                                                             90       100          90      100             90        100
+payload, and nonblocking transfer path.
+                                                                                                                                  Resume TTFT (% of FP16; lower is better)
+   Relative to FP16, PatchKV reduces mean resume TTFT by
+15.0% with a 0.35-point F1 score reduction. It is 5.6% faster
+than INT8 while its F1 score remains within 0.05 points of                               Fig. 9. Quantized-transport ablation on Llama-3.3-70B. TTFT is normalized
+INT8. INT4 is 3.5–3.7% faster than PatchKV but loses 1.15 F1                             to FP16, and F1 score is shown as the difference from FP16.
+score points. No uniform precision therefore provides both the
+observed quality of INT8 and the latency of the mixed policy
+across all three workloads.                                                             increase TTFT to 1,107.5 ms without monotonic quality gains.
+                                                                                        No evaluated attention fraction stays within the predefined
+D. Sensitivity Analysis                                                                 0.25-point quality tolerance of the best setting on every dataset.
+   We vary the actual recomputation ratio after block rounding                          Calibration therefore selects 1.5% by the predefined minimax
+and the KV block size used for selection and recovery.                                  rule, which first minimizes the worst per-dataset quality gap
+   Fig. 10(a) reports the repair set after dirty-window union                           and then minimizes mean TTFT.
+and block expansion. Raising the attention fraction from 0 to                              A 32-token block size achieves the highest mean F1 score on
+1.5% increases the actual ratio from 8.78% to 9.26% and F1                              HotpotQA-E and 2WikiMQA-E and, among quality-equivalent
+score from 60.47 to 64.32, at 905.4 ms TTFT. A 2% fraction                              TriviaQA-E points, the lowest TTFT (Fig. 10(b)–(d)). A 128-
+reaches the same F1 score but costs 921.4 ms; larger ratios                             token block size is 12.7–13.5 ms faster on the first two tasks
+                                           QA F1 (left axis)         Mean TTFT (right axis)           Selected/default setting
+
+              (a) Recompute ratio                       (b) HotpotQA-E                       (c) 2WikiMQA-E                            (d) TriviaQA-E
+                                    1100                                                                           1000
+         64                                                default           975                 default                                                    850
+                 selected
+
+                                                                                                                                                                  TTFT (ms)
+                                             52
+ QA F1
+                                                                                   47                                      95
+                                    1000                                     950
+         62                                                                                                        950                    default
+                                             50                                                                                                             800
+                                                                             925   46
+                                    900                                                                                    90
+                  10       12                     16     32 64 128 256                  16     32 64 128 256                     16     32 64 128 256
+              Recomputed KV (%)                        Block size (tokens)                   Block size (tokens)                      Block size (tokens)
+
+                                                            Fig. 10. Sensitivity analysis on Qwen3-32B.
+
+
+
+but has mean F1 scores that are 4.89 and 1.27 points lower. On                     B. KV Cache Compression and Offloading
+an independent request set, 32-token blocks also have mean F1                         KV offloading and disaggregated inference move inactive
+scores that are 1.22–2.19 points higher than those of 64-token                     or phase-separated state away from scarce accelerator memory.
+blocks while reducing TTFT by 22.4–38.2 ms. We therefore                           FlexGen offloads model and runtime state across GPU, CPU,
+use 32-token blocks by default.                                                    and storage, while Mooncake organizes serving around a
+E. Overhead Analysis                                                               disaggregated KV-cache tier [5], [6]. DistServe and Splitwise
+   Attention profiling. On Qwen3-32B with 10k-token con-                           separate prefill and decode resources to improve serving good-
+texts, collecting attention statistics takes 122.9–125.2 ms across                 put [34], [35]. Complementary work reduces the representation
+the three workloads. Token-to-block aggregation adds 1.36–                         cost of KV state: CacheGen compresses KV tensors for
+4.74 ms, and constructing the repair set adds 2.62–3.30 ms. The                    streaming, and KIVI and KVQuant develop low-bit KV formats
+attention-forward and aggregation path accounts for 3.47–3.58%                     for efficient long-context inference [14]–[16]. These systems
+of the original prefill time. Statistics are collected before offload,             reduce residency or encoding cost without testing whether a
+leaving only about 3 ms of resume-time set construction.                           suffix remains semantically valid after its causal prefix changes.
+   Quantization and restoration. In a five-repeat Qwen3-32B                        PatchKV fixes the repair set for the revised context before
+CPU DRAM microbenchmark with an 8k-token KV checkpoint,                            applying mixed precision to the reusable complement.
+FP16, INT8, INT4, and PatchKV require 2,007.8, 1,023.4,
+                                                                       C. Attention-Guided KV Selection
+523.4, and 799.4 MiB of CPU memory, respectively. Their
+measured fetch-and-dequantization times are 344.4, 183.6,                 Several methods exploit nonuniform token importance to
+107.2, and 158.0 ms. Thus, PatchKV reduces payload by reduce KV-cache capacity. H2 O retains attention heavy hitters,
+21.9% and restoration time by 13.9% relative to INT8, while Scissorhands builds on the persistence of token importance,
+reducing both by 60.2% and 54.1% relative to FP16. Its 4.44- and SnapKV selects prompt positions from an observation
+ms precision-planning step and 336.3-ms quantize-and-store window before generation [19]–[21]. Their primary objective is
+step occur during offload and are outside resume TTFT.                 cache eviction or compression within a single causal execution.
+                                                                       PatchKV instead recovers state across two context versions,
+                       VI. R ELATED W ORK
+                                                                       where attention alone cannot reveal which unchanged suffix
+A. Prompt and KV Cache Reuse                                           states have drifted because of an earlier edit. It uses attention
+   Modern LLM serving systems reuse previously computed KV after drift-based localization to select distant blocks whose exact
+state to reduce prefill cost. vLLM’s PagedAttention improves reconstruction can affect generation, keeping state invalidity
+KV-memory utilization through paging, while SGLang’s radix separate from downstream importance.
+cache shares common prompt prefixes across requests [10],
+[11]. SGLang’s exact prefix reuse terminates at the first token                              VII. C ONCLUSION
+mismatch; after a middle edit, the retained suffix must be                Middle edits can preserve suffix token IDs while changing
+recomputed. Prompt Cache instead exposes reusable prompt their causal states and RoPE positions. PatchKV addresses this
+modules, but assumes that module boundaries and composition mismatch by predicting an edit-local dirty window from offline
+are declared in advance [12]. CacheBlend composes cached drift profiles, augmenting it with sparse attention-selected
+knowledge chunks for RAG and repairs missing cross-chunk nonlocal blocks, and rounding their union to the serving
+dependencies by distributing partial recomputation across the engine’s KV-block boundaries. It exactly recomputes this repair
+reused chunks [13]. PatchKV targets a different reuse pattern: set while restoring the remaining aligned suffix at calibrated
+two adjacent versions of a long-lived context share an aligned per-block precision through a fused path for dequantization,
+textual suffix whose cached state is no longer exact. It exploits RoPE correction, and page placement. Across the evaluated
+the spatial structure of edit-induced drift to localize repair, then workloads, the prototype achieves up to a 3.85× TTFT speedup
+adds sparse nonlocal blocks whose state remains important to over Prefix Cache and matches or exceeds CacheBlend’s F1
+generation.                                                            score in six of nine settings.
+                              R EFERENCES                                          [20] Z. Liu, A. Desai, F. Liao, W. Wang, V. Xie, Z. Xu, A. Kyrillidis, and
+                                                                                        A. Shrivastava, “Scissorhands: Exploiting the persistence of importance
+ [1] T. Schick, J. Dwivedi-Yu, R. Dessi, R. Raileanu, M. Lomeli, E. Hambro,             hypothesis for LLM KV cache compression at test time,” in Advances
+     L. Zettlemoyer, N. Cancedda, and T. Scialom, “Toolformer: Language                 in Neural Information Processing Systems, 2023.
+     models can teach themselves to use tools,” in Advances in Neural              [21] Y. Li, Y. Huang, B. Yang, B. Venkitesh, A. F. Locatelli, H. Ye, T. Cai,
+     Information Processing Systems, 2023.                                              P. Lewis, and D. Chen, “SnapKV: LLM knows what you are looking
+ [2] S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao,              for before generation,” in Advances in Neural Information Processing
+     “ReAct: Synergizing reasoning and acting in language models,” in                   Systems, 2024.
+     International Conference on Learning Representations, 2023.                   [22] R. Koenker and G. Bassett, Jr., “Regression quantiles,” Econometrica,
+ [3] Q. Wu, G. Bansal, J. Zhang, Y. Wu, B. Li, E. Zhu, L. Jiang, X. Zhang,              vol. 46, no. 1, pp. 33–50, 1978.
+     S. Zhang, J. Liu, A. H. Awadallah, R. W. White, D. Burger, and                [23] A. Yang, A. Li, B. Yang et al., “Qwen3 technical report,” arXiv preprint
+     C. Wang, “AutoGen: Enabling next-gen LLM applications via multi-agent              arXiv:2505.09388, 2025.
+     conversation,” arXiv preprint arXiv:2308.08155, 2023.                         [24] Team GLM et al., “ChatGLM: A family of large language models from
+                                                                                        GLM-130B to GLM-4 all tools,” arXiv preprint arXiv:2406.12793, 2024.
+ [4] P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal,
+                                                                                   [25] A. Grattafiori et al., “The Llama 3 herd of models,” arXiv preprint
+     H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel, S. Riedel, and D. Kiela,
+                                                                                        arXiv:2407.21783, 2024.
+     “Retrieval-augmented generation for knowledge-intensive NLP tasks,” in
+                                                                                   [26] Y. Bai, X. Lv, J. Zhang et al., “LongBench: A bilingual, multitask
+     Advances in Neural Information Processing Systems, 2020.
+                                                                                        benchmark for long context understanding,” in Proceedings of the 62nd
+ [5] Y. Sheng, L. Zheng, B. Yuan, Z. Li, M. Ryabinin, B. Chen, P. Liang,
+                                                                                        Annual Meeting of the Association for Computational Linguistics, 2024,
+     C. Re, I. Stoica, and C. Zhang, “FlexGen: High-throughput generative
+                                                                                        pp. 3119–3137.
+     inference of large language models with a single GPU,” in Proceedings
+                                                                                   [27] Z. Yang, P. Qi, S. Zhang, Y. Bengio, W. W. Cohen, R. Salakhutdinov, and
+     of the 40th International Conference on Machine Learning, 2023.
+                                                                                        C. D. Manning, “HotpotQA: A dataset for diverse, explainable multi-hop
+ [6] R. Qin et al., “Mooncake: A KVCache-centric disaggregated architecture             question answering,” in Proceedings of the 2018 Conference on Empirical
+     for LLM serving,” arXiv preprint arXiv:2407.00079, 2024.                           Methods in Natural Language Processing, 2018, pp. 2369–2380.
+ [7] H. Jiang, Q. Wu, C.-Y. Lin, Y. Yang, and L. Qiu, “LLMLingua:                  [28] X. Ho, A.-K. D. Nguyen, S. Sugawara, and A. Aizawa, “Constructing a
+     Compressing prompts for accelerated inference of large language models,”           multi-hop QA dataset for comprehensive evaluation of reasoning steps,”
+     in Proceedings of the 2023 Conference on Empirical Methods in Natural              in Proceedings of the 28th International Conference on Computational
+     Language Processing, 2023.                                                         Linguistics, 2020, pp. 6609–6625.
+ [8] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez,       [29] M. Joshi, E. Choi, D. Weld, and L. Zettlemoyer, “TriviaQA: A large
+     L. Kaiser, and I. Polosukhin, “Attention is all you need,” in Advances in          scale distantly supervised challenge dataset for reading comprehension,”
+     Neural Information Processing Systems, 2017.                                       in Proceedings of the 55th Annual Meeting of the Association for
+ [9] J. Su, Y. Lu, S. Pan, B. Wen, and Y. Liu, “RoFormer: Enhanced trans-               Computational Linguistics, 2017, pp. 1601–1611.
+     former with rotary position embedding,” arXiv preprint arXiv:2104.09864,      [30] A. Paszke, S. Gross, F. Massa, A. Lerer, J. Bradbury, G. Chanan,
+     2021.                                                                              T. Killeen, Z. Lin, N. Gimelshein, L. Antiga, A. Desmaison, A. Köpf,
+[10] W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. E.                     E. Yang, Z. DeVito, M. Raison, A. Tejani, S. Chilamkurthy, B. Steiner,
+     Gonzalez, H. Zhang, and I. Stoica, “Efficient memory management                    L. Fang, J. Bai, and S. Chintala, “PyTorch: An imperative style, high-
+     for large language model serving with PagedAttention,” in Proceedings              performance deep learning library,” in Advances in Neural Information
+     of the 29th ACM Symposium on Operating Systems Principles, 2023.                   Processing Systems, 2019.
+[11] L. Zheng, L. Yin, Z. Xie, C. Sun, J. Huang, C. H. Yu, S. Cao,                 [31] T. Wolf, L. Debut, V. Sanh, J. Chaumond, C. Delangue, A. Moi, P. Cistac,
+     C. Kozyrakis, I. Stoica, J. E. Gonzalez, C. Barrett, and Y. Sheng,                 T. Rault, R. Louf, M. Funtowicz, J. Davison, S. Shleifer, P. von Platen,
+     “SGLang: Efficient execution of structured language model programs,”               C. Ma, Y. Jernite, J. Plu, C. Xu, T. L. Scao, S. Gugger, M. Drame,
+     in Advances in Neural Information Processing Systems, 2024.                        Q. Lhoest, and A. Rush, “Transformers: State-of-the-art natural language
+[12] I. Gim, G. Chen, S.-s. Lee, N. Sarda, A. Khandelwal, and L. Zhong,                 processing,” in Proceedings of the 2020 Conference on Empirical Methods
+     “Prompt Cache: Modular attention reuse for low-latency inference,” in              in Natural Language Processing: System Demonstrations, 2020, pp. 38–
+     Proceedings of Machine Learning and Systems, vol. 6, 2024, pp. 325–338.            45.
+[13] J. Yao, H. Li, Y. Liu, S. Ray, Y. Cheng, Q. Zhang, K. Du, S. Lu, and          [32] Hugging Face, “Accelerate documentation,” https://huggingface.co/docs/
+     J. Jiang, “CacheBlend: Fast large language model serving for RAG                   accelerate/index, 2026, accessed: 2026-07-26.
+     with cached knowledge fusion,” in Proceedings of the 20th European            [33] B. Efron and R. J. Tibshirani, An Introduction to the Bootstrap. Chapman
+     Conference on Computer Systems, 2025.                                              and Hall/CRC, 1993.
+[14] Z. Liu, J. Yuan, H. Jin, S. Zhong, Z. Xu, V. Braverman, B. Chen, and          [34] Y. Zhong, S. Liu, J. Chen, J. Hu, Y. Zhu, X. Liu, X. Jin, and H. Zhang,
+     X. Hu, “KIVI: A tuning-free asymmetric 2bit quantization for KV cache,”            “DistServe: Disaggregating prefill and decoding for goodput-optimized
+     in Proceedings of the 41st International Conference on Machine Learning,           large language model serving,” in 18th USENIX Symposium on Operating
+     2024.                                                                              Systems Design and Implementation, 2024.
+[15] C. Hooper, S. Kim, H. Mohammadzadeh, M. W. Mahoney, Y. S. Shao,               [35] P. Patel, E. Choukse, C. Zhang, A. Shah, I. Goiri, S. Maleki, and
+     K. Keutzer, and A. Gholami, “KVQuant: Towards 10 million context                   R. Bianchini, “Splitwise: Efficient generative LLM inference using phase
+     length LLM inference with KV cache quantization,” in Advances in                   splitting,” in Proceedings of the 51st Annual International Symposium
+     Neural Information Processing Systems, 2024.                                       on Computer Architecture, 2024.
+[16] Y. Liu, H. Li, Y. Cheng, S. Ray, Y. Huang, Q. Zhang, K. Du, J. Yao,
+     S. Lu, G. Ananthanarayanan, M. Maire, H. Hoffmann, A. Holtzman,
+     and J. Jiang, “CacheGen: KV cache compression and streaming for fast
+     large language model serving,” in Proceedings of the ACM SIGCOMM
+     Conference, 2024.
+[17] G.-I. Yu, J. S. Jeong, G.-W. Kim, S. Kim, and B.-G. Chun, “Orca: A dis-
+     tributed serving system for transformer-based generative models,” in 16th
+     USENIX Symposium on Operating Systems Design and Implementation,
+     2022.
+[18] S. Jain and B. C. Wallace, “Attention is not explanation,” in Proceedings
+     of the 2019 Conference of the North American Chapter of the Association
+     for Computational Linguistics: Human Language Technologies, 2019,
+     pp. 3543–3556.
+[19] Z. Zhang, Y. Sheng, T. Zhou, T. Chen, L. Zheng, R. Cai, Z. Song, Y. Tian,
+     C. Re, C. Barrett, Z. Wang, and B. Chen, “H2O: Heavy-hitter oracle for
+     efficient generative inference of large language models,” in Advances in
+     Neural Information Processing Systems, 2023.
+

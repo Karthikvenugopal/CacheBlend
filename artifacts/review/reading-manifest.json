@@ -1,0 +1,86 @@
+{
+  "2609.17983-source-files.txt": {
+    "bytes": 169,
+    "sha256": "4c0140957ce65d453fd8297076dfd92a67f8e0210a9ef1d06f18a151434d6603"
+  },
+  "2609.17983-source.tar": {
+    "bytes": 271923,
+    "sha256": "c7fc4ba3a7e05e8547fd12e5291e521d44544e90b282561752e406497400adfb"
+  },
+  "2609.17983.html": {
+    "bytes": 192308,
+    "sha256": "493905c4082c46d1cc9b08a9f238643d6877611ec6b097f372fb142ffb15b746"
+  },
+  "2609.17983.pdf": {
+    "bytes": 526376,
+    "sha256": "2bcd67e0f08d15794e0f939ec2b059099a55a5dc545154864b60c6f1533c4345"
+  },
+  "2609.17983.txt": {
+    "bytes": 33431,
+    "sha256": "9720d5818bd0a43582b5e35387ad1e8e7511f4b34719c6632dc4c60b16f118ec"
+  },
+  "2609.26219-source-files.txt": {
+    "bytes": 561,
+    "sha256": "17c206a776bea0a821d65c81fb009dd73400f6ac6706117cd4f9b9302f1ec1af"
+  },
+  "2609.26219-source.tar": {
+    "bytes": 1623088,
+    "sha256": "72a2a7b661908a5580dc250b1574f4fb5142681f9ea1de67662ead5c0da570a0"
+  },
+  "2609.26219.html": {
+    "bytes": 201350,
+    "sha256": "d51070917b63883155519dd0271c4d28a82511bb10123a2c8bc89aaeb030b98b"
+  },
+  "2609.26219.pdf": {
+    "bytes": 1889216,
+    "sha256": "6f72ac5a01bf8f96318c62d684137a24af700bb03acc55a114048b143f98c6f0"
+  },
+  "2609.26219.txt": {
+    "bytes": 41278,
+    "sha256": "bffd467b95fbaa984d569c23cc989a1173b2d3c7f71514665536311950bd4357"
+  },
+  "contiguity-page6.png": {
+    "bytes": 404004,
+    "sha256": "544fd07c7948ec6b2e374240dcae04a9c704bcb4b59594e6cb29e8a9c633b0a7"
+  },
+  "contiguity-pdf.txt": {
+    "bytes": 54306,
+    "sha256": "6055ed8e9d6530fbdf4277612e6a3d2897bc744b03ea4583fa6a7e8c40423c94"
+  },
+  "foundation-before.json": {
+    "bytes": 861,
+    "sha256": "a738ca11ad795f14ecf961578a49fbd8495a2b562f56c9419e11510cdef48e7a"
+  },
+  "foundation-preserved.json": {
+    "bytes": 917,
+    "sha256": "283973f5a265e60af9b17e097bdb62c22321c52f80dbfd5d4205e66993f238df"
+  },
+  "patchkv-page6.png": {
+    "bytes": 580028,
+    "sha256": "2b8f67f6edb463aaa6b80e28758972d766b329dbf2fdb497abc412c89bbad0a5"
+  },
+  "patchkv-pdf.txt": {
+    "bytes": 81260,
+    "sha256": "fdb54e3a41fa1bacb7c485a76916f6f14694fd02c8336efe1e2a8962421c1856"
+  },
+  "source-inspection.json": {
+    "bytes": 439,
+    "sha256": "c02ac0d89fc0e3ee63e8fb0ec2a3b614886f318489644bf3b6b189cfb3968e8d"
+  },
+  "sur-executor.py": {
+    "bytes": 9602,
+    "sha256": "f13ace2cbaf2e81216fe2a4f382a9496bbb85bbf0facf0f2cda1012da0536c88"
+  },
+  "sur-selection.py": {
+    "bytes": 18885,
+    "sha256": "38fb65af7d0c9ef1284e626061b2d813296effadbdc074c3a629011b28064206"
+  },
+  "thirdparty-baseline.md": {
+    "bytes": 3329,
+    "sha256": "c23bb3c45588499cd1e907105bda3dd9e036cd5c0885bb6e26e2bf594657a16c"
+  },
+  "thirdparty-kvx.py": {
+    "bytes": 51921,
+    "sha256": "e0a12f950767879278da10c3cce54d97722cde8d88843d743ae4b3351a586139"
+  }
+}
