@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-11-10T02:30:50.790497+00:00",
+  "scope": "User explicitly approved one pinned approximately 4.08 GB download and two fixed six-case MPS BF16 stages. Preserve every outcome, unknown author model revision, thinking-mode audit, 64-token truncations inconclusive. Stop afterward.",
+  "prepared_files": {
+    "run.py": "c71c1492ecf4f48fbcd844cfa2c56bc65d883afc30045a8af115987d375355b4",
+    "download.py": "c0f689369b06cb74606188851bba55cead546fe88e631ca9302f56aa89d32061",
+    "cases.json": "408c7a14f225ea357758c867d768931b9bee55b69c04141f07eadb3905b60fca",
+    "protocol.md": "6193770f3d6018b6a06131d7f1892a4b776fe59c7a8dd4c4b2cd2d109ee5d37a"
+  },
+  "author_model_revision": "unknown"
+}

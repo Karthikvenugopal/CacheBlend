@@ -1,0 +1,52 @@
+{
+  "enable_thinking": false,
+  "all_frozen_renderings_match": true,
+  "template_ends_with_empty_think_block": true,
+  "checkpoint_default_generation": {
+    "bos_token_id": 151643,
+    "do_sample": true,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151643,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95,
+    "transformers_version": "4.51.0"
+  },
+  "effective_generation": "Explicit argmax, no sampling, native EOS [151645,151643], 64 new tokens; cutoff means inconclusive",
+  "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+  "cases": [
+    {
+      "id": "retail_refund",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    },
+    {
+      "id": "airline_cancel",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    },
+    {
+      "id": "bank_withdraw",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    },
+    {
+      "id": "doc_access",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    },
+    {
+      "id": "customs_route",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    },
+    {
+      "id": "oncall_route",
+      "all_three_renderings_match": true,
+      "assistant_suffix": "\n<think>\n\n</think>\n\n"
+    }
+  ]
+}

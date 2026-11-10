@@ -1,0 +1,60 @@
+{
+  "prepared_utc": "2026-11-10T02:28:37.676549+00:00",
+  "status": "awaiting explicit download and pretrained execution authorization",
+  "candidate_model": "Qwen/Qwen3-1.7B",
+  "candidate_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "author_model_revision": "unreported in inspected release; not verified",
+  "source_revision": "e9085eafcc6c83e60c548de69060c4bd5b210c96",
+  "files": {
+    "run.py": "c71c1492ecf4f48fbcd844cfa2c56bc65d883afc30045a8af115987d375355b4",
+    "download.py": "c0f689369b06cb74606188851bba55cead546fe88e631ca9302f56aa89d32061",
+    "cases.json": "408c7a14f225ea357758c867d768931b9bee55b69c04141f07eadb3905b60fca",
+    "protocol.md": "6193770f3d6018b6a06131d7f1892a4b776fe59c7a8dd4c4b2cd2d109ee5d37a"
+  },
+  "cases": [
+    "retail_refund",
+    "airline_cancel",
+    "bank_withdraw",
+    "doc_access",
+    "customs_route",
+    "oncall_route"
+  ],
+  "limits": {
+    "cases": 6,
+    "published_restricted_comparisons": 18,
+    "original_full_control_readouts": 6,
+    "generated_sequences_including_original_controls": 18,
+    "new_tokens_per_sequence": 64,
+    "max_emitted_tokens": 1152,
+    "max_prompt_tokens": 2048,
+    "max_download_bytes": 4200000000
+  },
+  "checks": {
+    "all_cases_match_published_pair_selection": true,
+    "syntax_passed": true,
+    "frozen_foundation_preserved": true,
+    "download_not_run": true,
+    "pretrained_inference_not_run": true
+  },
+  "synthetic_preflight": {
+    "cpu_bfloat16": {
+      "passed": true,
+      "native_cached_max_error": 0.0,
+      "cache_ownership": true
+    },
+    "mps_bfloat16_outside_sandbox": {
+      "passed": true,
+      "native_cached_max_error": 0.0,
+      "cache_ownership": true
+    },
+    "scope": "Random two-layer Qwen3 architecture, seed17; no pretrained weights or tokenizer. Not a factual or full-size compatibility result."
+  },
+  "unique_parameters_from_meta_config": 1720574976,
+  "bf16_parameter_bytes": 3441149952,
+  "fp32_parameter_bytes": 6882299904,
+  "expected_download_bytes_approx": 4080000000,
+  "expected_runtime_peak_GiB_estimated": [
+    6,
+    10
+  ]
+}

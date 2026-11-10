@@ -1,0 +1,85 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+{
+  "case": "retail_refund",
+  "scope": "First fixed case only, unchanged MPS BF16/eager/seed17. Numerical controls, no generated answers, no repair experiments.",
+  "length": 331,
+  "edit": {
+    "start": 16,
+    "end": 18,
+    "space_id": 220,
+    "old_padding": 0,
+    "new_padding": 0
+  },
+  "repeat_full": {
+    "max_abs": 0.0,
+    "relative_l2": 0.0,
+    "within_frozen_tolerance": true,
+    "vocabulary_argmax_ids": [
+      82,
+      82
+    ],
+    "vocabulary_argmax_pieces": [
+      "s",
+      "s"
+    ],
+    "restricted_margins": [
+      3.0,
+      3.0
+    ],
+    "restricted_choice_agrees": true
+  },
+  "full_vs_replayed_last": {
+    "max_abs": 0.8125,
+    "relative_l2": 0.03237254545092583,
+    "within_frozen_tolerance": false,
+    "vocabulary_argmax_ids": [
+      82,
+      82
+    ],
+    "vocabulary_argmax_pieces": [
+      "s",
+      "s"
+    ],
+    "restricted_margins": [
+      3.0,
+      2.75
+    ],
+    "restricted_choice_agrees": true
+  },
+  "full_vs_prefix_then_last": {
+    "max_abs": 0.8125,
+    "relative_l2": 0.03237254545092583,
+    "within_frozen_tolerance": false,
+    "vocabulary_argmax_ids": [
+      82,
+      82
+    ],
+    "vocabulary_argmax_pieces": [
+      "s",
+      "s"
+    ],
+    "restricted_margins": [
+      3.0,
+      2.75
+    ],
+    "restricted_choice_agrees": true
+  },
+  "replayed_vs_explicit_mask_positions_and_attention_output": {
+    "max_abs": 0.0,
+    "relative_l2": 0.0,
+    "within_frozen_tolerance": true,
+    "vocabulary_argmax_ids": [
+      82,
+      82
+    ],
+    "vocabulary_argmax_pieces": [
+      "s",
+      "s"
+    ],
+    "restricted_margins": [
+      2.75,
+      2.75
+    ],
+    "restricted_choice_agrees": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "bytes": 4079434577,
+  "files": {
+    "LICENSE": 11343,
+    "config.json": 726,
+    "generation_config.json": 239,
+    "merges.txt": 1671853,
+    "model-00001-of-00002.safetensors": 3441185608,
+    "model-00002-of-00002.safetensors": 622329984,
+    "model.safetensors.index.json": 25605,
+    "tokenizer.json": 11422654,
+    "tokenizer_config.json": 9732,
+    "vocab.json": 2776833
+  }
+}
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  10%|█         | 1/10 [00:00<00:01,  7.23it/s]Fetching 10 files:  20%|██        | 2/10 [00:00<00:01,  7.22it/s]Fetching 10 files:  30%|███       | 3/10 [00:00<00:00,  7.17it/s]Fetching 10 files:  40%|████      | 4/10 [00:00<00:01,  4.56it/s]Fetching 10 files:  50%|█████     | 5/10 [02:24<04:19, 51.97s/it]Fetching 10 files:  60%|██████    | 6/10 [02:51<02:54, 43.55s/it]Fetching 10 files:  70%|███████   | 7/10 [02:52<01:28, 29.41s/it]Fetching 10 files:  80%|████████  | 8/10 [02:53<00:40, 20.38s/it]Fetching 10 files:  90%|█████████ | 9/10 [02:53<00:14, 14.05s/it]Fetching 10 files: 100%|██████████| 10/10 [02:53<00:00,  9.79s/it]Fetching 10 files: 100%|██████████| 10/10 [02:53<00:00, 17.34s/it]

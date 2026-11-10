@@ -1,0 +1,32 @@
+{
+  "status": "not_run",
+  "reason": "Restricted stage failed its pre-scoring numerical gate and did not complete. Frozen generation stage requires successful completion.",
+  "max_new_tokens": 64,
+  "truncation_rule": "Any cutoff answer is inconclusive, not incorrect.",
+  "records": [
+    {
+      "id": "retail_refund",
+      "status": "not_run"
+    },
+    {
+      "id": "airline_cancel",
+      "status": "not_run"
+    },
+    {
+      "id": "bank_withdraw",
+      "status": "not_run"
+    },
+    {
+      "id": "doc_access",
+      "status": "not_run"
+    },
+    {
+      "id": "customs_route",
+      "status": "not_run"
+    },
+    {
+      "id": "oncall_route",
+      "status": "not_run"
+    }
+  ]
+}

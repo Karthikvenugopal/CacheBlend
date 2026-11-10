@@ -1,0 +1,30 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+Traceback (most recent call last):
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/qwen_reproduction/run.py", line 266, in <module>
+    main()
+    ~~~~^^
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/qwen_reproduction/run.py", line 235, in main
+    meta, branches = states(model, tok, case)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/qwen_reproduction/run.py", line 126, in states
+    assert torch.allclose(direct, replay, atol=tolerance, rtol=tolerance), endpoint_error
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.8125
+       16.34 real         4.82 user         2.80 sys
+          1934737408  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               94366  page reclaims
+              130693  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6182  voluntary context switches
+               44507  involuntary context switches
+         63092284894  instructions retired
+         28697984262  cycles elapsed
+          4857382544  peak memory footprint

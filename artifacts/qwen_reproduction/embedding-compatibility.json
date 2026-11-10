@@ -1,0 +1,35 @@
+{
+  "check": "Streaming SHA-256 of exact tensor payloads, no model forward",
+  "tensors": [
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "key": "model.embed_tokens.weight",
+      "dtype": "BF16",
+      "shape": [
+        151936,
+        2048
+      ],
+      "data_offsets": [
+        0,
+        622329856
+      ],
+      "tensor_sha256": "f56b71b6939a944afce2902799810e2acfaefbf0dbcacd8cda1add4eb710f05d"
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "key": "lm_head.weight",
+      "dtype": "BF16",
+      "shape": [
+        151936,
+        2048
+      ],
+      "data_offsets": [
+        0,
+        622329856
+      ],
+      "tensor_sha256": "f56b71b6939a944afce2902799810e2acfaefbf0dbcacd8cda1add4eb710f05d"
+    }
+  ],
+  "byte_identical": true,
+  "inference_cases_evaluated_in_failed_launch": 0
+}

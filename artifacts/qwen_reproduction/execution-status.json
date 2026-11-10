@@ -1,0 +1,66 @@
+{
+  "completed_utc": "2026-11-10T02:42:50.906154+00:00",
+  "status": "stopped at failed numerical gate; no generation",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "author_model_revision": "unknown; reproduction pin not author-confirmed",
+  "download_bytes": 4079434577,
+  "restricted_scoring_reproduction": "not established; no full/field-only comparisons accepted",
+  "generated_answer_failures": "not evaluated; generation not run",
+  "gate_error": {
+    "max_abs": 0.8125,
+    "relative_l2": 0.03237254545092583,
+    "within_frozen_tolerance": false,
+    "vocabulary_argmax_ids": [
+      82,
+      82
+    ],
+    "vocabulary_argmax_pieces": [
+      "s",
+      "s"
+    ],
+    "restricted_margins": [
+      3.0,
+      2.75
+    ],
+    "restricted_choice_agrees": true
+  },
+  "records": [
+    {
+      "id": "retail_refund",
+      "restricted_status": "failed",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    },
+    {
+      "id": "airline_cancel",
+      "restricted_status": "not_run",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    },
+    {
+      "id": "bank_withdraw",
+      "restricted_status": "not_run",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    },
+    {
+      "id": "doc_access",
+      "restricted_status": "not_run",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    },
+    {
+      "id": "customs_route",
+      "restricted_status": "not_run",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    },
+    {
+      "id": "oncall_route",
+      "restricted_status": "not_run",
+      "generation_status": "not_run",
+      "factual_utility": "inconclusive; no generated answer evaluated"
+    }
+  ],
+  "next_action": "none; stop as requested; no repair development, sweeps or cloud jobs"
+}

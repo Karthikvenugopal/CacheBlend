@@ -1,0 +1,61 @@
+{
+  "prepared_utc": "2026-11-10T02:28:37.676549+00:00",
+  "status": "awaiting explicit download and pretrained execution authorization",
+  "candidate_model": "Qwen/Qwen3-1.7B",
+  "candidate_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "author_model_revision": "unreported in inspected release; not verified",
+  "source_revision": "e9085eafcc6c83e60c548de69060c4bd5b210c96",
+  "files": {
+    "run.py": "3237c8b7e9acdb5ddb53fe33dcd01e7bf02bcd1ca8a88626846afa5b898196ff",
+    "download.py": "c0f689369b06cb74606188851bba55cead546fe88e631ca9302f56aa89d32061",
+    "cases.json": "408c7a14f225ea357758c867d768931b9bee55b69c04141f07eadb3905b60fca",
+    "protocol.md": "bf08d7ae0c3f28c9ea3fd7b811a88f7822f0ea518227a1345a8c38313b56b18c"
+  },
+  "cases": [
+    "retail_refund",
+    "airline_cancel",
+    "bank_withdraw",
+    "doc_access",
+    "customs_route",
+    "oncall_route"
+  ],
+  "limits": {
+    "cases": 6,
+    "published_restricted_comparisons": 18,
+    "original_full_control_readouts": 6,
+    "generated_sequences_including_original_controls": 18,
+    "new_tokens_per_sequence": 64,
+    "max_emitted_tokens": 1152,
+    "max_prompt_tokens": 2048,
+    "max_download_bytes": 4200000000
+  },
+  "checks": {
+    "all_cases_match_published_pair_selection": true,
+    "syntax_passed": true,
+    "frozen_foundation_preserved": true,
+    "download_not_run": true,
+    "pretrained_inference_not_run": true
+  },
+  "synthetic_preflight": {
+    "cpu_bfloat16": {
+      "passed": true,
+      "native_cached_max_error": 0.0,
+      "cache_ownership": true
+    },
+    "mps_bfloat16_outside_sandbox": {
+      "passed": true,
+      "native_cached_max_error": 0.0,
+      "cache_ownership": true
+    },
+    "scope": "Random two-layer Qwen3 architecture, seed17; no pretrained weights or tokenizer. Not a factual or full-size compatibility result."
+  },
+  "unique_parameters_from_meta_config": 1720574976,
+  "bf16_parameter_bytes": 3441149952,
+  "fp32_parameter_bytes": 6882299904,
+  "expected_download_bytes_approx": 4080000000,
+  "expected_runtime_peak_GiB_estimated": [
+    6,
+    10
+  ],
+  "compatibility_amendment": "Before any case: alias byte-identical embedding/output parameters to honor config; original preparation/runner and failed launch retained."
+}

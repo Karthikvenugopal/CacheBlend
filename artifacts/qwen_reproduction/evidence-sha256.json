@@ -1,0 +1,18 @@
+{
+  "artifacts/qwen_reproduction/authorization.json": "160e5257f227075249056d69a76d737212fbdf8e28bfd60b3b0cada3e6d23c2c",
+  "artifacts/qwen_reproduction/diagnose_endpoint.py": "0d520d472e3cb234eea90e879b6da7b85de74e2b2fad00ef38224943d5779324",
+  "artifacts/qwen_reproduction/download-console.txt": "0e0e39d74d297a668b36af18a1111eaa9606f1062c8a33e460c73599a7caf053",
+  "artifacts/qwen_reproduction/embedding-compatibility.json": "77d27b168e18e193f07161c575103f850d658470b57917a10dc4812ffde9f263",
+  "artifacts/qwen_reproduction/endpoint-diagnosis-console.txt": "db0ef9fc48c72b042f5da68dfc21b86e9edfcc2d19f569ac8f42c6bf9040ca82",
+  "artifacts/qwen_reproduction/endpoint-diagnosis.json": "8e54dd7af3c0e3425e46e4be748ab55c269d0e5690506840a084e0d3a650c387",
+  "artifacts/qwen_reproduction/execution-status.json": "35e4fa0b9adb62403fca3a55d5b7033673082f0813bde9f2d8474d0f48c53f0e",
+  "artifacts/qwen_reproduction/generation-status.json": "47de150a2478ced3cfb23515063e22f7b58eea09ba03d3915b66d38777988df0",
+  "artifacts/qwen_reproduction/model-manifest.json": "10345bf820b048bd899b8f7c2201c256769fae1d2b3ba1c55a79a3bee1612fc4",
+  "artifacts/qwen_reproduction/prepared-before-tying-fix.json": "4cb756515ba8b3bee591a79be8dcc7080ddb04bc033eca14f09534c55eecfe77",
+  "artifacts/qwen_reproduction/restricted-console.txt": "2aaf572b03cfae11f908ba360a7e8f57a01200225c55e81dfaa71b08e537be4a",
+  "artifacts/qwen_reproduction/restricted-load-failure-console.txt": "c31ce8c7c2da1dab3ae5eddcc1aac6b1ded3b3748fe7346e730117c0bc370153",
+  "artifacts/qwen_reproduction/restricted.json": "c2cf00827631cbcae0d7e53036b342611964eca98065e9b1e90451d1fe0b6d87",
+  "artifacts/qwen_reproduction/run-before-tying-fix.py": "c71c1492ecf4f48fbcd844cfa2c56bc65d883afc30045a8af115987d375355b4",
+  "artifacts/qwen_reproduction/thinking-mode-audit.json": "82ff6f5f7431ece9ac5ec2fce688e02fff2e81665cefc54148860a4842df131c",
+  "artifacts/qwen_reproduction/verification.json": "7e6175ec738a2e97c4a5d668d45f32c1981579b18a772f1f247b00656e43d871"
+}
