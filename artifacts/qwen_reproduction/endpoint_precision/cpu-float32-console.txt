@@ -1,0 +1,67 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+{
+  "configuration": "cpu-float32",
+  "status": "completed",
+  "full_vs_native_incremental": {
+    "max_absolute": 8.463859558105469e-05,
+    "max_relative_elementwise_floor_1e-6": 0.23191489279270172,
+    "relative_linf": 2.066684373858152e-06,
+    "relative_l2": 2.783946683848626e-06,
+    "allclose_atol_rtol": 0.0002,
+    "within_tolerance": true,
+    "exact_equal": false,
+    "top_ids": [
+      82,
+      82
+    ],
+    "top_pieces": [
+      "s",
+      "s"
+    ],
+    "top_agreement": true,
+    "restricted_margins": [
+      3.1071910858154297,
+      3.1072540283203125
+    ],
+    "restricted_choice_agreement": true
+  },
+  "native_incremental_vs_wrapper": {
+    "max_absolute": 0.0,
+    "max_relative_elementwise_floor_1e-6": 0.0,
+    "relative_linf": 0.0,
+    "relative_l2": 0.0,
+    "allclose_atol_rtol": 0.0002,
+    "within_tolerance": true,
+    "exact_equal": true,
+    "top_ids": [
+      82,
+      82
+    ],
+    "top_pieces": [
+      "s",
+      "s"
+    ],
+    "top_agreement": true,
+    "restricted_margins": [
+      3.1072540283203125,
+      3.1072540283203125
+    ],
+    "restricted_choice_agreement": true
+  },
+  "first_layer_with_any_bitwise_output_difference": 0,
+  "first_layer_output_outside_frozen_tolerance": 24,
+  "invariants": {
+    "all_modules_eval": true,
+    "all_observed_forwards_inference_mode": true,
+    "same_ids_no_duplicate_last_token": true,
+    "prefix_length_before": 330,
+    "length_after": 331,
+    "native_cache_returned_directly_and_mutated_in_its_branch": true,
+    "native_full_and_prefix_storage_independent": true,
+    "full_cache_unchanged_after_native_continuation": true,
+    "full_cache_unchanged_after_wrapper": true,
+    "wrapper_storage_independent": true
+  }
+}
+       12.54 real         6.73 user         9.78 sys
+time: sysctl kern.clockrate: Operation not permitted

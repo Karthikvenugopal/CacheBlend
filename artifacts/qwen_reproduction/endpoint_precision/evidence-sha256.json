@@ -1,0 +1,13 @@
+{
+  "artifacts/qwen_reproduction/endpoint_precision/cpu-float32/result.json": "fbc125ffe2580f9e3fa72edbe9de72222aa5bec8d8003b131ed12bfb20443836",
+  "artifacts/qwen_reproduction/endpoint_precision/cpu-float32/tensors.pt": "eebc1b9695b9fa22553199164deea29d70e64bd8e39c8d8dcb8576b5c9c580ed",
+  "artifacts/qwen_reproduction/endpoint_precision/cpu-float32-console.txt": "ab75a9a16fd439a6eb9f062e7fb32a8169cd6ce49ac6026de3868efd56b5d8a9",
+  "artifacts/qwen_reproduction/endpoint_precision/diagnostic-source-sha256.json": "f7ab31ee3873649521adb33662c90fb09e72edf48f54cd06dce060f1509364ca",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-bfloat16/result.json": "c1956278773c0774cb7591f17459bc37f9556bb5585736a26932699df5ca5a37",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-bfloat16/tensors.pt": "cff5d4ec9bbd5e85084de0f9724bedb8d25d9e0c168382eeb7aff80afbebdb7b",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-bfloat16-console.txt": "267aebee1e00c0eeecabfca75c4d9214a2655d8fa4e65e1e7eff2ff7c6b35795",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-float32/result.json": "80af047c816b6a4990e0c47e9ff62dc6aca41aa01daa15b712fb4ac85835e0fd",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-float32/tensors.pt": "9a89843bc10faf683e3a21bd228ab1e6ab78b3fbe8cb53adf468f82a297af379",
+  "artifacts/qwen_reproduction/endpoint_precision/mps-float32-console.txt": "2b1d5c2bfe5fecd40d90396ec210091a2388bf6160c0a45b87bd91884fac7b35",
+  "artifacts/qwen_reproduction/endpoint_precision/summary.json": "5c1922d6e7bde8d2386252824a1a3bd151c85629cd4ec9a67bf7b450b2f7507e"
+}
