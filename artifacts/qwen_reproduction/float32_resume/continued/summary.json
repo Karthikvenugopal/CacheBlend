@@ -1,0 +1,54 @@
+{
+  "completed_utc": "2026-11-10T03:04:02.767605+00:00",
+  "scope": "Six fixed published decision pairs, retrospectively selected; no generalization claim. MPS float32/eager with CPU float32 numerical references.",
+  "authors_model_revision": "unknown",
+  "candidate_model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "published_restricted_agreement": {
+    "matched": 18,
+    "comparisons": 18,
+    "full_correct": 6,
+    "field_only_correct": 0,
+    "erratum_correct": 6
+  },
+  "generated_utility": {
+    "cases": 6,
+    "original_full_correct": 6,
+    "edited_full_clearly_correct": 4,
+    "edited_full_inconclusive": 2,
+    "edited_full_explicitly_wrong": 0,
+    "field_only_explicitly_wrong": 6,
+    "clear_paired_reuse_induced_errors": 4,
+    "clear_paired_errors_with_cpu_logit_tolerance_also_passed": 2,
+    "truncated_sequences": 0,
+    "total_sequences": 18,
+    "total_emitted_tokens_including_EOS": 41,
+    "unexpected_emitted_thinking_markers": 0
+  },
+  "numerical_checks": {
+    "cpu_native_full_cache_passed": 6,
+    "mps_native_full_cache_passed": 6,
+    "mps_checks_repeated_in_generation": 6,
+    "atol": 0.0002,
+    "rtol": 0.0002,
+    "worst_mps_native_max_abs": 0.000186920166015625,
+    "cpu_mps_comparison_failures": [
+      "doc_access",
+      "oncall_route"
+    ],
+    "cpu_mps_top_and_restricted_choices_agree": true
+  },
+  "memory_failure": false,
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.2.0",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.7.0"
+  },
+  "next_action": "Stopped after reproduction. No repair development, headroom experiment or selector proposed.",
+  "peak_process_footprints_bytes": {
+    "cpu-reference-console.txt": 9134824960,
+    "restricted-console.txt": 11035909272,
+    "restricted-completion-console.txt": 11036089496,
+    "generation-console.txt": 10894990536
+  }
+}

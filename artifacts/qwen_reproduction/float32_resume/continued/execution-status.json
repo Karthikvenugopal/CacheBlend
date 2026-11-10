@@ -1,0 +1,6 @@
+{
+  "status": "completed and stopped",
+  "utc": "2026-11-10T03:05:15.885483+00:00",
+  "remaining_inference_jobs": "none from this task; all stage sessions exited",
+  "next_action": "none; report only"
+}

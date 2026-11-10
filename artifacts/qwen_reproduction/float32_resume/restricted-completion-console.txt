@@ -1,0 +1,25 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+restricted retail_refund preserved from parent
+restricted airline_cancel preserved from parent
+restricted bank_withdraw preserved from parent
+restricted doc_access saved
+restricted customs_route saved
+restricted oncall_route saved
+       30.06 real         7.54 user         7.69 sys
+          6763102208  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              947551  page reclaims
+              117370  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               36089  voluntary context switches
+              298697  involuntary context switches
+        112146216576  instructions retired
+         54380072152  cycles elapsed
+         11036089496  peak memory footprint

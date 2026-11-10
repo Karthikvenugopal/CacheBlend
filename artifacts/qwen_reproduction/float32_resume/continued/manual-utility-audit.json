@@ -1,0 +1,144 @@
+{
+  "audited_utc": "2026-11-10T03:04:02.767497+00:00",
+  "rubric": "Manual policy-decision utility, case-insensitive and allowing semantically correct wording. Any 64-token cutoff is inconclusive. Require a clear correct edited full answer and clear incorrect field-only answer for a paired reuse-induced error. Do not equate binary preference with generated utility.",
+  "records": [
+    {
+      "id": "retail_refund",
+      "expected_new_decision": "escalate",
+      "expected_old_decision": "proceed",
+      "original_full": {
+        "text": "refund",
+        "verdict": "correct",
+        "reason": "Correct old-context action; refund is semantically equivalent to proceed with the requested refund in retail."
+      },
+      "edited_full": {
+        "text": "suspended",
+        "verdict": "inconclusive_nonanswer",
+        "reason": "Names the suspended account state instead of giving the required escalation decision."
+      },
+      "field_only": {
+        "text": "refund",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": false,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": true
+    },
+    {
+      "id": "airline_cancel",
+      "expected_new_decision": "deny",
+      "expected_old_decision": "refund",
+      "original_full": {
+        "text": "refund",
+        "verdict": "correct",
+        "reason": "Correct action for the unmodified original context."
+      },
+      "edited_full": {
+        "text": "deny",
+        "verdict": "correct",
+        "reason": "Deny is the required decision for a basic-economy refund request."
+      },
+      "field_only": {
+        "text": "refund",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": true,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": true
+    },
+    {
+      "id": "bank_withdraw",
+      "expected_new_decision": "decline",
+      "expected_old_decision": "approve",
+      "original_full": {
+        "text": "Approve",
+        "verdict": "correct",
+        "reason": "Correct action for the unmodified original context."
+      },
+      "edited_full": {
+        "text": "Decline",
+        "verdict": "correct",
+        "reason": "Decline is correct because 30 USD cannot cover a 500 USD withdrawal."
+      },
+      "field_only": {
+        "text": "Approve",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": true,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": true
+    },
+    {
+      "id": "doc_access",
+      "expected_new_decision": "deny",
+      "expected_old_decision": "grant",
+      "original_full": {
+        "text": "grant",
+        "verdict": "correct",
+        "reason": "Correct action for the unmodified original context."
+      },
+      "edited_full": {
+        "text": "deny",
+        "verdict": "correct",
+        "reason": "Deny is correct for public clearance requesting a top-secret document."
+      },
+      "field_only": {
+        "text": "grant",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": true,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": false
+    },
+    {
+      "id": "customs_route",
+      "expected_new_decision": "require",
+      "expected_old_decision": "skip",
+      "original_full": {
+        "text": "skip",
+        "verdict": "correct",
+        "reason": "Correct action for the unmodified original context."
+      },
+      "edited_full": {
+        "text": "customs",
+        "verdict": "inconclusive_ambiguous",
+        "reason": "Customs names the paperwork topic but does not explicitly decide require versus skip; conservatively exclude from definite recovery/error counts."
+      },
+      "field_only": {
+        "text": "skip",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": false,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": true
+    },
+    {
+      "id": "oncall_route",
+      "expected_new_decision": "page",
+      "expected_old_decision": "queue",
+      "original_full": {
+        "text": "queue",
+        "verdict": "correct",
+        "reason": "Correct action for the unmodified original context."
+      },
+      "edited_full": {
+        "text": "page",
+        "verdict": "correct",
+        "reason": "Page is the required action for a critical incident."
+      },
+      "field_only": {
+        "text": "queue",
+        "verdict": "incorrect",
+        "reason": "Explicitly returns the old-context action, contradicting the edited policy condition."
+      },
+      "clear_reuse_induced_error": true,
+      "truncated": false,
+      "cpu_mps_logit_tolerance_passed": false
+    }
+  ]
+}

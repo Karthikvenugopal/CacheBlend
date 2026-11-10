@@ -1,5 +1,17 @@
 # KV repair after document edits
 
+**Archived; method development stopped.** No further selector development or TinyLlama factual sweeps are planned. The code and all results are preserved in the [archive](archives/kvrepair-2026-11-09/README.md). The attention calculation is validated; the selector is rejected; factual repair efficacy remains inconclusive. This project has not demonstrated a successful repair method.
+
+The [reproduction-target assessment](docs/reproduction-target.md) identifies a small-model published candidate but recommends shelving development under current conditions. No new model was downloaded or experiment implemented. MPS is available outside the execution sandbox, as confirmed by a basic tensor test; historical results remain CPU measurements.
+
+The authorized [six-pair Qwen3-1.7B reproduction](docs/qwen-reproduction-results.md) downloaded the pinned checkpoint but stopped at its first native/cached numerical gate on MPS/BF16. Restricted agreement and generated-answer failures remain unestablished; generation was not run. All six case statuses and the bounded first-case investigation are retained. The author's model revision is unknown. Repair and selector development remain stopped.
+
+The subsequent [three-configuration diagnosis](docs/endpoint-precision-diagnosis.md) found that the native MPS/BF16 path reproduces the discrepancy, while CPU and MPS float32 pass the unchanged float32 tolerance. MPS float32/eager is the recommended local candidate, with CPU float32 as reference. Only the first case was examined; no reproduction or repair experiments were resumed.
+
+The later authorized [six-case float32 continuation](docs/qwen-float32-reproduction.md) is complete: 18/18 published restricted choices matched; unrestricted full answers were clearly correct on four cases and inconclusive on two. Four paired MPS reuse-induced wrong decisions were observed, with two cases additionally flagged for CPU–MPS logit differences. All within-backend full/cache checks passed unchanged tolerance. No selective repair was tested; method development remains stopped.
+
+The following describes the preserved historical work and reproduction commands.
+
 Current status: the two-gate attention-output-change experiment is complete. The calculation passed, but the selector duplicated local repair on all held-out cases. See the [decision](docs/feasibility-assessment.md), [measurements](docs/feasibility-results.md), and [reproduction commands](experiments/feasibility/README.md). The validated original baselines are unchanged. A [bounded diagnostic](docs/selector-diagnosis.md) found correlated signals rather than an implementation fault; no replacement method was implemented.
 
 The subsequent [bounded oracle prerequisite screen](docs/oracle-bound-diagnostic.md) retained all 12 candidates and found no full-correct/reuse-wrong case. Oracle enumeration stopped at that gate; factual repair headroom remains unestablished. The selector stays rejected and the validated attention calculation is preserved.

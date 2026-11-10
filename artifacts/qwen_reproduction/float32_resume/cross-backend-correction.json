@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-10T03:01:11.961989+00:00",
+  "reason": "The requested full/cache validation is within each backend. Retain cross-CPU tolerance failures explicitly as reference differences, without asserting they pass. Keep native MPS full/cache gate unchanged, and still stop on cross-CPU top-token or restricted-choice disagreement. No prompts, weights, positions, scores, generation settings, or tolerances change.",
+  "parent_sha256": {
+    "artifacts/qwen_reproduction/float32_resume/cpu_reference.json": "a33d8b2e02fcfebc0da9321a6349ec22e36189bec7f546c9cc36df93fab35bb7",
+    "artifacts/qwen_reproduction/float32_resume/restricted.json": "7ff98b5832e1b25472275c4eddfd7914cbbe15af8cb7abbe8a6f02ec79dfc7be",
+    "experiments/qwen_reproduction/resume_float32.py": "d0d8a5ac9854d2d6fcd0f2a58b6c22732d14911be283f4a60d16747509c95abe",
+    "experiments/qwen_reproduction/float32-protocol.md": "988f20cd001313ba5cf3cbb454b3d69f2d58d9b43851d8482cfa687e1dca33e1"
+  },
+  "preserve_completed_parent_case_ids": [
+    "retail_refund",
+    "airline_cancel",
+    "bank_withdraw"
+  ]
+}

@@ -1,0 +1,30 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+restricted retail_refund saved
+restricted airline_cancel saved
+restricted bank_withdraw saved
+Traceback (most recent call last):
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/qwen_reproduction/resume_float32.py", line 166, in <module>
+    main()
+    ~~~~^^
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/qwen_reproduction/resume_float32.py", line 128, in main
+    assert passed(check), check
+           ~~~~~~^^^^^^^
+AssertionError: {'max_abs': 0.0006122589111328125, 'relative_l2': 1.4553272194461897e-05, 'relative_linf': 1.4022183677298017e-05, 'within_tolerance': False, 'top_agreement': True, 'top_ids': [89963, 89963], 'margins': [6.752628326416016, 6.7531280517578125], 'restricted_choice_agreement': True}
+       33.10 real         8.01 user         7.77 sys
+          6898483200  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              992971  page reclaims
+               73185  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               34852  voluntary context switches
+              261593  involuntary context switches
+        114987958406  instructions retired
+         56271464386  cycles elapsed
+         11035909272  peak memory footprint

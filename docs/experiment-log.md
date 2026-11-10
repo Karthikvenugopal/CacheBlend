@@ -87,3 +87,43 @@ Change: fix 12 candidates before inference, six templates in both directions, wi
 Evidence: all 12 candidates supported; full recomputation correct on four, with reuse preserving all four. Other full outputs comprise four incorrect answers and four nonanswers. Zero qualifying reuse-induced answer errors. Screening took 49.72 seconds after loading. Raw outputs and actual token positions retained; frozen source hashes verified.
 
 Decision: stop before oracle enumeration as required. No small-repair recovery, advantage over local, or useful repair positions established. This screened setup is unsuitable for factual repair evaluation, and factual efficacy remains inconclusive. Selector stays rejected; validated attention calculation preserved. No replacement method, speedup or novelty claim. Details: docs/oracle-bound-diagnostic.md.
+
+## E9: archive and reproduction-target assessment
+
+Change: archive committed source/results with a SHA-256 manifest; preserve the working source. Stop selector development and TinyLlama factual sweeps. Review existing paper/release targets without model downloads or new model inference. Confirm basic MPS tensor access outside the sandbox; preserve earlier CPU measurements.
+
+Evidence: the strongest small-model candidate is the original-author Qwen3-1.7B gated-decision release, with seven of eight clean binary preferences correct and six paired reuse regressions. Source inspection finds a restricted token readout, artificial length alignment, clean-cache downstream transplantation and CUDA-specific execution. The unquantized checkpoint is absent locally. Its short-context memory estimate is plausible; larger 8B/9B unquantized targets are impractical within 16 GiB. None is a locally reproduced factual repair failure with demonstrated improvement headroom.
+
+Decision: shelve method development now. Retain the small-model target only as a conditional reopening candidate; do not implement, download, sweep, or optimize a selector. This is not a successful repair method or a benchmarking project. Details: docs/reproduction-target.md and archives/kvrepair-2026-11-09/manifest.json.
+
+## E10: prepare six published Qwen3-1.7B pairs, pending authorization
+
+Change: the user authorized preparation of a bounded reproduction, with download and pretrained execution deferred. Freeze the six existing published regression pairs, complete prompt bodies/renderings, the field-only clean-state intervention and restricted first-token readout. Add a separate offline Qwen3 runner and a pinned, explicitly bounded downloader. Preserve the archived Llama source unchanged.
+
+Evidence: author code/result do not record a model revision. Official candidate pin is 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e; this is not author-confirmed. Official assets total approximately 4.08 GB. Meta-device construction counts 1,720,574,976 unique tied parameters, 3.205 GiB in BF16. Tiny random-Qwen3 BF16 API checks passed on CPU and MPS, with zero observed native/cached logit discrepancy and independent cache ownership; no pretrained assets were downloaded or loaded. Pretrained tokenizer/precision/backend fidelity remains unverified.
+
+Decision: await explicit approval for one pinned download and the two fixed six-case stages. Keep restricted preference reproduction separate from unrestricted deterministic generated-answer errors. Preserve all outcomes; no prompt replacement, broader sweeps, repairs or selectors. If generated regressions do not reproduce, stop and shelve. Protocol and exact commands: experiments/qwen_reproduction/protocol.md.
+
+## E11: authorized download and Qwen3 reproduction attempt
+
+Change: download exactly 4,079,434,577 bytes at the approved revision, verify files and all frozen chat renderings, and launch restricted scoring on MPS/BF16. Retain the unknown author revision. A pre-case identity guard found separate embedding/output parameters; byte-identical payload checks justified restoring the config-declared alias without changing values. Preserve the original preparation and failed launch.
+
+Evidence: the first factual case then failed the frozen numerical gate, max absolute logit difference 0.8125 between full prefill and its cached final-token replay. One same-case numerical investigation found repeatable full logits, exact prefix-cache agreement at all layers, and unchanged cached results with explicit masks/positions. Restricted preference and first vocabulary token agreed, but full/cached relative logit L2 discrepancy was 0.03237. No full/field-only scoring comparison was accepted and generation did not run. All six statuses are retained: first blocked by validation, five not run. Thinking was explicitly disabled; no cutoff answers exist to score.
+
+Decision: stop and report validation failure, not factual repair failure or absence of headroom. Do not relax tolerance, change backend/precision, broaden cases or develop repair. Archived inference source and attention calculation hashes remain unchanged. Details: docs/qwen-reproduction-results.md.
+
+## E12: authorized first-case backend/precision diagnosis
+
+Change: sequential CPU float32, MPS float32 and MPS BF16 runs on the same downloaded checkpoint and first fixed edited prompt. Compare native full prefill with native prefix-cache continuation directly, without cache manipulation; trace layer outputs and verify the existing wrapper independently. No generation or repair experiments.
+
+Evidence: all eval/inference, token, cache-length and ownership checks pass; wrapper and native incremental logits are exactly equal in every configuration. Full/incremental max absolute differences are 8.46e-5 / 1.77e-4 / 0.8125, with relative L2 2.78e-6 / 4.55e-6 / 0.03237. Both float32 paths pass unchanged atol=rtol=2e-4; MPS BF16 still fails its original 0.02 gate. Differences start at layer 0, including a BF16 query-projection difference despite identical normalized input values. All paths agree on the first token and restricted preference, which does not establish generated utility.
+
+Decision: recommend MPS float32/eager with CPU float32 reference and unchanged per-case checks; do not relax BF16 tolerance. Original failure and frozen code/protocol artifacts remain preserved. Stop with diagnosis; no six-case rerun, downloads, further precision configurations, repair work or selector development. Details: docs/endpoint-precision-diagnosis.md.
+
+## E13: authorized six-case MPS float32 continuation
+
+Change: run CPU float32 native-cache numerical references on all six fixed edited prompts, then MPS float32/eager restricted scoring and deterministic generation using preserved inference functions. Thinking disabled, original 64-token limit, no downloads or additional cases. An added cross-backend stop blocked collection at case four; preserve the partial run and original driver, remove that extra stop while retaining failed comparisons as explicit flags, and finish only the remaining three scored cases. All native full/cache gates and numerical tolerances remain unchanged; first three scored records preserved verbatim.
+
+Evidence: 18/18 published restricted choices matched. All six CPU and MPS within-backend full/cache checks passed atol=rtol=2e-4; MPS checks repeated before generation. CPU–MPS comparisons failed that same tolerance for doc_access and oncall_route while top-token/preference agreement held. Eighteen generations ended at EOS without truncation: original full 6/6 semantically correct; edited full four clearly correct, two inconclusive (`suspended`, `customs`); field-only six explicit wrong edited-context decisions. Four satisfy clear full-correct/reuse-wrong attribution; two of those also pass cross-CPU comparison. No memory failure; peak process footprint about 10.28 GiB.
+
+Decision: a bounded MPS cache-reuse failure target now exists, but selective-repair headroom and method efficacy remain untested. Retain all six outcomes, ambiguities, CPU flags and the collection correction. Stop after reporting; no repair development, selector, broader sweep or cloud work. Prior failures and archived numerical/source artifacts unchanged. Details: docs/qwen-float32-reproduction.md.

@@ -1,0 +1,13 @@
+{
+  "all_six_records_retained_and_completed_each_stage": true,
+  "all_cpu_native_full_cache_checks_passed": true,
+  "all_mps_native_full_cache_checks_passed_twice": true,
+  "unchanged_atol_rtol": 0.0002,
+  "scoring_choices_and_margins_reproduced_exactly_in_generation": true,
+  "first_three_completed_restricted_records_preserved_verbatim": true,
+  "original_bf16_failure_unchanged": true,
+  "precision_diagnosis_unchanged": true,
+  "archived_baselines_attention_and_prepared_reproduction_source_unchanged": true,
+  "all_cross_cpu_tolerance_failures_retained": true,
+  "no_new_downloads_or_repairs": true
+}

@@ -1,0 +1,17 @@
+{
+  "artifacts/qwen_reproduction/float32_resume/continued/execution-status.json": "2e72fb4de6ccc038a86312d7bd52f98779acbf53456a341ba32bffff34e1b01a",
+  "artifacts/qwen_reproduction/float32_resume/continued/generation.json": "96b2f8a5a2ada54c106d6d7040b923366cfca2eda5ff5aa22a67511ec6cddafe",
+  "artifacts/qwen_reproduction/float32_resume/continued/manual-utility-audit.json": "0232a743f746f61ced30be3bc28225f55656c8276cfc840ee44e980b263f5d5e",
+  "artifacts/qwen_reproduction/float32_resume/continued/restricted.json": "0e1a94d9eee2d223b1a7c42c5cd66e4633fd1ab170807c64c51143da42f5e7ba",
+  "artifacts/qwen_reproduction/float32_resume/continued/summary.json": "b452b56f7717c3fb7ce2a8175de74295d1a5449ceafa63f8f602a0716d819b0a",
+  "artifacts/qwen_reproduction/float32_resume/continued/verification.json": "de1e9033be5061a96201032c8126cf8178c2901ccd8a1487be35a80d5a526bce",
+  "artifacts/qwen_reproduction/float32_resume/cpu-reference-console.txt": "84268caa5ad710105b52dbbde655c876d0f08e73f65a83c422e1b40db0ffc29a",
+  "artifacts/qwen_reproduction/float32_resume/cpu_reference.json": "a33d8b2e02fcfebc0da9321a6349ec22e36189bec7f546c9cc36df93fab35bb7",
+  "artifacts/qwen_reproduction/float32_resume/cross-backend-correction.json": "3ce51d7c95a8cef940ce7d3ffc241fe8fc2b6051a21212ca23d72f9050e626fd",
+  "artifacts/qwen_reproduction/float32_resume/generation-console.txt": "3e8d3e39ba2dfd16f397b2dab1950b3d9d8e716e99588cc0e95afcbc5a3b8d06",
+  "artifacts/qwen_reproduction/float32_resume/protocol-before-cross-backend-correction.md": "988f20cd001313ba5cf3cbb454b3d69f2d58d9b43851d8482cfa687e1dca33e1",
+  "artifacts/qwen_reproduction/float32_resume/restricted-completion-console.txt": "5005f52fe363ffbd67a6c23757e015c44659ef80c929a801dde47974914c43ac",
+  "artifacts/qwen_reproduction/float32_resume/restricted-console.txt": "baacda172016d8509b2055920d9f232fdb1f214206abcce433fc38589a0613c0",
+  "artifacts/qwen_reproduction/float32_resume/restricted.json": "7ff98b5832e1b25472275c4eddfd7914cbbe15af8cb7abbe8a6f02ec79dfc7be",
+  "artifacts/qwen_reproduction/float32_resume/runner-before-cross-backend-correction.py": "d0d8a5ac9854d2d6fcd0f2a58b6c22732d14911be283f4a60d16747509c95abe"
+}
