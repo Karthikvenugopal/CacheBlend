@@ -1,0 +1,11 @@
+development-delivery-direct regions= 8 token Spearman= 0.9927421714954638 region Spearman= 1.0 all-region orders equal= True
+development-refund-direct regions= 16 token Spearman= 0.99854657713675 region Spearman= 1.0 all-region orders equal= True
+development-record-direct regions= 2 token Spearman= 0.9964153561517114 region Spearman= 1.0 all-region orders equal= True
+heldout-dispatch-direct regions= 18 token Spearman= 0.9972167829090669 region Spearman= 1.0 all-region orders equal= True
+heldout-warehouse-direct regions= 8 token Spearman= 0.997905634273174 region Spearman= 1.0 all-region orders equal= True
+heldout-clinic-direct regions= 2 token Spearman= 0.9934088806660499 region Spearman= 1.0 all-region orders equal= True
+heldout-account-direct regions= 19 token Spearman= 0.9993368386738765 region Spearman= 1.0 all-region orders equal= True
+heldout-museum-direct regions= 8 token Spearman= 0.9923237068275236 region Spearman= 1.0 all-region orders equal= True
+heldout-permit-direct regions= 2 token Spearman= 0.9720166512488436 region Spearman= 1.0 all-region orders equal= True
+heldout-rail-direct regions= 18 token Spearman= 0.9950794577818654 region Spearman= 1.0 all-region orders equal= True
+heldout-parcel-direct regions= 9 token Spearman= 0.9954074402552707 region Spearman= 1.0 all-region orders equal= True

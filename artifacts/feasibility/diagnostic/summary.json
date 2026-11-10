@@ -1,0 +1,23 @@
+{
+  "document_groups": 11,
+  "development_groups": 3,
+  "heldout_groups": 8,
+  "all_independent_score_and_selection_checks_passed": true,
+  "all_token_rank_orders_differ": true,
+  "all_region_rank_orders_equal": true,
+  "strict_region_score_decay_with_distance": true,
+  "reverse_exact_tie_break_changed_support": false,
+  "nonforced_cutoff_ties": 0,
+  "token_spearman_range": [
+    0.9720166512488436,
+    0.9993368386738765
+  ],
+  "token_proportional_residual_range": [
+    0.0544100257047043,
+    0.3602514927355485
+  ],
+  "max_independent_native_delta_score_error": 2.2351741790771484e-08,
+  "max_independent_full_softmax_mass_error": 7.450580596923828e-09,
+  "controlled_example_max_error": 3.2310661324252976e-07,
+  "source_and_original_results_preserved": true
+}
