@@ -1,0 +1,11 @@
+{
+  "artifacts/qwen_headroom/airline_cancel/outcomes.json": "88b5d1919d91e211cc9a4f18e45d7ec6811890926b4234df8d5c3c044d821657",
+  "artifacts/qwen_headroom/assessment.json": "f0332a20ab566138a2e7968de42373dce79963a5624c4038139f376ed34696ab",
+  "artifacts/qwen_headroom/bank_withdraw/outcomes.json": "14208769cfa0ca037d3f722935fb66f33fd8e52503846af454d007127477a5f2",
+  "artifacts/qwen_headroom/console.txt": "14b58a7348d8edec782f9e073dbec9c0e751f065ca3fe12cf0865596716c109a",
+  "artifacts/qwen_headroom/manual-output-audit.json": "47e5e29009d128dfb4cb94911712495a194692b6cb0b0067c93d8ee3e90ea0bd",
+  "artifacts/qwen_headroom/random-cpu-check.json": "aa0881047016682283664fdb4051f99be7611e8deb81ea75fa51e34844eb44ea",
+  "artifacts/qwen_headroom/random-mps-check.json": "dc7f6db2f8ff4eb1838a649b08a716508258fdd50616fbaf1e7e5df4f90c5e26",
+  "artifacts/qwen_headroom/run.json": "58d5911e073405a5af44a40741c0b1b4ee331fcc5bf1eef1a1ee752671e67081",
+  "artifacts/qwen_headroom/verification.json": "0fdefb1c41d6834f4351e693f5b815175ef85bc1a5ad4f455aca03689b0e39f8"
+}

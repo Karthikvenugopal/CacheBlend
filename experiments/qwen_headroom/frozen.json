@@ -1,0 +1,51 @@
+{
+  "frozen_utc": "2026-11-10T03:16:19.219952+00:00",
+  "scope": "399 predefined region supports, two frozen aligned interventions; intended-label bank utility qualified by malformed padded amount. No selector.",
+  "files": {
+    "experiments/qwen_headroom/check_operator.py": "094e6f7aad0a26d68bba725696b401ee875846938007ba68508800a87ef28396",
+    "experiments/qwen_headroom/run.py": "b724603bf7cf3f7fa107c2d2c5edaecac9eda6381f81216a5f1adebb5f00fc77",
+    "experiments/qwen_headroom/sparse_qwen.py": "8eb242d60779364ecee64b5470f919dd2cfb70cf4da7f785fdec4b4b8029c3d9",
+    "experiments/qwen_headroom/fixed_cases.json": "065e555b65259da43c210dda91f9d46f12b141953f86b5201c2f6535a2152222",
+    "experiments/qwen_headroom/protocol.md": "4870e0652f8a956c452cea428202d112c1c67c37a167fde25d3b807e285c65a6",
+    "experiments/qwen_headroom/intervention-map.md": "3d85b80bab469e2e96494589d1996a7d248ce0f74ef8414902920ab3ce0b0b81",
+    "experiments/qwen_reproduction/run.py": "3237c8b7e9acdb5ddb53fe33dcd01e7bf02bcd1ca8a88626846afa5b898196ff",
+    "experiments/qwen_reproduction/cases.json": "408c7a14f225ea357758c867d768931b9bee55b69c04141f07eadb3905b60fca",
+    "artifacts/qwen_reproduction/float32_resume/continued/generation.json": "96b2f8a5a2ada54c106d6d7040b923366cfca2eda5ff5aa22a67511ec6cddafe",
+    "artifacts/qwen_reproduction/float32_resume/cpu_reference.json": "a33d8b2e02fcfebc0da9321a6349ec22e36189bec7f546c9cc36df93fab35bb7"
+  },
+  "oracle_supports": 399,
+  "hard_max_supports": 400,
+  "control_max": 10,
+  "budgets": [
+    16,
+    32
+  ],
+  "region_size": 16,
+  "generation_limit": 64,
+  "atol": 0.0002,
+  "rtol": 0.0002,
+  "seed": 17,
+  "device": "mps",
+  "dtype": "float32",
+  "attention": "eager",
+  "random_model_checks": {
+    "random-cpu-check.json": {
+      "device": "cpu",
+      "full_KV_max_abs": 0.0,
+      "native_changed_span_equivalence": true,
+      "full_suffix_endpoint": true,
+      "old_cache_unchanged": true,
+      "independent_storage": true,
+      "random_model_only": true
+    },
+    "random-mps-check.json": {
+      "device": "mps",
+      "full_KV_max_abs": 0.0,
+      "native_changed_span_equivalence": true,
+      "full_suffix_endpoint": true,
+      "old_cache_unchanged": true,
+      "independent_storage": true,
+      "random_model_only": true
+    }
+  }
+}

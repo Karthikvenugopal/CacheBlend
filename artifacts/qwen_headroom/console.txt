@@ -1,0 +1,36 @@
+The tied weights mapping and config for this model specifies to tie model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+airline_cancel all baseline/operator gates passed; 190 supports
+airline_cancel 25 / 190 attempts saved
+airline_cancel 50 / 190 attempts saved
+airline_cancel 75 / 190 attempts saved
+airline_cancel 100 / 190 attempts saved
+airline_cancel 125 / 190 attempts saved
+airline_cancel 150 / 190 attempts saved
+airline_cancel 175 / 190 attempts saved
+bank_withdraw all baseline/operator gates passed; 209 supports
+bank_withdraw 25 / 209 attempts saved
+bank_withdraw 50 / 209 attempts saved
+bank_withdraw 75 / 209 attempts saved
+bank_withdraw 100 / 209 attempts saved
+bank_withdraw 125 / 209 attempts saved
+bank_withdraw 150 / 209 attempts saved
+bank_withdraw 175 / 209 attempts saved
+bank_withdraw 200 / 209 attempts saved
+      298.36 real        80.13 user        12.83 sys
+          5926420480  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1078296  page reclaims
+              156443  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               19091  voluntary context switches
+              577525  involuntary context switches
+        945155836900  instructions retired
+        337793778107  cycles elapsed
+         10995817648  peak memory footprint

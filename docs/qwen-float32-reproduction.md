@@ -1,5 +1,7 @@
 # Six-case Qwen3 float32 reproduction
 
+Follow-up input audit: the [headroom diagnostic](qwen-headroom-results.md) documents that bank's actual aligned edited field is `3  0 USD`, not the original `30 USD`. Its prior label judgments below describe the intended task and full-reference output, not an unqualified literal monetary-document result. Original records are preserved. Airline's old padding also creates a noncanonical token sequence; neither raw pair satisfies the original equal-token-length literal-edit contract.
+
 Completed the six fixed cases. **All 18 published restricted choices matched**, but unrestricted generated utility differs: edited full recomputation produced four clear correct decisions and two inconclusive responses. Field-only reuse produced a clear wrong decision on each of those four clean-correct cases. No repair method or selective-repair headroom was tested.
 
 All answers below are MPS float32/eager results. CPU float32 supplies a numerical reference, not a second generated-answer experiment. The checkpoint pin is `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`; the authors' exact model revision remains unknown. Float32 and the Mac backend differ from the published BF16/CUDA environment. These six pairs were retrospectively selected from an existing published eight-case record, so these numbers do not establish generalization or model-wide reliability.

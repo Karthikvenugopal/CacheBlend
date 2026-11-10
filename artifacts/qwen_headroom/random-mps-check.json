@@ -1,0 +1,9 @@
+{
+  "device": "mps",
+  "full_KV_max_abs": 0.0,
+  "native_changed_span_equivalence": true,
+  "full_suffix_endpoint": true,
+  "old_cache_unchanged": true,
+  "independent_storage": true,
+  "random_model_only": true
+}

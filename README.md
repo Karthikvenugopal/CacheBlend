@@ -10,6 +10,8 @@ The subsequent [three-configuration diagnosis](docs/endpoint-precision-diagnosis
 
 The later authorized [six-case float32 continuation](docs/qwen-float32-reproduction.md) is complete: 18/18 published restricted choices matched; unrestricted full answers were clearly correct on four cases and inconclusive on two. Four paired MPS reuse-induced wrong decisions were observed, with two cases additionally flagged for CPU–MPS logit differences. All within-backend full/cache checks passed unchanged tolerance. No selective repair was tested; method development remains stopped.
 
+The subsequent [bounded headroom diagnostic](docs/qwen-headroom-results.md) completed 399 actual partial repairs on two fixed interventions at 16/32-token budgets. None recovered the full answer; full-suffix controls did. The input audit also found that bank's padded amount is `3  0 USD`, qualifying its earlier intended-label interpretation. No repair mechanism or selector is proposed from this negative result.
+
 The following describes the preserved historical work and reproduction commands.
 
 Current status: the two-gate attention-output-change experiment is complete. The calculation passed, but the selector duplicated local repair on all held-out cases. See the [decision](docs/feasibility-assessment.md), [measurements](docs/feasibility-results.md), and [reproduction commands](experiments/feasibility/README.md). The validated original baselines are unchanged. A [bounded diagnostic](docs/selector-diagnosis.md) found correlated signals rather than an implementation fault; no replacement method was implemented.

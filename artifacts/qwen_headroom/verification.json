@@ -1,0 +1,14 @@
+{
+  "frozen_search_sources_prompts_scoring_protocol_unchanged": true,
+  "all_399_unique_support_attempts_completed": true,
+  "all_10_controls_completed": true,
+  "matched_budgets_and_written_positions_verified": true,
+  "all_old_caches_unchanged": true,
+  "native_and_full_repair_endpoint_checks_passed": true,
+  "prior_baselines_BF16_failure_precision_and_six_case_results_unchanged": true,
+  "all_409_generated_sequences_ended_at_EOS": true,
+  "answer_recovery": 0,
+  "rejected_selector_not_used": true,
+  "no_new_downloads_cloud_or_extra_cases": true,
+  "status": "completed and stopped"
+}

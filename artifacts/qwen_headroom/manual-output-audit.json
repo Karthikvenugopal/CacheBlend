@@ -1,0 +1,30 @@
+{
+  "reviewed_utc": "2026-11-10T05:11:55.031543+00:00",
+  "all_fixed_attempts_finished_before_label_scoring": true,
+  "cases": [
+    {
+      "id": "airline_cancel",
+      "all_generated_repair_outputs": {
+        "refund": 190
+      },
+      "truncated": 0,
+      "alternative_semantic_successes": 0,
+      "full_output_recovery": 0,
+      "intended_label_recovery": 0,
+      "factual_qualification": "Airline policy decision is clear; old token padding is noncanonical and differs from the original input contract.",
+      "distinct_KL_values": 190
+    },
+    {
+      "id": "bank_withdraw",
+      "all_generated_repair_outputs": {
+        "Approve": 209
+      },
+      "truncated": 0,
+      "alternative_semantic_successes": 0,
+      "full_output_recovery": 0,
+      "intended_label_recovery": 0,
+      "factual_qualification": "Bank padded amount is not the original well-formed 30 USD; no literal-document factual conclusion.",
+      "distinct_KL_values": 209
+    }
+  ]
+}
