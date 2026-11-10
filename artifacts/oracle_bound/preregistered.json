@@ -1,0 +1,51 @@
+{
+  "started_utc": "2026-11-10T01:55:42.780091+00:00",
+  "config": {
+    "seed": 17,
+    "threads": 4,
+    "max_new_tokens": 24,
+    "max_suffix_tokens": 16,
+    "max_oracle_cases": 2,
+    "budgets": [
+      1,
+      2
+    ]
+  },
+  "candidate_sha256": "a173980f3a8ddf9af44a56fd82d39715eee82907588128a7ddf997143d1189db",
+  "source_sha256": {
+    "experiments/oracle_bound/run.py": "cd736d500b43f24fb621ecfd2b7073fe1073be26a668dd7d414f46bfca8b93ca",
+    "experiments/oracle_bound/candidates.json": "544cb48504c34bd87b5e7c1a5b7984fa6573c13df535d5f54d55288a912c38b9",
+    "experiments/oracle_bound/protocol.md": "179785e15c5f9c5b6efd42f72f7c09f195599e8931e55d567df9286e394a9427",
+    "src/kvrepair/__init__.py": "78f3f67d91922430667e6309b511a16bb4ffac5653177a147fccd20186b4a6c5",
+    "src/kvrepair/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "src/kvrepair/cli.py": "ac1c589e17e1d87c3d4b0ccf1f7ebd53293284e179d43ac12b9fad67f359c45d",
+    "src/kvrepair/engine.py": "f08e3755da03cc34b74a770c43b888a7938bf0635ed64493871ee938c7488191",
+    "src/kvrepair/feasibility.py": "9bfbccdcb6dd22a769727ee3dbbcdacae16caf335cee2b31973ac0971c467b01",
+    "src/kvrepair/feasibility_cases.py": "73e4cddc4f5855f7473a3299a651f9f2bb51e47baea09712cd51fccbaceff546",
+    "src/kvrepair/models.py": "268256d6bf9d4c1b6bab4ec446e85b3daf5aa7b0c6063993ec92becd2d1ccb68",
+    "src/kvrepair/repair_probe.py": "6f6c00930cf185719c0d0e257fbde3c95d37be69e0349ab09a5e2e91dce30b39",
+    "src/kvrepair/report.py": "e0144fc4b1712f3fa618e5139d20c1bbebe90800974e10177b0296764f3acb01"
+  },
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "revision": "fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+  "environment": {
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 8,
+    "processor": "Apple M3",
+    "physical_memory_bytes": 17179869184,
+    "memory_note": "null means OS query unavailable; no RAM assumption made",
+    "mps_built": true,
+    "mps_available": false,
+    "cuda_available": false,
+    "versions": {
+      "torch": "2.8.0",
+      "transformers": "5.2.0",
+      "tokenizers": "0.22.2",
+      "safetensors": "0.7.0",
+      "pytest": "8.3.4"
+    },
+    "python": "3.13.1",
+    "cached_default_snapshot": "/Users/karthik/.cache/huggingface/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6"
+  }
+}

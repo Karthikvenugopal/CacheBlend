@@ -1,0 +1,9 @@
+{
+  "status": "not_run",
+  "reason": "Zero manually confirmed full-correct/reuse-wrong cases among 12 fixed candidates. Stop under the registered qualification gate.",
+  "repair_choices_evaluated": 0,
+  "small_repair_recovery": "not established; no eligible case",
+  "advantage_over_local": "not evaluated",
+  "useful_positions": "not identified",
+  "screen_sha256": "f7949b1904f780ec278c66ac2640e4fb5cf82499e95063eed68ba16cc5bd9b84"
+}

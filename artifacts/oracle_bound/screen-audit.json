@@ -1,0 +1,115 @@
+{
+  "screen_sha256": "f7949b1904f780ec278c66ac2640e4fb5cf82499e95063eed68ba16cc5bd9b84",
+  "manual_review": "Reviewed all original, edited full and unrepaired answers against record meanings, not phrase matches alone. No qualifier was established.",
+  "confirmed_qualifiers": [],
+  "records": [
+    {
+      "id": "slot-forward",
+      "edited_full_factual": "correct",
+      "unrepaired_suffix_factual": "correct",
+      "qualifies": false,
+      "reason": "Both explicitly answer 8.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "slot-reverse",
+      "edited_full_factual": "correct",
+      "unrepaired_suffix_factual": "correct",
+      "qualifies": false,
+      "reason": "Both explicitly answer 3.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "gate-forward",
+      "edited_full_factual": "incorrect",
+      "unrepaired_suffix_factual": "incorrect",
+      "qualifies": false,
+      "reason": "Both answer left; selected gate 9 requires right.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "gate-reverse",
+      "edited_full_factual": "correct",
+      "unrepaired_suffix_factual": "correct",
+      "qualifies": false,
+      "reason": "Both answer left; original full incorrectly answered left for gate 9.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "access-forward",
+      "edited_full_factual": "incorrect",
+      "unrepaired_suffix_factual": "incorrect",
+      "qualifies": false,
+      "reason": "Both assert yes for active D, which maps to no; truncation does not erase that explicit wrong answer.",
+      "edited_hit_limit": true,
+      "reuse_hit_limit": true
+    },
+    {
+      "id": "access-reverse",
+      "edited_full_factual": "correct",
+      "unrepaired_suffix_factual": "correct",
+      "qualifies": false,
+      "reason": "Both explicitly assert yes for active C; original full was wrong for D.",
+      "edited_hit_limit": true,
+      "reuse_hit_limit": true
+    },
+    {
+      "id": "pin-forward",
+      "edited_full_factual": "nonanswer",
+      "unrepaired_suffix_factual": "nonanswer",
+      "qualifies": false,
+      "reason": "Full repeats operands 5 and 1 without computing 6; reuse repeats the expression. Neither states the requested numeric result.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "pin-reverse",
+      "edited_full_factual": "nonanswer",
+      "unrepaired_suffix_factual": "nonanswer",
+      "qualifies": false,
+      "reason": "Both repeat the expression without computing 3.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "switch-forward",
+      "edited_full_factual": "nonanswer",
+      "unrepaired_suffix_factual": "nonanswer",
+      "qualifies": false,
+      "reason": "Both deny having enough information; neither resolves open versus shut.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "switch-reverse",
+      "edited_full_factual": "nonanswer",
+      "unrepaired_suffix_factual": "nonanswer",
+      "qualifies": false,
+      "reason": "Both deny having enough information; neither resolves open versus shut.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "route-forward",
+      "edited_full_factual": "incorrect",
+      "unrepaired_suffix_factual": "incorrect",
+      "qualifies": false,
+      "reason": "Full says lake instead of hill; reuse says R, a code rather than the requested destination.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    },
+    {
+      "id": "route-reverse",
+      "edited_full_factual": "incorrect",
+      "unrepaired_suffix_factual": "correct",
+      "qualifies": false,
+      "reason": "Full says R instead of lake; reuse correctly says Lake. This reverses the required qualification direction.",
+      "edited_hit_limit": false,
+      "reuse_hit_limit": false
+    }
+  ]
+}

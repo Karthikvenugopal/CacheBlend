@@ -1,0 +1,12 @@
+slot-forward  full= 'The number recorded in Slot is 8.' reuse= 'The number recorded in Slot is 8.' provisional= False
+slot-reverse  full= 'The number recorded in Slot is 3.' reuse= 'The number recorded in Slot is 3.' provisional= False
+gate-forward  full= 'The selected gate uses the left direction.' reuse= 'The selected gate uses the left direction.' provisional= False
+gate-reverse  full= 'The selected gate uses the left direction.' reuse= 'The selected gate uses the left direction.' provisional= False
+access-forward  full= 'Based on the given record, the answer to the question is "Yes" as the active code is allowed for access' reuse= 'Based on the given record, the answer to the question is "Yes" as the active code is "D"' provisional= False
+access-reverse  full= 'Based on the given record, the answer to the question is "Yes" as the active code is "C."' reuse= 'Based on the given record, the answer to the question is "Yes" as the active code is allowed for access' provisional= False
+pin-forward  full= 'Answer: Result is the sum of the original Pin (5) and 1 (1).' reuse= 'Answer: Result is the sum of Pin and 1.' provisional= False
+pin-reverse  full= 'Answer: Result is the sum of Pin and 1.' reuse= 'Answer: Result is the sum of Pin and 1.' provisional= False
+switch-forward  full= 'The record does not contain any information about whether the door is open or shut.' reuse= 'The record does not contain any information about whether the door is open or shut.' provisional= False
+switch-reverse  full= 'The record does not contain any information about whether the door is open or shut.' reuse= 'The record does not contain any information about whether the door is open or shut.' provisional= False
+route-forward  full= 'The answer is "Lake."' reuse= 'The answer is "R."' provisional= False
+route-reverse  full= 'The answer is "R."' reuse= 'The answer is "Lake."' provisional= False
