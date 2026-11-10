@@ -1,0 +1,78 @@
+{
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "cpu_count": 8,
+  "processor": "Apple M3",
+  "physical_memory_bytes": 17179869184,
+  "memory_note": "null means OS query unavailable; no RAM assumption made",
+  "mps_built": true,
+  "mps_available": false,
+  "cuda_available": false,
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.2.0",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.7.0",
+    "pytest": "8.3.4"
+  },
+  "python": "3.13.1",
+  "cached_default_snapshot": "/Users/karthik/.cache/huggingface/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451e6",
+  "checked_utc": "2026-11-10T02:20:40.068825+00:00",
+  "outside_sandbox_mps_probe": {
+    "mps_built": true,
+    "mps_available": true,
+    "test": "(torch.ones(1,device=\"mps\") + torch.ones(1,device=\"mps\")).cpu().tolist()",
+    "result": [
+      2.0
+    ],
+    "scope": "Basic tensor availability only; no model, cache, float64 or timing validation."
+  },
+  "cached_causal_model_directories": [
+    "models--microsoft--DialoGPT-medium",
+    "models--TinyLlama--TinyLlama-1.1B-Chat-v1.0",
+    "models--mlx-community--Qwen3-4B-4bit"
+  ],
+  "cached_qwen4b": {
+    "revision": "4dcb3d101c2a062e5c1d4bb173588c54ea6c4d25",
+    "model_bytes": 2263022529,
+    "config": {
+      "architectures": [
+        "Qwen3ForCausalLM"
+      ],
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 2560,
+      "initializer_range": 0.02,
+      "intermediate_size": 9728,
+      "max_position_embeddings": 40960,
+      "max_window_layers": 36,
+      "model_type": "qwen3",
+      "num_attention_heads": 32,
+      "num_hidden_layers": 36,
+      "num_key_value_heads": 8,
+      "quantization": {
+        "group_size": 64,
+        "bits": 4
+      },
+      "quantization_config": {
+        "group_size": 64,
+        "bits": 4
+      },
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": null,
+      "rope_theta": 1000000,
+      "sliding_window": null,
+      "tie_word_embeddings": true,
+      "torch_dtype": "bfloat16",
+      "transformers_version": "4.51.0",
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 151936
+    },
+    "format": "MLX 4-bit; not the unquantized PyTorch paper checkpoint"
+  }
+}

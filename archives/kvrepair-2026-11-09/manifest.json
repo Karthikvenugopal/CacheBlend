@@ -1,0 +1,36 @@
+{
+  "archived_utc": "2026-11-10T02:20:40.019536+00:00",
+  "status": "archived; method development stopped",
+  "source_commit": "697909cb603c832f753ab9e88076e9139d411771",
+  "source_tree": "b6435408ea9f21a396f3210126bc39006062b4cf",
+  "archive": "experiment-and-results.tar.gz",
+  "archive_bytes": 5839962,
+  "archive_sha256": "d0a8549e20ac824248402316df81a86c2cd4eabb00f6b7bdd3ad329838b1f6ef",
+  "scope": "Complete committed project, including code, tests, protocols, all retained experiment outcomes and prior literature snapshots. Environment/model weights excluded by existing ignore rules.",
+  "stop_rules": [
+    "No further selector development",
+    "No further TinyLlama factual sweeps"
+  ],
+  "results": {
+    "attention_calculation": "validated on CPU float32; preserved",
+    "selector": "rejected",
+    "heldout_full_correct": 13,
+    "heldout_questions": 24,
+    "oracle_candidates_screened": 12,
+    "oracle_full_correct": 4,
+    "oracle_qualifying_reuse_errors": 0,
+    "oracle_repairs_tested": 0,
+    "factual_repair_efficacy": "inconclusive"
+  },
+  "preserved_source_sha256": {
+    "src/kvrepair/__init__.py": "78f3f67d91922430667e6309b511a16bb4ffac5653177a147fccd20186b4a6c5",
+    "src/kvrepair/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "src/kvrepair/cli.py": "ac1c589e17e1d87c3d4b0ccf1f7ebd53293284e179d43ac12b9fad67f359c45d",
+    "src/kvrepair/engine.py": "f08e3755da03cc34b74a770c43b888a7938bf0635ed64493871ee938c7488191",
+    "src/kvrepair/feasibility.py": "9bfbccdcb6dd22a769727ee3dbbcdacae16caf335cee2b31973ac0971c467b01",
+    "src/kvrepair/feasibility_cases.py": "73e4cddc4f5855f7473a3299a651f9f2bb51e47baea09712cd51fccbaceff546",
+    "src/kvrepair/models.py": "268256d6bf9d4c1b6bab4ec446e85b3daf5aa7b0c6063993ec92becd2d1ccb68",
+    "src/kvrepair/repair_probe.py": "6f6c00930cf185719c0d0e257fbde3c95d37be69e0349ab09a5e2e91dce30b39",
+    "src/kvrepair/report.py": "e0144fc4b1712f3fa618e5139d20c1bbebe90800974e10177b0296764f3acb01"
+  }
+}

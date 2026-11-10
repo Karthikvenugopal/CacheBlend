@@ -1,0 +1,93 @@
+{
+  "repository_revision": "e9085eafcc6c83e60c548de69060c4bd5b210c96",
+  "files": [
+    {
+      "path": "results/mech_diverse_qwen3_1p7b.json",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/results/mech_diverse_qwen3_1p7b.json",
+      "bytes": 2573,
+      "sha256": "5ee182b0729231d4c5320ad3a7547f558b0edcfb885b44e2fe421f6e51b1846e"
+    },
+    {
+      "path": "results/mech_diverse_qwen3_0p6b.json",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/results/mech_diverse_qwen3_0p6b.json",
+      "bytes": 2554,
+      "sha256": "08ca349a3950ac02fa1257c4fa33db24dab46c394ccd0e6f09690a4b094e02d7"
+    },
+    {
+      "path": "results/mech_oracle_qwen3_4b.json",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/results/mech_oracle_qwen3_4b.json",
+      "bytes": 565,
+      "sha256": "035d00e31c865c85fdb0d23f9b053d7a52afda999aa2b7156c70891b571ae089"
+    },
+    {
+      "path": "results/selective_Ksweep_qwen3_1p7b_par.json",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/results/selective_Ksweep_qwen3_1p7b_par.json",
+      "bytes": 690,
+      "sha256": "346125f1f530b9102d312501ce394b27b44db3507f5451738097a9777f87b05e"
+    },
+    {
+      "path": "esys/mech_diverse.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/mech_diverse.py",
+      "bytes": 5756,
+      "sha256": "336e37fb60ae507eb80a67c558e0206cc1832ca02d405b4a9290f6df4d62b243"
+    },
+    {
+      "path": "esys/selective_Ksweep.py",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "esys/mech_suite.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/mech_suite.py",
+      "bytes": 15544,
+      "sha256": "419377ebb4d79c144c1139896aac29e59a7c9e6a9fa772281002ebddbd0b9648"
+    },
+    {
+      "path": "esys/mech_oracle_control.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/mech_oracle_control.py",
+      "bytes": 5369,
+      "sha256": "075d400b060c25505749689bc7d54e456a3e74f087f2af581b85881c8b78066f"
+    },
+    {
+      "path": "e2/scenarios.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/e2/scenarios.py",
+      "bytes": 5381,
+      "sha256": "9f499f0f901ee65904f186139039172d1bb17fc6c59e8b715022e10dcde30e68"
+    },
+    {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/requirements.txt",
+      "bytes": 892,
+      "sha256": "e870141745f326046dc047915d887cf877b65847a7300581c958120eb16c279d"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "esys/diverse_tasks.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/diverse_tasks.py",
+      "bytes": 4063,
+      "sha256": "7b49c7ddc937e5330e742a816e60c74de0fba5c51eb076a9ee8e8d242add6ea4"
+    },
+    {
+      "path": "esys/selective_K_sweep.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/selective_K_sweep.py",
+      "bytes": 5786,
+      "sha256": "b5668a0c5c4cd42742794036f5cbac395d6d07e713c113040cb78ccd542d4584"
+    },
+    {
+      "path": "esys/selective_recompute.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/esys/selective_recompute.py",
+      "bytes": 11009,
+      "sha256": "3dcb5db7b595de885dd8d2377a28dbcd5a72111a53c0379e9d57cf865baa0b45"
+    },
+    {
+      "path": "e1/align.py",
+      "url": "https://raw.githubusercontent.com/19PINE-AI/programmable-kv/e9085eafcc6c83e60c548de69060c4bd5b210c96/e1/align.py",
+      "bytes": 2524,
+      "sha256": "7ee943e261046fd95a9bc781c995d5c1f40dff00d20c8dd5b9aec706edab8a20"
+    }
+  ]
+}

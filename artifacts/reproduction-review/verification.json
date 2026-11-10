@@ -1,0 +1,10 @@
+{
+  "archive_digest_matches": true,
+  "all_committed_files_archived": 106,
+  "source_matches_archive_and_frozen_state": true,
+  "new_inference_implementation": false,
+  "model_downloads": false,
+  "model_inference_runs": false,
+  "external_source_executed": false,
+  "mps_probe_only": true
+}
