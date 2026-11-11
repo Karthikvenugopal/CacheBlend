@@ -1,0 +1,126 @@
+{
+  "analysis_type": "static log/source/header analysis; no inference or allocation experiment",
+  "parameter_elements_including_both_checkpoint_embedding_and_head": 2031739904,
+  "checkpoint_elements_by_dtype": {
+    "BF16": 2031739904
+  },
+  "float32_parameter_payload_bytes": 8126959616,
+  "float32_parameter_payload_GiB": 7.568820953369141,
+  "large_parameters": {
+    "model.embed_tokens.weight": {
+      "shape": [
+        151936,
+        2048
+      ],
+      "float32_bytes": 1244659712,
+      "float32_GiB": 1.1591796875
+    },
+    "lm_head.weight": {
+      "shape": [
+        151936,
+        2048
+      ],
+      "float32_bytes": 1244659712,
+      "float32_GiB": 1.1591796875
+    }
+  },
+  "sequence_tokens": 1356,
+  "document_tokens": 1295,
+  "fresh_tokens": 61,
+  "float32_KV_bytes_per_token": 229376,
+  "full_KV_bytes": 311033856,
+  "document_KV_bytes": 297041920,
+  "three_simultaneously_live_cache_payload_bytes": 919109632,
+  "128_generated_tokens_extra_KV_bytes": 29360128,
+  "one_full_attention_matrix_bytes": 117679104,
+  "worker_memory_samples": [
+    {
+      "elapsed_s": 18.302531003952026,
+      "maxrss_bytes": 6173982720,
+      "mps_allocated_bytes": 8126960128,
+      "mps_driver_bytes": 8942731264,
+      "mps_recommended_bytes": 12713115648
+    },
+    {
+      "elapsed_s": 23.349863052368164,
+      "maxrss_bytes": 6173982720,
+      "mps_allocated_bytes": 8424609792,
+      "mps_driver_bytes": 10548494336,
+      "mps_recommended_bytes": 12713115648
+    },
+    {
+      "elapsed_s": 52.468353033065796,
+      "maxrss_bytes": 6173982720,
+      "mps_allocated_bytes": 9742942720,
+      "mps_driver_bytes": 11488542720,
+      "mps_recommended_bytes": 12713115648
+    }
+  ],
+  "os_timeline": [
+    {
+      "elapsed_s": 0.0,
+      "kernel_pressure": 1,
+      "os_free_percentage": 80,
+      "new_swapouts_bytes": 0,
+      "new_swapins_bytes": 0,
+      "sampled_process_rss_bytes": 10371072
+    },
+    {
+      "elapsed_s": 10.03453803062439,
+      "kernel_pressure": 4,
+      "os_free_percentage": 25,
+      "new_swapouts_bytes": 1325989888,
+      "new_swapins_bytes": 16023552,
+      "sampled_process_rss_bytes": 1115029504
+    },
+    {
+      "elapsed_s": 20.056714057922363,
+      "kernel_pressure": 1,
+      "os_free_percentage": 25,
+      "new_swapouts_bytes": 3075080192,
+      "new_swapins_bytes": 1443774464,
+      "sampled_process_rss_bytes": 637763584
+    },
+    {
+      "elapsed_s": 30.082928895950317,
+      "kernel_pressure": 2,
+      "os_free_percentage": 21,
+      "new_swapouts_bytes": 5332467712,
+      "new_swapins_bytes": 2927263744,
+      "sampled_process_rss_bytes": 188989440
+    },
+    {
+      "elapsed_s": 40.24081110954285,
+      "kernel_pressure": 2,
+      "os_free_percentage": 23,
+      "new_swapouts_bytes": 7845904384,
+      "new_swapins_bytes": 4582277120,
+      "sampled_process_rss_bytes": 90800128
+    },
+    {
+      "elapsed_s": 50.275351762771606,
+      "kernel_pressure": 2,
+      "os_free_percentage": 27,
+      "new_swapouts_bytes": 9709879296,
+      "new_swapins_bytes": 5850120192,
+      "sampled_process_rss_bytes": 72597504
+    },
+    {
+      "elapsed_s": 60.29260587692261,
+      "kernel_pressure": 2,
+      "os_free_percentage": 22,
+      "new_swapouts_bytes": 11037343744,
+      "new_swapins_bytes": 8305442816,
+      "sampled_process_rss_bytes": 291717120
+    }
+  ],
+  "attribution_limits": [
+    "Counters are system-wide; baseline swap usage was already nonzero. Cumulative swap I/O is churn, not simultaneously resident bytes.",
+    "Pressure reached critical at10s, before the first post-load sample at18.3s. The evidence does not isolate checkpoint reading, asynchronous CPU conversion, device transfer or unrelated OS load.",
+    "The worker retains source and native caches while creating a third candidate cache for validation. It releases candidate but retains native before the second endpoint. Full endpoint passed; reference ratio1 endpoint was interrupted.",
+    "Source label ACTIVE.phase remained composition while validation was executing. Traceback and completed gate files, rather than this stale label, locate the stop.",
+    "Observed driver minus tensor allocations includes allocator/backend resources, not a measured leak. Sparse samples cannot identify every temporary or true MPS peak.",
+    "RSS and MPS counters overlap and must not be added. There was no recorded OOM or nonfinite error."
+  ],
+  "proposed_plan_status": "proposal only; no loader, executor, precision or guard has been changed; no run authorized"
+}

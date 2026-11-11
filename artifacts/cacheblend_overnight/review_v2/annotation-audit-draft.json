@@ -1,0 +1,749 @@
+{
+  "parent_frozen_sha256": "6cd0b3bf5d384372a29c377c5cdc2f0be69c8b42babf84c9409d450cf91fe519",
+  "version2_sha256": "0313df7e58a51ed02416e90d2a34a2eda04471515178403952e5c1a15ee2770c",
+  "original_items": 10,
+  "retained": 9,
+  "excluded": [
+    "wikimqa:031"
+  ],
+  "new_candidates": 0,
+  "replacements": 0,
+  "input_ids_changed_for_retained_items": false,
+  "original_candidate_pool": 40,
+  "original_selected": 10,
+  "original_excluded_before_run": 26,
+  "original_not_qualified_after_cap": 4,
+  "ranking_provenance": "not available; only supplied context order is known",
+  "prior_annotation_status": "Agent-created quotations and offsets existed; explicit chains and subject anchors were incomplete; no official or human validation existed. User approval authorized creating annotations, not validation of their contents.",
+  "findings": [
+    {
+      "id": "musique:022",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 22,
+          "json_location": "[22].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            253,
+            377
+          ],
+          "decoded_prompt_character_span_half_open": [
+            474,
+            598
+          ],
+          "quote": "dimuthu bandara abayakoon ( born september 6, 1971 ) is a sri lankan politician, belonging to the janatha vimukthi peramuna.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 22,
+          "json_location": "[22].ctxs[5].text",
+          "source_context_index_zero_based": 5,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1194,
+            1329
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3724,
+            3859
+          ],
+          "quote": "known as rohana wijeweera, was a sri lankan marxist politician, revolutionary and the founding leader of the janatha vimukthi peramuna.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Dimuthu Bandara Abayakoon belongs to Janatha Vimukthi Peramuna."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "Rohana Wijeweera is identified as the founding leader of that same named party."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Join on the explicit party name; return its founding leader."
+        }
+      ],
+      "derived_answer_from_quotes": "rohana wijeweera",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "The same window mentions his UPFA candidacy; party membership used here is the explicitly stated belonging-to relation, not an inferred coalition equivalence."
+      ]
+    },
+    {
+      "id": "musique:027",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 27,
+          "json_location": "[27].ctxs[3].text",
+          "source_context_index_zero_based": 3,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            912,
+            1045
+          ],
+          "decoded_prompt_character_span_half_open": [
+            1133,
+            1266
+          ],
+          "quote": "the rabat ajax football ground is the training ground of maltese football team rabat ajax f. c. and is located in the town of mtarfa.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 27,
+          "json_location": "[27].ctxs[6].text",
+          "source_context_index_zero_based": 6,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            823,
+            1082
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3421,
+            3680
+          ],
+          "quote": "malcolm licari ( born 18 april 1978 in pieta, malta ) is a retired professional footballer playing for pieta hotspurs, marsaxlokk, floriana, balzan and rabat ajax in the maltese premier league, where he plays as a striker, and also occasionally as a defender.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "The named ground is used by Rabat Ajax F.C."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "The supplied account associates Rabat Ajax with the Maltese Premier League in its description of Licari."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Join the team names and return the league stated in the supplied account."
+        }
+      ],
+      "derived_answer_from_quotes": "maltese premier league",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "Text mixes retired/present-tense biographical language. This supports a source-conditioned historical association, not an independently checked current league affiliation. No present-day sports fact was looked up."
+      ]
+    },
+    {
+      "id": "musique:030",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 30,
+          "json_location": "[30].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            453,
+            617
+          ],
+          "decoded_prompt_character_span_half_open": [
+            674,
+            838
+          ],
+          "quote": "in the shadow of greatness is a 2012 book written by 33 members of the united states naval academy class of 2002 and published by the united states naval institute.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 30,
+          "json_location": "[30].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            112,
+            247
+          ],
+          "decoded_prompt_character_span_half_open": [
+            333,
+            468
+          ],
+          "quote": "the united states naval institute ( usni ), based in annapolis, maryland, is a private, non - profit, professional military association",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "The book is published by the United States Naval Institute."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "That organization is based in Annapolis, Maryland."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Join on the organization name; interpret based-in as the location requested by the headquarters question."
+        }
+      ],
+      "derived_answer_from_quotes": "annapolis, maryland",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "Both hops occur in one intact retained window. The second window is additional context, not a missing supporting hop. Headquarters is a linguistic reading of based-in; no external headquarters record is assumed."
+      ]
+    },
+    {
+      "id": "musique:033",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 33,
+          "json_location": "[33].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            730,
+            845
+          ],
+          "decoded_prompt_character_span_half_open": [
+            951,
+            1066
+          ],
+          "quote": "snappy tomato pizza is a pizza chain that started in fort mitchell, kentucky, and has over 60 locations nationwide.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 33,
+          "json_location": "[33].ctxs[4].text",
+          "source_context_index_zero_based": 4,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1536,
+            1627
+          ],
+          "decoded_prompt_character_span_half_open": [
+            4285,
+            4376
+          ],
+          "quote": "fort mitchell is a home rule - class city in kenton county, kentucky, in the united states.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Snappy Tomato Pizza started in Fort Mitchell, Kentucky."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "Fort Mitchell is in Kenton County, Kentucky."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Join on the full city/state identity and return the county."
+        }
+      ],
+      "derived_answer_from_quotes": "kenton county",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "The question asks where the chain formed, so the stated started-in location is used rather than its separately stated headquarters in Burlington."
+      ]
+    },
+    {
+      "id": "musique:039",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 39,
+          "json_location": "[39].ctxs[8].text",
+          "source_context_index_zero_based": 8,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            549,
+            619
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3339,
+            3409
+          ],
+          "quote": "the contemporary liberal party generally advocates economic liberalism",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 39,
+          "json_location": "[39].ctxs[8].text",
+          "source_context_index_zero_based": 8,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            852,
+            1094
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3642,
+            3884
+          ],
+          "quote": "strong opposition to socialism and communism in australia and abroad was one of its founding principles. the party's founder and longest - serving leader robert menzies envisaged that australia's middle class would form its main constituency.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 39,
+          "json_location": "[39].ctxs[7].text",
+          "source_context_index_zero_based": 7,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            1352,
+            1459
+          ],
+          "decoded_prompt_character_span_half_open": [
+            1573,
+            1680
+          ],
+          "quote": "politically, robert menzies and the liberal party of australia dominated much of the immediate post war era",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__musique_s.json",
+          "source_record_index": 39,
+          "json_location": "[39].ctxs[7].text",
+          "source_context_index_zero_based": 7,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            1008,
+            1095
+          ],
+          "decoded_prompt_character_span_half_open": [
+            1229,
+            1316
+          ],
+          "quote": "lyons'death in 1939 saw robert menzies assume the prime ministership on the eve of war.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0,
+            1,
+            2
+          ],
+          "claim": "The local party discourse, Australia context, named Australian Liberal Party and Robert Menzies supply the antecedent for the party-founder claim."
+        },
+        {
+          "evidence": [
+            3
+          ],
+          "claim": "The supplied account explicitly says Lyons death in 1939 led to Menzies assuming the prime ministership."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Join on Robert Menzies and return the stated event, reading become Prime Minister as his initial accession described here."
+        }
+      ],
+      "derived_answer_from_quotes": "lyons'death in 1939",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "The abbreviated v1 quote omitted party identity. New contextual quotes supply that link from retained texts, not from the gold answer. The account also discusses later elections; this answer is conditional on the question referring to the initial accession."
+      ]
+    },
+    {
+      "id": "wikimqa:025",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 25,
+          "json_location": "[25].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            307,
+            363
+          ],
+          "decoded_prompt_character_span_half_open": [
+            528,
+            584
+          ],
+          "quote": "guy arvely dolsin ( born january 15, 1957 in toamasina )",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 25,
+          "json_location": "[25].ctxs[3].text",
+          "source_context_index_zero_based": 3,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1893,
+            1985
+          ],
+          "decoded_prompt_character_span_half_open": [
+            4176,
+            4268
+          ],
+          "quote": "altug celikbilek ( turkish pronunciation : [ ˈaɫtuː ˈtʃelicbilec ] ; born 7 september 1996 )",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Guy Arvely Dolsin was born in 1957."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "The Altug Celikbilek entry gives a birth year of 1996."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Compare explicit birth years: 1996 is later than 1957, so the second person is younger."
+        }
+      ],
+      "derived_answer_from_quotes": "altug celikbilek",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "The question uses Altuğ Çelikbilek and the source uses an unaccented spelling with a pronunciation. This is an explicit agent name-normalization assumption, not human validation. Gold spelling is preserved without adding scoring aliases; exact scoring can penalize a source-faithful unaccented output."
+      ]
+    },
+    {
+      "id": "wikimqa:026",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 26,
+          "json_location": "[26].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            253,
+            392
+          ],
+          "decoded_prompt_character_span_half_open": [
+            474,
+            613
+          ],
+          "quote": "jugband blues \" is a song by the english psychedelic rock band pink floyd, released on their second album, a saucerful of secrets, in 1968.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 26,
+          "json_location": "[26].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            361,
+            548
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3055,
+            3242
+          ],
+          "quote": "joel the lump of coal \" joel the lump of coal \" is a song by las vegas - based rock band the killers featuring late night talk show host jimmy kimmel. it was released on december 1, 2014.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Jugband Blues was released on the named album in 1968."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "The song named Joel the Lump of Coal is the antecedent of it in the December 1, 2014 release sentence."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Compare the provided release years: 1968 precedes 2014."
+        }
+      ],
+      "derived_answer_from_quotes": "jugband blues",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "V1 quoted only it was released... for the second song. The v2 span includes its title and subject sentence, closing the annotation gap without changing input text."
+      ]
+    },
+    {
+      "id": "wikimqa:031",
+      "decision": "exclude_ambiguous",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 31,
+          "json_location": "[31].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            813,
+            998
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3477,
+            3662
+          ],
+          "quote": "john paul getty jr. sir paul getty ( ; born eugene paul getty ; 7 september 1932 – 17 april 2003 ), known widely as john paul getty jr., was a british philanthropist and book collector.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 31,
+          "json_location": "[31].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            999,
+            1066
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3663,
+            3730
+          ],
+          "quote": "he was the third of five sons born to j. paul getty ( 1892 – 1976 )",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 31,
+          "json_location": "[31].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1171,
+            1346
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3835,
+            4010
+          ],
+          "quote": "the getty family's wealth was the result of the oil business founded by george franklin getty. one of his sons, mark getty, co - founded the visual media company getty images.",
+          "literal_location_check_passed": true
+        }
+      ],
+      "supported_partial_hops": [
+        "The John Paul Getty Jr heading anchors the third-of-five-sons relation to J. Paul Getty."
+      ],
+      "unresolved_hops": [
+        "The Mark Getty parent link is expressed only as one of his sons immediately after George Franklin Getty is named. The intended return to the article subject John Paul Getty Jr is plausible but not explicitly disambiguated in this flattened text.",
+        "The retained windows do not explicitly expand the grandfather J. Paul Getty to the gold label Jean Paul Getty. The junior name elsewhere is not evidence for expanding the senior name."
+      ],
+      "reason": "Conservative exclusion for unresolved parent-link coreference and ungrounded gold-name expansion. This does not assert the intended biography is false; the agent will not fill these links from gold or outside knowledge.",
+      "derived_answer": null,
+      "replacement": null
+    },
+    {
+      "id": "wikimqa:032",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 32,
+          "json_location": "[32].ctxs[9].text",
+          "source_context_index_zero_based": 9,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1766,
+            1838
+          ],
+          "decoded_prompt_character_span_half_open": [
+            4198,
+            4270
+          ],
+          "quote": "\" fantasy \" is a song by the english singer - songwriter george michael.",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 32,
+          "json_location": "[32].ctxs[0].text",
+          "source_context_index_zero_based": 0,
+          "assembled_chunk_index_zero_based": 1,
+          "source_character_span_half_open": [
+            320,
+            489
+          ],
+          "decoded_prompt_character_span_half_open": [
+            541,
+            710
+          ],
+          "quote": "michael died of heart disease on christmas day in 2016, at his home in goring - on - thames, oxfordshire. early life george michael was born georgios kyriacos panayiotou",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Fantasy is performed by George Michael."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "The death sentence gives Michael home in Goring-on-Thames, Oxfordshire, followed by the same subject full-name early-life identification."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Resolve the local Michael subject to George Michael and return the stated place of death."
+        }
+      ],
+      "derived_answer_from_quotes": "goring - on - thames, oxfordshire",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "The paragraph transition and full name are now quoted explicitly. Home here is the stated death location, not an inferred birthplace or residence from an external biography."
+      ]
+    },
+    {
+      "id": "wikimqa:035",
+      "decision": "retain_with_agent_annotations",
+      "annotation_origin": "agent_created",
+      "official": false,
+      "human_validated": false,
+      "evidence": [
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 35,
+          "json_location": "[35].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            192,
+            263
+          ],
+          "decoded_prompt_character_span_half_open": [
+            2436,
+            2507
+          ],
+          "quote": "above rubies is a 1932 british comedy film directed by frank richardson",
+          "literal_location_check_passed": true
+        },
+        {
+          "source_file": "experiments/cacheblend/reference/inputs__wikimqa_s.json",
+          "source_record_index": 35,
+          "json_location": "[35].ctxs[1].text",
+          "source_context_index_zero_based": 1,
+          "assembled_chunk_index_zero_based": 2,
+          "source_character_span_half_open": [
+            1248,
+            1360
+          ],
+          "decoded_prompt_character_span_half_open": [
+            3492,
+            3604
+          ],
+          "quote": "the magic aster the magic aster ( [UNK] [UNK] 花 ; ma lan hua ) is a chinese animated film released june 19, 2009",
+          "literal_location_check_passed": true
+        }
+      ],
+      "reasoning_chain": [
+        {
+          "evidence": [
+            0
+          ],
+          "claim": "Above Rubies is dated 1932."
+        },
+        {
+          "evidence": [
+            1
+          ],
+          "claim": "The Magic Aster is explicitly named and its release dated June 19, 2009."
+        },
+        {
+          "depends_on": [
+            0,
+            1
+          ],
+          "operation": "Compare the given film year and release year: 1932 precedes 2009."
+        }
+      ],
+      "derived_answer_from_quotes": "above rubies",
+      "necessary_hops": "present under the explicitly stated local linguistic/identity assumptions",
+      "assumptions_and_scoring_limits": [
+        "V1 omitted the second film name from its date quotation. The v2 quote supplies the title already present in the frozen window."
+      ]
+    }
+  ],
+  "original_evidence_manifest_verified_files": 31,
+  "inference_started": false
+}

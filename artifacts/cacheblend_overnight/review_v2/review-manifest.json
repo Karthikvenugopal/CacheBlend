@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-11-11T15:25:24.255476+00:00",
+  "review_only": true,
+  "inference_started": false,
+  "original_freeze_unchanged": true,
+  "prior_overnight_31_files_unchanged": true,
+  "prior_pilot_62_files_unchanged": true,
+  "retained_input_identity_checks_passed": 9,
+  "annotations_are_agent_created_not_human_validated": true,
+  "sha256": {
+    "artifacts/cacheblend_overnight/review_v2/annotation-audit-draft.json": "a8a5cd7162a5cc172bc1705606ba646222cd23152e97491cbc205ab15b1a3b51",
+    "artifacts/cacheblend_overnight/review_v2/annotation-audit-draft.md": "e71560354934de451f993b79926c3473f6f894b8872c00f08c162e0e87e058b4",
+    "artifacts/cacheblend_overnight/review_v2/annotation-audit.json": "9639cb83099db381d87aeb38d02a1f6610d46a4dcbf44327639bd39c8153b692",
+    "artifacts/cacheblend_overnight/review_v2/annotation-audit.md": "bc7d50e6acebf52aceb6986c71d4d7b7e5b45f13349d7a3df4affacb520d5161",
+    "artifacts/cacheblend_overnight/review_v2/memory-analysis.json": "bf03882605730cb3b969471b865b76cea30c8c490a57f51281f8df20e1f7c84a",
+    "artifacts/cacheblend_overnight/review_v2/memory-diagnosis-and-plan.md": "dfc9b862e098017781e85a73ade28885be9c97359b78bb860d1b005fdb0f7673",
+    "experiments/cacheblend_overnight/review_v2/README.md": "eb6f1d0f60c2eea9d4e6386b6ef20861d25531685aa989d0f68e32a63d6b7ebf",
+    "experiments/cacheblend_overnight/review_v2/audit_annotations.py": "815446f2b5ce6421773e2c4cbc233c073b38b63635a2ba8493a0221ee31b50d4",
+    "experiments/cacheblend_overnight/review_v2/diagnose_memory.py": "f87ae61c30cf0a900652ab35f5ad9ccac4491608bcecc1c2e48abef31eca58c4",
+    "experiments/cacheblend_overnight/review_v2/frozen-v2-draft.json": "0313df7e58a51ed02416e90d2a34a2eda04471515178403952e5c1a15ee2770c",
+    "experiments/cacheblend_overnight/review_v2/frozen-v2.json": "68030f866f02f8a51f3860efaffe053a90fa886d871d066ab454ad87ea99bb4b"
+  }
+}
