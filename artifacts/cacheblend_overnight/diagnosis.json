@@ -1,0 +1,44 @@
+{
+  "elapsed_s": 70.32845497131348,
+  "completed_results": 0,
+  "expected_results": 50,
+  "samples": 7,
+  "preflight_item": "wikimqa:025",
+  "prompt_tokens": 1356,
+  "observed_pressure_levels": [
+    1,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "minimum_os_free_percentage": 21,
+  "new_system_swapouts_bytes": 11037343744,
+  "new_system_swapins_bytes": 8305442816,
+  "maximum_observed_worker_maxrss_bytes": 6173982720,
+  "maximum_observed_mps_allocated_bytes": 9742942720,
+  "maximum_observed_mps_driver_bytes": 11488542720,
+  "mps_recommended_bytes": 12713115648,
+  "native_prefix_tensor_flags": 5,
+  "gates_completed": {
+    "validation-prefix-logits-layer0.json": {
+      "comparisons": 3,
+      "passed": true,
+      "max_abs": 6.103515625e-05
+    },
+    "validation-position-correction.json": {
+      "comparisons": 84,
+      "passed": true,
+      "max_abs": 6.103515625e-05
+    },
+    "validation-full-endpoint.json": {
+      "comparisons": 57,
+      "passed": true,
+      "max_abs": 0.0
+    }
+  },
+  "source_and_prior_archive_unchanged": true,
+  "no_new_batch_or_retry": true
+}

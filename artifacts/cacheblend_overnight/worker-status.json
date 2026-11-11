@@ -1,0 +1,12 @@
+{
+  "status": "stopped",
+  "active": {
+    "item": "wikimqa:025",
+    "phase": "composition"
+  },
+  "partial_generated_ids": [],
+  "error": "Stop('Stop requested, deadline reached, or supervisor exited')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 133, in main\n    begin=time.time();item_run(pre,True,protocol,phash,tok)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 76, in item_run\n    guard();cache,logits,_=execute(MODEL,ids,d,source,mode,1.)\n                           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend/core.py\", line 99, in execute\n    x = layer.input_layernorm(hidden)\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1773, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1879, in _call_impl\n    return inner()\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1816, in inner\n    args_result = hook(self, args)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 23, in guard\n    raise Stop('Stop requested, deadline reached, or supervisor exited')\nStop: Stop requested, deadline reached, or supervisor exited\n",
+  "elapsed_s": 60.71287822723389,
+  "completed_results": 0
+}

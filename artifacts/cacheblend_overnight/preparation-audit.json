@@ -1,0 +1,62 @@
+{
+  "ranked_retrieval": "unverifiable from schema; prior description of retrieved/ranked contexts was an unverified assumption",
+  "official_support_annotations": "absent in every cached record",
+  "original_passage_ids": "absent; titles empty; windows concatenate material from unrelated topics",
+  "manual_annotation_authorization": "user explicitly approved manual evidence chains for this diagnostic",
+  "previous_pilot_evidence_losses": [
+    {
+      "id": "musique:000",
+      "claim": "education at Exeter College",
+      "source_context_token_offsets": {
+        "3": 565,
+        "4": 594,
+        "6": 281,
+        "7": 414,
+        "9": 326
+      },
+      "effect": "Every occurrence lies beyond128-token cap; context9 additionally omitted in8-window input."
+    },
+    {
+      "id": "musique:001",
+      "claim": "Hughesville in Charles County",
+      "source_context_token_offsets": {
+        "0": 353,
+        "1": 386,
+        "2": 478,
+        "3": 513,
+        "5": 237
+      },
+      "effect": "All occurrences cut by128-token cap."
+    },
+    {
+      "id": "wikimqa:001",
+      "claim": "Sobe mother of Elizabeth",
+      "source_context_token_offsets": {
+        "0": 226
+      },
+      "effect": "First relationship hop removed by128-token cap despite answer-string presence elsewhere."
+    }
+  ],
+  "representative_full_answers": [
+    {
+      "id": "musique:000/8x128",
+      "gold": "Exeter College",
+      "answer": "University of Edinburgh.",
+      "assessment": "Wrong gold answer on an input missing the education evidence; cannot isolate a model error from the missing-evidence confound."
+    },
+    {
+      "id": "musique:011/8x128",
+      "gold": "national cycling route network",
+      "answer": "National Cycle Network",
+      "assessment": "Both route-to-network and network-to-type claims are retained. Output names the network rather than its requested type; abstraction/readout error with lexical scoring penalties, not merely absent evidence."
+    },
+    {
+      "id": "musique:005/8x128",
+      "gold": "Emilia Galotti",
+      "answer": "Miss Sara Sampson is a play by Gotthold Ephraim Lessing. Another notable work by the author is \"Emilia Galotti.\"",
+      "assessment": "Gold is embedded in elaboration: raw EM0 and word F1 .2105 penalize length. Reference first-line parser does not remove same-line elaboration. Correct embedded string is not a proof of complete reasoning."
+    }
+  ],
+  "old_pilot_method_outputs_rescored": 400,
+  "new_model_inferences_during_preparation": 0
+}

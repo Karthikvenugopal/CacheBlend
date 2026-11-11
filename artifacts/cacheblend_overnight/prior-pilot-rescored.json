@@ -1,0 +1,6002 @@
+[
+  {
+    "id": "musique:000",
+    "config": "4x128",
+    "method": "full",
+    "answer": "University of Edinburgh",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Edinburgh",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The author of *Hannibal and Scipio* was educated at the University of Edinburgh.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The author of *Hannibal and Scipio* was educated at the University of Edinburgh.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "8x128",
+    "method": "full",
+    "answer": "University of Edinburgh.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Edinburgh.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The author of \"Hannibal and Scipio\" is Mads Mikkelsen.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The author of \"Hannibal and Scipio\" is Mads Mikkelsen.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "4x128",
+    "method": "full",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland. The answer is: Hughesville.",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland. The answer is: Hughesville.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "8x128",
+    "method": "full",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: southern maryland.",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: southern maryland.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Michelle Phillips",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "Michelle Phillips",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6
+  },
+  {
+    "id": "musique:002",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The child of the Victim of Romance performer is the one born on January 14, 1794.",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The child of the Victim of Romance performer is the one born on January 14, 1794.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Susan Aglukark.",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Susan Aglukark.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The victim of the romance on film, romance on broadway is a 2000 album by american vocalist michael feinstein. The victim is the one",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The victim of the romance on film, romance on broadway is a 2000 album by american vocalist michael feinstein. The victim is the one",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.15384615384615385,
+    "reference_parsed_answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.11764705882352941,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.13333333333333333
+  },
+  {
+    "id": "musique:003",
+    "config": "8x128",
+    "method": "full",
+    "answer": "missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.15384615384615385,
+    "reference_parsed_answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.11764705882352941,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.13333333333333333
+  },
+  {
+    "id": "musique:004",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Pias",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Pias",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:004",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Pias Records.",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "The answer is: Pias Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2222222222222222,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2857142857142857
+  },
+  {
+    "id": "musique:004",
+    "config": "8x128",
+    "method": "full",
+    "answer": "RCA Records",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "RCA Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:004",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The record label is Pias Records.",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.25,
+    "reference_parsed_answer": "The record label is Pias Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:005",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Miss Mousie's Blind Date",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Miss Mousie's Blind Date",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: \"Kabale und Liebe\" by Gotthold Ephraim Lessing.",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: \"Kabale und Liebe\" by Gotthold Ephraim Lessing.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Miss Sara Sampson is a play by Gotthold Ephraim Lessing. Another notable work by the author is \"Emilia Galotti.\"",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.21052631578947367,
+    "reference_parsed_answer": "Miss Sara Sampson is a play by Gotthold Ephraim Lessing. Another notable work by the author is \"Emilia Galotti.\"",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.1935483870967742,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.20689655172413793
+  },
+  {
+    "id": "musique:005",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: \"The story of the play \"The Tragedy of the Muses\" by Gotthold Ephraim Lessing.",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: \"The story of the play \"The Tragedy of the Muses\" by Gotthold Ephraim Lessing.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "4x128",
+    "method": "full",
+    "answer": "tito puente",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "tito puente",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The instrument played by the person from The Blackout All-Stars is the electric musical instrument.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The instrument played by the person from The Blackout All-Stars is the electric musical instrument.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "8x128",
+    "method": "full",
+    "answer": "The Chapman Stick.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Chapman Stick.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The instrument played by the person from The Blackout All-Stars is the Chapman Stick.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The instrument played by the person from The Blackout All-Stars is the Chapman Stick.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Van Hook township is located in Mountrail County.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook township is located in Mountrail County.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The seat of Van Hook Township is in North Dakota.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The seat of Van Hook Township is in North Dakota.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Van Hook township is located in Mountrail County, North Dakota.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook township is located in Mountrail County, North Dakota.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The seat of Van Hook Township is in Lincoln County, Kentucky.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The seat of Van Hook Township is in Lincoln County, Kentucky.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:008",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Josiah Stamp",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Josiah Stamp",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:008",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring of Cromer Hall.",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2222222222222222,
+    "reference_parsed_answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring of Cromer Hall.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.34285714285714286,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.36363636363636365
+  },
+  {
+    "id": "musique:008",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Henry Baring",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "Henry Baring",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.26666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3076923076923077
+  },
+  {
+    "id": "musique:008",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring, third son of Sir Francis Baring, 1st Baronet",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.43478260869565216,
+    "reference_parsed_answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring, third son of Sir Francis Baring, 1st Baronet",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.4186046511627907,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.43902439024390244
+  },
+  {
+    "id": "musique:009",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: The performer was a member of the indie rock group Broken Social Scene.",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The performer was a member of the indie rock group Broken Social Scene.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: The passage mentions that the song \"Be the One\" was performed by Eric Clapton, who was a member of the band The Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The passage mentions that the song \"Be the One\" was performed by Eric Clapton, who was a member of the band The Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Katrina Kaif",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Katrina Kaif",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The lead singer of the band performing \"Bang Bang Rock & Roll\" is not specified in the passage.",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The lead singer of the band performing \"Bang Bang Rock & Roll\" is not specified in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Kevin Sussman",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kevin Sussman",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The lead singer of the band is not specified in the passage.",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The lead singer of the band is not specified in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:011",
+    "config": "4x128",
+    "method": "full",
+    "answer": "National Cycle Network",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5714285714285714,
+    "reference_parsed_answer": "National Cycle Network",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:011",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.375,
+    "reference_parsed_answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:011",
+    "config": "8x128",
+    "method": "full",
+    "answer": "National Cycle Network",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5714285714285714,
+    "reference_parsed_answer": "National Cycle Network",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:011",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "National Cycle Route 57 is an example of a national cycle route network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "National Cycle Route 57 is an example of a national cycle route network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.35294117647058826,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.26666666666666666
+  },
+  {
+    "id": "musique:012",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Mila Kunis",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Mila Kunis",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:012",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The spouse of the child of Peter Andreas Heiberg is Magdalena Eleonora Busseck.",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.14285714285714285,
+    "reference_parsed_answer": "The spouse of the child of Peter Andreas Heiberg is Magdalena Eleonora Busseck.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "musique:012",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Mila Kunis",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Mila Kunis",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:012",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: the spouse of the child of Peter Andreas Heiberg is not mentioned in the passage.",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.11764705882352941,
+    "reference_parsed_answer": "The answer is: the spouse of the child of Peter Andreas Heiberg is not mentioned in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.24,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2608695652173913
+  },
+  {
+    "id": "musique:013",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:013",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The Unwinding: An Inner History of the New America is written by George Packer, who was an early termination from the Peace Corps. \n\nAnswer:",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.19047619047619047,
+    "reference_parsed_answer": "The Unwinding: An Inner History of the New America is written by George Packer, who was an early termination from the Peace Corps. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.08333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.09090909090909091
+  },
+  {
+    "id": "musique:013",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:013",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Peace Corps.",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Peace Corps.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.5
+  },
+  {
+    "id": "musique:014",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Austrian Capital Territory.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Austrian Capital Territory.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The capital of the county that Pine Springs is located in is Texas.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The capital of the county that Pine Springs is located in is Texas.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Austrian capital.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Austrian capital.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The capital of the county where Pine Springs is located is Lufkin, Texas.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The capital of the county where Pine Springs is located is Lufkin, Texas.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "4x128",
+    "method": "full",
+    "answer": "bandundu",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "bandundu",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Dorset.",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "The answer is: Dorset.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.8
+  },
+  {
+    "id": "musique:015",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Pangi Territory",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Pangi Territory",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: corfe mullen.",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: corfe mullen.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Erik Erikson",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "Erik Erikson",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.6,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.75
+  },
+  {
+    "id": "musique:016",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Katharina von Bora",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Katharina von Bora",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The spouse of Young Man Luther's author is Katharina von Bora.",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of Young Man Luther's author is Katharina von Bora.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:017",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Orbit Records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "Orbit Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.4,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "musique:017",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Columbia Records.",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Columbia Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "musique:017",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Ornament records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "Ornament records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.5
+  },
+  {
+    "id": "musique:017",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Columbia Records.",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Columbia Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "musique:018",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Vukosava Milanovic-Reljin",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Vukosava Milanovic-Reljin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "musique:018",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Milena Reljin.",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Milena Reljin.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Milena Reljin",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Milena Reljin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: vukosava milanovic - reljin.",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: vukosava milanovic - reljin.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.14285714285714285,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.16666666666666666
+  },
+  {
+    "id": "musique:019",
+    "config": "4x128",
+    "method": "full",
+    "answer": "North Carolina State University's football team.",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: men's baseball.",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: men's baseball.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Kris Benson",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kris Benson",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: the men's volleyball team.",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: the men's volleyball team.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Galata, Constantinople",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Galata, Constantinople",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The wife of Francis I Rákóczi was born in Gedern.",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The wife of Francis I Rákóczi was born in Gedern.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Budingen",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Budingen",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The wife of Francis I of Hungary, Francis II of Styria, was born in Gedern.",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The wife of Francis I of Hungary, Francis II of Styria, was born in Gedern.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Eleanor and Thomas's child, Humphrey.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eleanor and Thomas's child, Humphrey.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Eleanor and Thomas's granddaughter.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Eleanor and Thomas's granddaughter.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Sobe's grandchild is Elizabeth.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Sobe's grandchild is Elizabeth.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Maria Teresa.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Maria Teresa.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Kfar Saba municipality",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kfar Saba municipality",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The director of the film *Man at Bath* is based in the United States.",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film *Man at Bath* is based in the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "8x128",
+    "method": "full",
+    "answer": "film and television department at the kfar saba municipality",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "film and television department at the kfar saba municipality",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The director of the film *Man at Bath* is located in the United States.",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film *Man at Bath* is located in the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "4x128",
+    "method": "full",
+    "answer": "No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "8x128",
+    "method": "full",
+    "answer": "No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "4x128",
+    "method": "full",
+    "answer": "18 November 1601",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "18 November 1601",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The date of birth of William Paulet, 4th Marquess of Winchester's father is 1560.",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The date of birth of William Paulet, 4th Marquess of Winchester's father is 1560.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "8x128",
+    "method": "full",
+    "answer": "18 November 1601",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "18 November 1601",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The date of birth of William Paulet, 4th Marquess of Winchester is not provided in the passage.",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The date of birth of William Paulet, 4th Marquess of Winchester is not provided in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Edward Watson",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Edward Watson",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Edward Watson, Viscount Sondes's paternal grandfather is Lewis Watson, 1st Earl of Rockingham.",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.23529411764705882,
+    "reference_parsed_answer": "The answer is: Edward Watson, Viscount Sondes's paternal grandfather is Lewis Watson, 1st Earl of Rockingham.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Edward Watson",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Edward Watson",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Edward Watson, the son of Edward Watson, 2nd Baron Rockingham.",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3076923076923077,
+    "reference_parsed_answer": "The answer is: Edward Watson, the son of Edward Watson, 2nd Baron Rockingham.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2608695652173913,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2857142857142857
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "4x128",
+    "method": "full",
+    "answer": "24 September 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 September 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "1249",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1249",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "8x128",
+    "method": "full",
+    "answer": "24 september 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 september 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The date of death of Humphrey de Bohun, 7th Earl of Hereford is 24 September 1275.",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.1111111111111111,
+    "reference_parsed_answer": "The date of death of Humphrey de Bohun, 7th Earl of Hereford is 24 September 1275.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16216216216216217,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.17142857142857143
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Fujiwara no Mitsuko",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Fujiwara no Mitsuko",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: Fujiwara no Matsukuri.",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Fujiwara no Matsukuri.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Nagara",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Nagara",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Helmichis's father-in-law is the father of the queen of the Lombards, which is the same as the father of the mother",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Helmichis's father-in-law is the father of the queen of the Lombards, which is the same as the father of the mother",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Central School",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Central School",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The father of Helena Carroll was Rev. George Hole, who was the bishop of Norwich. \n\nAnswer: Rev. George Hole.",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The father of Helena Carroll was Rev. George Hole, who was the bishop of Norwich. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "8x128",
+    "method": "full",
+    "answer": "University of London",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of London",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The father of Helena Carroll was the Reverend Edward Moore, who was a clergyman. The passage mentions that he was the son of the Reverend Edward Moore",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The father of Helena Carroll was the Reverend Edward Moore, who was a clergyman. The passage mentions that he was the son of the Reverend Edward Moore",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "4x128",
+    "method": "full",
+    "answer": "University of Southern California",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "University of Southern California",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The director of *Wine of Morning* is **Bob Johnson**. \n\nThe passage states that Bob Johnson directed *Wine of Morning* and that he",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.08695652173913043,
+    "reference_parsed_answer": "The director of *Wine of Morning* is **Bob Johnson**. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "8x128",
+    "method": "full",
+    "answer": "University of Southern California",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "University of Southern California",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The director of \"Wine of Morning\" (1996) is Robert L. Moore. \n\nThe passage mentions that Robert L. Moore directed \"",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of \"Wine of Morning\" (1996) is Robert L. Moore. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "4x128",
+    "method": "full",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: The Secret Invasion.",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The Secret Invasion.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "8x128",
+    "method": "full",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: The answer is \"The Secret Invasion\" (1967) and \"The House of the Seven Hawks\" (1967",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.47058823529411764,
+    "reference_parsed_answer": "The answer is: The answer is \"The Secret Invasion\" (1967) and \"The House of the Seven Hawks\" (1967",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2962962962962963,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.32
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Marie of Navarre",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "Marie of Navarre",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.46153846153846156,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.36363636363636365
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The paternal grandmother of Marie of France (Queen of France) is Marie Louise of Burgundy.",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.23529411764705882,
+    "reference_parsed_answer": "The paternal grandmother of Marie of France (Queen of France) is Marie Louise of Burgundy.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.15384615384615385,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.16666666666666666
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Marie of Brabant's paternal grandmother is Joan II of Navarre.",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3076923076923077,
+    "reference_parsed_answer": "Marie of Brabant's paternal grandmother is Joan II of Navarre.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2608695652173913,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.19047619047619047
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The paternal grandmother of Marie of France (Queen of France) is Anne Bourchier, the mother of Marie Louise of France.",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.19047619047619047,
+    "reference_parsed_answer": "The paternal grandmother of Marie of France (Queen of France) is Anne Bourchier, the mother of Marie Louise of France.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.12903225806451613,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.13793103448275862
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Adelaide",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Adelaide",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "Renaud II, Count of Soissons is the son of Guy I, Count of Soissons, who was the brother of the person mentioned in",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "Renaud II, Count of Soissons is the son of Guy I, Count of Soissons, who was the brother of the person mentioned in",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.36363636363636365,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3870967741935484
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Adelaide",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Adelaide",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "Renaud II, Count of Soissons was the son of the Count of Soissons, and his father was the Count of Soissons,",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.34782608695652173,
+    "reference_parsed_answer": "Renaud II, Count of Soissons was the son of the Count of Soissons, and his father was the Count of Soissons,",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.36363636363636365,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3870967741935484
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "4x128",
+    "method": "full",
+    "answer": "26 april 1872",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "26 april 1872",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "1839.",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1839.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "8x128",
+    "method": "full",
+    "answer": "1700",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1700",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The death date of William Le Poer Trench's father is 1444.",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The death date of William Le Poer Trench's father is 1444.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.17391304347826086
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "4x128",
+    "method": "full",
+    "answer": "United States",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "United States",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The director of *Renegade Force* is from the United States.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of *Renegade Force* is from the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Israel.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Israel.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The director of *Renegade Force* is from the United States.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of *Renegade Force* is from the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "4x128",
+    "method": "full",
+    "answer": "marion byron",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "marion byron",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The spouse of the director of *Emergency Wedding* is Marion Byron.",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of the director of *Emergency Wedding* is Marion Byron.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Barbara Hale",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Barbara Hale",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The spouse of the director of \"Emergency Wedding\" is Marion Byrnes.",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of the director of \"Emergency Wedding\" is Marion Byrnes.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Indradhanura Chhai",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Indradhanura Chhai",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The Death of Black King.",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "The Death of Black King.",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Indradhanura Chhai",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Indradhanura Chhai",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The film \"Indradhanura Chhai\" was released in 1971, while \"The Death of Black King\" was released in 1",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "The film \"Indradhanura Chhai\" was released in 1971, while \"The Death of Black King\" was released in 1",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "4x128",
+    "method": "full",
+    "answer": "No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "4x128",
+    "method": "full",
+    "answer": "Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "8x128",
+    "method": "full",
+    "answer": "Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The answer is: Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Yes.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "4x128",
+    "method": "full",
+    "answer": "India",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "India",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "4x128",
+    "method": "naive",
+    "answer": "The director of the film *Kanneshwara Rama* was born in India.",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film *Kanneshwara Rama* was born in India.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "8x128",
+    "method": "full",
+    "answer": "India",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "India",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "8x128",
+    "method": "naive",
+    "answer": "The director of the film \"Kanneshwara Rama\" was born in 1936.",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film \"Kanneshwara Rama\" was born in 1936.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The author of *Hannibal and Scipio* was educated at the University of Edinburgh.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The author of *Hannibal and Scipio* was educated at the University of Edinburgh.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "University of Edinburgh",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Edinburgh",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "University of Edinburgh",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Edinburgh",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The author of \"Hannibal and Scipio\" is Mads Mikkelsen.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The author of \"Hannibal and Scipio\" is Mads Mikkelsen.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "University of Toronto.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Toronto.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:000",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "University of Toronto.",
+    "answers": [
+      "Exeter College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of Toronto.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland. The answer is: Hughesville.",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland. The answer is: Hughesville.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: southern maryland.",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: southern maryland.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:001",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "calvert",
+    "answers": [
+      "Charles County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "calvert",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The child of the Victim of Romance performer is the one born on January 14, 1794.",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The child of the Victim of Romance performer is the one born on January 14, 1794.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Susan Aglukark",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Susan Aglukark",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Michelle Phillips",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "Michelle Phillips",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6
+  },
+  {
+    "id": "musique:002",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The victim of the romance on film, romance on broadway is a 2000 album by american vocalist michael feinstein. The victim is the one",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The victim of the romance on film, romance on broadway is a 2000 album by american vocalist michael feinstein. The victim is the one",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Natalie Horler",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Natalie Horler",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:002",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Natalie Horler",
+    "answers": [
+      "Chynna Phillips"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Natalie Horler",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.15384615384615385,
+    "reference_parsed_answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.11764705882352941,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.13333333333333333
+  },
+  {
+    "id": "musique:003",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.15384615384615385,
+    "reference_parsed_answer": "The passage does not explicitly state the county where Tim Dubois was born.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.11764705882352941,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.13333333333333333
+  },
+  {
+    "id": "musique:003",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:003",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "missouri",
+    "answers": [
+      "McDonald County"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "missouri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:004",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Pias.",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Pias.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:004",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Rising Storm Records",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "Rising Storm Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:004",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Rising Storm Records",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "Rising Storm Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:004",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The record label is Pias Records.",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.25,
+    "reference_parsed_answer": "The record label is Pias Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:004",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "RCA Records",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "RCA Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:004",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "RCA Records",
+    "answers": [
+      "Asian Man Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "RCA Records",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:005",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: \"Kabale und Liebe\" by Gotthold Ephraim Lessing.",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: \"Kabale und Liebe\" by Gotthold Ephraim Lessing.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "maria magdalene",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "maria magdalene",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "kabale und liebe",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "kabale und liebe",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: \"The story of the play \"The Tragedy of the Tragedy of the Tragedy\" by Gotthold Ephra",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: \"The story of the play \"The Tragedy of the Tragedy of the Tragedy\" by Gotthold Ephra",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "maria magdalene",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "maria magdalene",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:005",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "maria magdalene",
+    "answers": [
+      "Emilia Galotti"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "maria magdalene",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The instrument played by the person from The Blackout All-Stars is the electric musical instrument.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The instrument played by the person from The Blackout All-Stars is the electric musical instrument.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "electric musical instrument",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "electric musical instrument",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "electric musical instrument",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "electric musical instrument",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The instrument played by the person from The Blackout All-Stars is the Chapman Stick.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The instrument played by the person from The Blackout All-Stars is the Chapman Stick.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "The Chapman Stick.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Chapman Stick.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:006",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "The Chapman Stick.",
+    "answers": [
+      "conga"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Chapman Stick.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The seat of Van Hook Township is in North Dakota.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The seat of Van Hook Township is in North Dakota.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Van Hook Township is located in Mountrail County.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook Township is located in Mountrail County.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Van Hook Township is located in Mountrail County.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook Township is located in Mountrail County.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The seat of Van Hook Township is in Lincoln County, Kentucky.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The seat of Van Hook Township is in Lincoln County, Kentucky.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Van Hook Township is located in Mountrail County, North Dakota.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook Township is located in Mountrail County, North Dakota.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:007",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Van Hook Township is located in Mountrail County, North Dakota.",
+    "answers": [
+      "Stanley"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Van Hook Township is located in Mountrail County, North Dakota.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:008",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring of Cromer Hall.",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2222222222222222,
+    "reference_parsed_answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring of Cromer Hall.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.34285714285714286,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.36363636363636365
+  },
+  {
+    "id": "musique:008",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Henry Baring of Cromer Hall",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2,
+    "reference_parsed_answer": "Henry Baring of Cromer Hall",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "musique:008",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Henry Baring of Cromer Hall",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2,
+    "reference_parsed_answer": "Henry Baring of Cromer Hall",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "musique:008",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring, third son of Sir Francis Baring, 1st Baronet",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.43478260869565216,
+    "reference_parsed_answer": "The father of Edward Baring, 1st Baron Revelstoke is Henry Baring, third son of Sir Francis Baring, 1st Baronet",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.4186046511627907,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.43902439024390244
+  },
+  {
+    "id": "musique:008",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Henry Baring",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "Henry Baring",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.26666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3076923076923077
+  },
+  {
+    "id": "musique:008",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Henry Baring",
+    "answers": [
+      "Sir Francis Baring, 1st Baronet"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "Henry Baring",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.26666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3076923076923077
+  },
+  {
+    "id": "musique:009",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: The performer of \"Be the One\" was a member of the indie rock group Broken Social Scene.",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The performer of \"Be the One\" was a member of the indie rock group Broken Social Scene.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Broken Social Scene",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Broken Social Scene",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: The passage mentions that the song \"Be the One\" was performed by Eric Clapton, who was a member of the band The Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The passage mentions that the song \"Be the One\" was performed by Eric Clapton, who was a member of the band The Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:009",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Eagles",
+    "answers": [
+      "Jackson 5"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Eagles",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The lead singer of the band performing \"Bang Bang Rock & Roll\" is not specified in the passage.",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The lead singer of the band performing \"Bang Bang Rock & Roll\" is not specified in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Lois Griffin",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Lois Griffin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Lois Griffin",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Lois Griffin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The lead singer of the band is not specified in the passage.",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The lead singer of the band is not specified in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Kevin Sussman",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kevin Sussman",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:010",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Kevin Sussman",
+    "answers": [
+      "Eddie Argos"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kevin Sussman",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:011",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.375,
+    "reference_parsed_answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:011",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "National Cycle Network",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5714285714285714,
+    "reference_parsed_answer": "National Cycle Network",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:011",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "National Cycle Network",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5714285714285714,
+    "reference_parsed_answer": "National Cycle Network",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.4
+  },
+  {
+    "id": "musique:011",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "National Cycle Route 57 is an example of a national cycle route network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "National Cycle Route 57 is an example of a national cycle route network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.35294117647058826,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.26666666666666666
+  },
+  {
+    "id": "musique:011",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.375,
+    "reference_parsed_answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:011",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "answers": [
+      "national cycling route network"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.375,
+    "reference_parsed_answer": "National Cycle Route 57 is part of the United Kingdom's National Cycle Network.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.25
+  },
+  {
+    "id": "musique:012",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The spouse of the child of Peter Andreas Heiberg is Magdalena Eleonora Busseck.",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.14285714285714285,
+    "reference_parsed_answer": "The spouse of the child of Peter Andreas Heiberg is Magdalena Eleonora Busseck.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "musique:012",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Mila Kunis",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Mila Kunis",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:012",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Mila Kunis",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Mila Kunis",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:012",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: the spouse of the child of Peter Andreas Heiberg is not mentioned in the passage.",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.11764705882352941,
+    "reference_parsed_answer": "The answer is: the spouse of the child of Peter Andreas Heiberg is not mentioned in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.24,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2608695652173913
+  },
+  {
+    "id": "musique:012",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "mila kunis",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "mila kunis",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:012",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "margareta von ascheberg",
+    "answers": [
+      "Johanne Luise Heiberg"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "margareta von ascheberg",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:013",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The Unwinding: An Inner History of the New America is written by George Packer, who was an early termination from the Peace Corps. \n\nThe answer",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.19047619047619047,
+    "reference_parsed_answer": "The Unwinding: An Inner History of the New America is written by George Packer, who was an early termination from the Peace Corps. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.08333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.09090909090909091
+  },
+  {
+    "id": "musique:013",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:013",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:013",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Peace Corps.",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Peace Corps.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.5
+  },
+  {
+    "id": "musique:013",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:013",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Peace Corps",
+    "answers": [
+      "Peace Corps"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Peace Corps",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:014",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The capital of the county that Pine Springs is located in is Texas.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The capital of the county that Pine Springs is located in is Texas.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Austell",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Austell",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Austell",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Austell",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The capital of the county where Pine Springs is located is Lufkin, Texas.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The capital of the county where Pine Springs is located is Lufkin, Texas.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "pinespring is located in northern culberson county, texas, so the capital of northern culberson county is lufkin, texas.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "pinespring is located in northern culberson county, texas, so the capital of northern culberson county is lufkin, texas.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:014",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Pine Springs is located in Culberson County, Texas. The capital of Texas is Austin. Therefore, the answer is:\n\nAustin.",
+    "answers": [
+      "Van Horn"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Pine Springs is located in Culberson County, Texas. The capital of Texas is Austin. Therefore, the answer is:",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Dorset.",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "The answer is: Dorset.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5714285714285714,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.8
+  },
+  {
+    "id": "musique:015",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "menteng",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "menteng",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "menteng",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "menteng",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: corfe mullen.",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: corfe mullen.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "pangi territory",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "pangi territory",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:015",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "pangi territory",
+    "answers": [
+      "East Dorset"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "pangi territory",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Ernest Hemingway",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Ernest Hemingway",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Ernest Hemingway",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Ernest Hemingway",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The spouse of Young Man Luther's author is Katharina von Bora.",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of Young Man Luther's author is Katharina von Bora.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of Young Man Luther's author is not mentioned in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:016",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "katharina von bora",
+    "answers": [
+      "Joan Erikson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "katharina von bora",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:017",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Columbia Records.",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Columbia Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "musique:017",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Columbia Records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Columbia Records",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:017",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Columbia Records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Columbia Records",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:017",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Columbia Records.",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "The answer is: Columbia Records.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "musique:017",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "columbia records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "columbia records",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:017",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Columbia Records",
+    "answers": [
+      "Columbia Records"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Columbia Records",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "musique:018",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Milena Reljin.",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Milena Reljin.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Milena Reljin",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Milena Reljin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Tihomir of Serbia",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Tihomir of Serbia",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: vukosava milanovic - reljin.",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: vukosava milanovic - reljin.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.14285714285714285,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.16666666666666666
+  },
+  {
+    "id": "musique:018",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Milena Reljin",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Milena Reljin",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:018",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Milena Reljin.",
+    "answers": [
+      "Saint Sava"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Milena Reljin.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: men's baseball.",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: men's baseball.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "men's vermont voltage",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "men's vermont voltage",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "North Carolina State University Wolfpack",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: the men's baseball team.",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: the men's baseball team.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "men's vermont voltage",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "men's vermont voltage",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "musique:019",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "alvin seville",
+    "answers": [
+      "Pittsburgh Pirates"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "alvin seville",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The wife of Francis I Rákóczi was born in Gedern.",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The wife of Francis I Rákóczi was born in Gedern.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Gedern",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Gedern",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Galata, Constantinople",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Galata, Constantinople",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The wife of Francis I of Hungary, Francis Rakoczi, was born in Gedern.",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The wife of Francis I of Hungary, Francis Rakoczi, was born in Gedern.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Gedern",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Gedern",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:000",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Budingen",
+    "answers": [
+      "Ozalj"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Budingen",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Eleanor and Thomas's granddaughter.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Eleanor and Thomas's granddaughter.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Sobe's grandchild is Alexander III.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Sobe's grandchild is Alexander III.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Sobe's grandchild is Alexander III.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Sobe's grandchild is Alexander III.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Maria Teresa.",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Maria Teresa.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "maria teresa",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "maria teresa",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:001",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "maria teresa",
+    "answers": [
+      "John the Baptist"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "maria teresa",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The director of the film *Man at Bath* is Dana Blankstein. \n\nBased on the passage, the answer is: **Dana Blankstein**.",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film *Man at Bath* is Dana Blankstein. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "kfar saba municipality",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "kfar saba municipality",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Kfar Saba",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Kfar Saba",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The director of the film *Man at Bath* is **Brian Patrick Kennedy**. \n\nThe answer is: **Brian Patrick Kennedy**.",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film *Man at Bath* is **Brian Patrick Kennedy**. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "beaconsfield studios",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "beaconsfield studios",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:002",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "beaconsfield studios",
+    "answers": [
+      "Cahiers du cinéma"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "beaconsfield studios",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "no",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "no",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:003",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "no",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The date of birth of William Paulet, 3rd Marquess of Winchester is 1560.",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The date of birth of William Paulet, 3rd Marquess of Winchester is 1560.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2222222222222222,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.24
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "17 October 1560",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "17 October 1560",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.6153846153846154,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.5454545454545454
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "18 June 1560",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "18 June 1560",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.6153846153846154,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.5454545454545454
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The date of birth of William Paulet, 4th Marquess of Winchester is not provided in the passage.",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The date of birth of William Paulet, 4th Marquess of Winchester is not provided in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "1560",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1560",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.75,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "wikimqa:004",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "1560",
+    "answers": [
+      "1510"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1560",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.75,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.6666666666666666
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "Edward Watson, Viscount Sondes's paternal grandfather is Lewis Watson, 1st Earl of Rockingham.",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.26666666666666666,
+    "reference_parsed_answer": "Edward Watson, Viscount Sondes's paternal grandfather is Lewis Watson, 1st Earl of Rockingham.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2962962962962963,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.24
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Edward Watson",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Edward Watson",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Edward Watson",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Edward Watson",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Edward Watson, the son of Edward Watson, 2nd Baron Rockingham.",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3076923076923077,
+    "reference_parsed_answer": "The answer is: Edward Watson, the son of Edward Watson, 2nd Baron Rockingham.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2608695652173913,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2857142857142857
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Edward Watson, Viscount Sondes's paternal grandfather is Sir Edward Watson.",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "Edward Watson, Viscount Sondes's paternal grandfather is Sir Edward Watson.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.4,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3333333333333333
+  },
+  {
+    "id": "wikimqa:005",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Edward Watson",
+    "answers": [
+      "Edward Watson"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "Edward Watson",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "1249",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1249",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16666666666666666,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "24 September 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 September 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "24 September 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 September 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The date of death of Humphrey de Bohun, 7th Earl of Hereford is not provided in the passage.",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The date of death of Humphrey de Bohun, 7th Earl of Hereford is not provided in the passage.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0625,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.06666666666666667
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "24 september 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 september 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:006",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "24 september 1275",
+    "answers": [
+      "16 September 1360"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "24 september 1275",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.375,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: Fujiwara no Matsukuri.",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Fujiwara no Matsukuri.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Fujiwara no Matsukuri",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Fujiwara no Matsukuri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Fujiwara no Matsukuri",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Fujiwara no Matsukuri",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Helmichis's father-in-law is the father of the queen of the Lombards, which is the same as the father of the mother",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Helmichis's father-in-law is the father of the queen of the Lombards, which is the same as the father of the mother",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "marius",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "marius",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:007",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "fuyutsugu",
+    "answers": [
+      "Cunimund"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "fuyutsugu",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The father of Helena Carroll was Rev. George Hole, who was the Bishop of Norwich. \n\nAnswer: Bishop of Norwich.",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The father of Helena Carroll was Rev. George Hole, who was the Bishop of Norwich. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "University of London",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "University of London",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Webber Douglas Academy of Dramatic Art",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Webber Douglas Academy of Dramatic Art",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The father of Helena Carroll was the Reverend Edward Moore.",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The father of Helena Carroll was the Reverend Edward Moore.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "kent",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "kent",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:008",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "kent",
+    "answers": [
+      "St Patrick's College"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "kent",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The director of *Wine of Morning Red* (2003) is **Fannie Mae Jones**. She worked as a director at the University",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2,
+    "reference_parsed_answer": "The director of *Wine of Morning Red* (2003) is **Fannie Mae Jones**. She worked as a director at the University",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.21428571428571427,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.23076923076923078
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "University of Southern California",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "University of Southern California",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "University of Southern California",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.2857142857142857,
+    "reference_parsed_answer": "University of Southern California",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The director of \"Wine of Morning\" is Robert L. Moore, who worked at the University of Southern California. \n\nAnswer: University of Southern California",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.08333333333333333,
+    "reference_parsed_answer": "The director of \"Wine of Morning\" is Robert L. Moore, who worked at the University of Southern California. ",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.09523809523809523,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.10526315789473684
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "University of Toledo",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "University of Toledo",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:009",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "University of Toledo",
+    "answers": [
+      "Bob Jones University"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "University of Toledo",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: The Secret Invasion.",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: The Secret Invasion.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: The answer is \"The Secret Invasion\" (1967) and \"The House of the Seven Hawks\" (1967",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.47058823529411764,
+    "reference_parsed_answer": "The answer is: The answer is \"The Secret Invasion\" (1967) and \"The House of the Seven Hawks\" (1967",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2962962962962963,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.32
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:010",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "The Secret Invasion",
+    "answers": [
+      "The House Of The Seven Hawks"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The Secret Invasion",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The paternal grandmother of Marie of France (Queen of France) is Marie Louise of Burgundy.",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.23529411764705882,
+    "reference_parsed_answer": "The paternal grandmother of Marie of France (Queen of France) is Marie Louise of Burgundy.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.15384615384615385,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.16666666666666666
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Marie Louise",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "Marie Louise",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.36363636363636365,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Marie of Navarre",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.6666666666666666,
+    "reference_parsed_answer": "Marie of Navarre",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.46153846153846156,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.36363636363636365
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The paternal grandmother of Marie of France (Queen of France) is Anne Bourchier, the mother of Marie Louise.",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.21052631578947367,
+    "reference_parsed_answer": "The paternal grandmother of Marie of France (Queen of France) is Anne Bourchier, the mother of Marie Louise.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.13793103448275862,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.14814814814814814
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Marie Louise Coidavid",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.3333333333333333,
+    "reference_parsed_answer": "Marie Louise Coidavid",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.2857142857142857,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.16666666666666666
+  },
+  {
+    "id": "wikimqa:011",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Anne Bourchier",
+    "answers": [
+      "Marie of Hohenstaufen"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Anne Bourchier",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "Renaud II, Count of Soissons is the son of Guy II, Count of Soissons, who was the brother of the person mentioned in",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "Renaud II, Count of Soissons is the son of Guy II, Count of Soissons, who was the brother of the person mentioned in",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.36363636363636365,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3870967741935484
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Renaud II's uncle is Adelida.",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Renaud II's uncle is Adelida.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.125,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.14285714285714285
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Renaud II's uncle is Adelida.",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Renaud II's uncle is Adelida.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.125,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.14285714285714285
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "Renaud II, Count of Soissons was the son of the Count of Soissons, and his father was the Count of Soissons,",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.34782608695652173,
+    "reference_parsed_answer": "Renaud II, Count of Soissons was the son of the Count of Soissons, and his father was the Count of Soissons,",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.36363636363636365,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.3870967741935484
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Renaud II's uncle is Adelida.",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Renaud II's uncle is Adelida.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.125,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.14285714285714285
+  },
+  {
+    "id": "wikimqa:012",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Adelaide",
+    "answers": [
+      "Guy II, Count of Soissons"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Adelaide",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "1839.",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1839.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "26 april 1872",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "26 april 1872",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "28 december 1804",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "28 december 1804",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.5,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.42857142857142855
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The death date of William Le Poer Trench's father is 1444.",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The death date of William Le Poer Trench's father is 1444.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.16,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.17391304347826086
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "1700",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1700",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "wikimqa:013",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "1700",
+    "answers": [
+      "26 April 1872"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "1700",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.3333333333333333,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The director of *Renegade Force* is from the United States.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of *Renegade Force* is from the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "United States",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "United States",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "United States",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "United States",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The director of *Renegade Force* is from the United States.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of *Renegade Force* is from the United States.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Israel.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Israel.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:014",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Israel.",
+    "answers": [
+      "America"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Israel.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The spouse of the director of *Emergency Wedding* is Marion Byron.",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of the director of *Emergency Wedding* is Marion Byron.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "marion byron",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "marion byron",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Marion Byron",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Marion Byron",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The spouse of the director of \"Emergency Wedding\" is Marion Byrnes.",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The spouse of the director of \"Emergency Wedding\" is Marion Byrnes.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "marion byron",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "marion byron",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:015",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "marion byron",
+    "answers": [
+      "Ona Munson"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "marion byron",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The Death of Black King.",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "The Death of Black King.",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "The Death Of Black King",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "The Death Of Black King",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "The Death Of Black King",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "The Death Of Black King",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The film \"Indradhanura Chhai\" was released in 1971, while \"The Death of Black King\" was released in 1",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.4,
+    "reference_parsed_answer": "The film \"Indradhanura Chhai\" was released in 1971, while \"The Death of Black King\" was released in 1",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.20689655172413793,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.2222222222222222
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "Indradhanura Chhai",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Indradhanura Chhai",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:016",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "Indradhanura Chhai",
+    "answers": [
+      "The Death Of Black King"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Indradhanura Chhai",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 1.0,
+    "existing_word_f1": 1.0,
+    "reference_parsed_answer": "No",
+    "reference_em": 1.0,
+    "reference_qwen_token_f1": 1.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: No.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.5,
+    "reference_parsed_answer": "The answer is: No.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:017",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The answer is: Yes.",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The answer is: Yes.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:018",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "yes",
+    "answers": [
+      "no"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Yes",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 1.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "4x128",
+    "method": "zero",
+    "answer": "The director of the film \"Kanneshwara Rama\" was born in India.",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film \"Kanneshwara Rama\" was born in India.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "4x128",
+    "method": "hkvd_16",
+    "answer": "Delhi",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Delhi",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "4x128",
+    "method": "hkvd_32",
+    "answer": "Delhi",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "Delhi",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "8x128",
+    "method": "zero",
+    "answer": "The director of the film \"Kanneshwara Rama\" was born in 1936.",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "The director of the film \"Kanneshwara Rama\" was born in 1936.",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "8x128",
+    "method": "hkvd_16",
+    "answer": "kannada",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "kannada",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  },
+  {
+    "id": "wikimqa:019",
+    "config": "8x128",
+    "method": "hkvd_32",
+    "answer": "India",
+    "answers": [
+      "Mysore"
+    ],
+    "existing_em": 0.0,
+    "existing_word_f1": 0.0,
+    "reference_parsed_answer": "India",
+    "reference_em": 0.0,
+    "reference_qwen_token_f1": 0.0,
+    "legacy_drop_first_token_f1_DIAGNOSTIC_ONLY": 0.0
+  }
+]

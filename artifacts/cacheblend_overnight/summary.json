@@ -1,0 +1,263 @@
+{
+  "protocol_sha256": "6cd0b3bf5d384372a29c377c5cdc2f0be69c8b42babf84c9409d450cf91fe519",
+  "status": {
+    "status": "pressure_stopped",
+    "returncode": 2,
+    "elapsed_s": 70.32845497131348,
+    "completed_results": 0,
+    "expected_results": 50,
+    "worker_status": {
+      "status": "stopped",
+      "active": {
+        "item": "wikimqa:025",
+        "phase": "composition"
+      },
+      "partial_generated_ids": [],
+      "error": "Stop('Stop requested, deadline reached, or supervisor exited')",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 133, in main\n    begin=time.time();item_run(pre,True,protocol,phash,tok)\n                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 76, in item_run\n    guard();cache,logits,_=execute(MODEL,ids,d,source,mode,1.)\n                           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend/core.py\", line 99, in execute\n    x = layer.input_layernorm(hidden)\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1773, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1879, in _call_impl\n    return inner()\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1816, in inner\n    args_result = hook(self, args)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/worker.py\", line 23, in guard\n    raise Stop('Stop requested, deadline reached, or supervisor exited')\nStop: Stop requested, deadline reached, or supervisor exited\n",
+      "elapsed_s": 60.71287822723389,
+      "completed_results": 0
+    },
+    "stop_reason": "pressure_stopped"
+  },
+  "completed_item_methods": 0,
+  "expected_item_methods": 50,
+  "missing": [
+    {
+      "id": "musique:022",
+      "method": "full"
+    },
+    {
+      "id": "musique:022",
+      "method": "naive"
+    },
+    {
+      "id": "musique:022",
+      "method": "zero"
+    },
+    {
+      "id": "musique:022",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "musique:022",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "musique:027",
+      "method": "full"
+    },
+    {
+      "id": "musique:027",
+      "method": "naive"
+    },
+    {
+      "id": "musique:027",
+      "method": "zero"
+    },
+    {
+      "id": "musique:027",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "musique:027",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "musique:030",
+      "method": "full"
+    },
+    {
+      "id": "musique:030",
+      "method": "naive"
+    },
+    {
+      "id": "musique:030",
+      "method": "zero"
+    },
+    {
+      "id": "musique:030",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "musique:030",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "musique:033",
+      "method": "full"
+    },
+    {
+      "id": "musique:033",
+      "method": "naive"
+    },
+    {
+      "id": "musique:033",
+      "method": "zero"
+    },
+    {
+      "id": "musique:033",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "musique:033",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "musique:039",
+      "method": "full"
+    },
+    {
+      "id": "musique:039",
+      "method": "naive"
+    },
+    {
+      "id": "musique:039",
+      "method": "zero"
+    },
+    {
+      "id": "musique:039",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "musique:039",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "wikimqa:025",
+      "method": "full"
+    },
+    {
+      "id": "wikimqa:025",
+      "method": "naive"
+    },
+    {
+      "id": "wikimqa:025",
+      "method": "zero"
+    },
+    {
+      "id": "wikimqa:025",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "wikimqa:025",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "wikimqa:026",
+      "method": "full"
+    },
+    {
+      "id": "wikimqa:026",
+      "method": "naive"
+    },
+    {
+      "id": "wikimqa:026",
+      "method": "zero"
+    },
+    {
+      "id": "wikimqa:026",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "wikimqa:026",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "wikimqa:031",
+      "method": "full"
+    },
+    {
+      "id": "wikimqa:031",
+      "method": "naive"
+    },
+    {
+      "id": "wikimqa:031",
+      "method": "zero"
+    },
+    {
+      "id": "wikimqa:031",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "wikimqa:031",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "wikimqa:032",
+      "method": "full"
+    },
+    {
+      "id": "wikimqa:032",
+      "method": "naive"
+    },
+    {
+      "id": "wikimqa:032",
+      "method": "zero"
+    },
+    {
+      "id": "wikimqa:032",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "wikimqa:032",
+      "method": "hkvd_32"
+    },
+    {
+      "id": "wikimqa:035",
+      "method": "full"
+    },
+    {
+      "id": "wikimqa:035",
+      "method": "naive"
+    },
+    {
+      "id": "wikimqa:035",
+      "method": "zero"
+    },
+    {
+      "id": "wikimqa:035",
+      "method": "hkvd_16"
+    },
+    {
+      "id": "wikimqa:035",
+      "method": "hkvd_32"
+    }
+  ],
+  "summary": {},
+  "paired_differences": {
+    "naive-minus-full/existing_em": null,
+    "naive-minus-full/existing_word_f1": null,
+    "naive-minus-full/reference_em": null,
+    "naive-minus-full/reference_qwen_token_f1": null,
+    "naive-minus-naive/existing_em": null,
+    "naive-minus-naive/existing_word_f1": null,
+    "naive-minus-naive/reference_em": null,
+    "naive-minus-naive/reference_qwen_token_f1": null,
+    "zero-minus-full/existing_em": null,
+    "zero-minus-full/existing_word_f1": null,
+    "zero-minus-full/reference_em": null,
+    "zero-minus-full/reference_qwen_token_f1": null,
+    "zero-minus-naive/existing_em": null,
+    "zero-minus-naive/existing_word_f1": null,
+    "zero-minus-naive/reference_em": null,
+    "zero-minus-naive/reference_qwen_token_f1": null,
+    "hkvd_16-minus-full/existing_em": null,
+    "hkvd_16-minus-full/existing_word_f1": null,
+    "hkvd_16-minus-full/reference_em": null,
+    "hkvd_16-minus-full/reference_qwen_token_f1": null,
+    "hkvd_16-minus-naive/existing_em": null,
+    "hkvd_16-minus-naive/existing_word_f1": null,
+    "hkvd_16-minus-naive/reference_em": null,
+    "hkvd_16-minus-naive/reference_qwen_token_f1": null,
+    "hkvd_32-minus-full/existing_em": null,
+    "hkvd_32-minus-full/existing_word_f1": null,
+    "hkvd_32-minus-full/reference_em": null,
+    "hkvd_32-minus-full/reference_qwen_token_f1": null,
+    "hkvd_32-minus-naive/existing_em": null,
+    "hkvd_32-minus-naive/existing_word_f1": null,
+    "hkvd_32-minus-naive/reference_em": null,
+    "hkvd_32-minus-naive/reference_qwen_token_f1": null
+  },
+  "truncations": []
+}
