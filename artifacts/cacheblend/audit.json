@@ -1,0 +1,20 @@
+{
+  "pilot_sha256": "e798b558624ec7b5366d40026c6c15f62d3435bcdda9db4addc94ffc0f1b5b5c",
+  "frozen_records": 40,
+  "frozen_pairs": 80,
+  "stages": {
+    "baseline": {
+      "pairs": 80,
+      "methods_per_pair": 2,
+      "complete": true,
+      "sha256": "31f8e5805639fef357a80127d0ddfdf215f7e355a2bdbaf70d779b19b748a647"
+    },
+    "selection": {
+      "pairs": 80,
+      "methods_per_pair": 3,
+      "complete": true,
+      "sha256": "86fa0ccf043fc6ab3f7746e5219849f8aa7c61d1014696b1770900f853f3551b"
+    }
+  },
+  "passed": true
+}

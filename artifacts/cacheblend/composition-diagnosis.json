@@ -1,0 +1,4937 @@
+[
+  {
+    "chunk": 0,
+    "offset": 0,
+    "tokens": 20,
+    "layers": [
+      {
+        "layer": 0,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 3.814697265625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.62939453125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.5762786865234375e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 389.840576171875,
+        "value_abs_max": 2.47359561920166
+      },
+      {
+        "layer": 1,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 9.918212890625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 1.4901161193847656e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 127.91638946533203,
+        "value_abs_max": 1.6769672632217407
+      },
+      {
+        "layer": 2,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 2.1457672119140625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 181.8115692138672,
+        "value_abs_max": 2.418689727783203
+      },
+      {
+        "layer": 3,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 9.918212890625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 7.163733243942261e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 95.75032806396484,
+        "value_abs_max": 2.8634917736053467
+      },
+      {
+        "layer": 4,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.62939453125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.00011444091796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 6.318092346191406e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 102.573974609375,
+        "value_abs_max": 2.938849925994873
+      },
+      {
+        "layer": 5,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.0001373291015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 9.298324584960938e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 89.47900390625,
+        "value_abs_max": 3.2061800956726074
+      },
+      {
+        "layer": 6,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.00011539459228515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 1.0207295417785645e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 84.2621841430664,
+        "value_abs_max": 2.7106175422668457
+      },
+      {
+        "layer": 7,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 3.814697265625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.000110626220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 1.4066696166992188e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 67.70972442626953,
+        "value_abs_max": 5.368170261383057
+      },
+      {
+        "layer": 8,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 3.790855407714844e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.62396240234375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.796430587768555,
+        "value_abs_max": 35.43955612182617
+      },
+      {
+        "layer": 9,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 3.814697265625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.2479248046875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 2.574920654296875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 42.93318176269531,
+        "value_abs_max": 7.348276138305664
+      },
+      {
+        "layer": 10,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.00012969970703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 80.24111938476562,
+        "value_abs_max": 44.24390411376953
+      },
+      {
+        "layer": 11,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 4.5299530029296875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 4.1961669921875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.2751522064209,
+        "value_abs_max": 40.80231475830078
+      },
+      {
+        "layer": 12,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 9.918212890625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.0001068115234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 49.37839889526367,
+        "value_abs_max": 81.91694641113281
+      },
+      {
+        "layer": 13,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.054643630981445,
+        "value_abs_max": 84.39019775390625
+      },
+      {
+        "layer": 14,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 3.814697265625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 8.928775787353516e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.0001373291015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 26.966327667236328,
+        "value_abs_max": 176.11512756347656
+      },
+      {
+        "layer": 15,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 3.814697265625e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.000102996826171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.000118255615234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 53.02755355834961,
+        "value_abs_max": 18.113651275634766
+      },
+      {
+        "layer": 16,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 6.4849853515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.00018978118896484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.82388687133789,
+        "value_abs_max": 22.755420684814453
+      },
+      {
+        "layer": 17,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 0.00010204315185546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.00012111663818359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 36.99374771118164,
+        "value_abs_max": 30.95134162902832
+      },
+      {
+        "layer": 18,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 5.435943603515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.94131851196289,
+        "value_abs_max": 36.167240142822266
+      },
+      {
+        "layer": 19,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 5.340576171875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.00018095970153808594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 29.200048446655273,
+        "value_abs_max": 34.041542053222656
+      },
+      {
+        "layer": 20,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 5.7220458984375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.0002033710479736328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.866039276123047,
+        "value_abs_max": 53.39240264892578
+      },
+      {
+        "layer": 21,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.43865966796875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.00038814544677734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 31.883398056030273,
+        "value_abs_max": 86.35457611083984
+      },
+      {
+        "layer": 22,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 0.000408172607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 22.189054489135742,
+        "value_abs_max": 78.48314666748047
+      },
+      {
+        "layer": 23,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 6.67572021484375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.00032901763916015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 34.108055114746094,
+        "value_abs_max": 115.33814239501953
+      },
+      {
+        "layer": 24,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 8.118152618408203e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.0003825724124908447,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 52.16968536376953,
+        "value_abs_max": 120.17867279052734
+      },
+      {
+        "layer": 25,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.152557373046875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.00069427490234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.85363006591797,
+        "value_abs_max": 178.00656127929688
+      },
+      {
+        "layer": 26,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 4.76837158203125e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 4.982948303222656e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.0005613565444946289,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.17222213745117,
+        "value_abs_max": 136.0351104736328
+      },
+      {
+        "layer": 27,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 1.9073486328125e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 8.392333984375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.0005741119384765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 39.773414611816406,
+        "value_abs_max": 118.09575653076172
+      }
+    ]
+  },
+  {
+    "chunk": 1,
+    "offset": 20,
+    "tokens": 135,
+    "layers": [
+      {
+        "layer": 0,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00010442733764648438,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.62939453125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.5762786865234375e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 355.4078369140625,
+        "value_abs_max": 2.7675375938415527
+      },
+      {
+        "layer": 1,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018310546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.522117614746094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.8908252716064453e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.6465750932693481,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 143.8737030029297,
+        "value_abs_max": 1.1363433599472046
+      },
+      {
+        "layer": 2,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000202178955078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000194549560546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 99.73430633544922,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.771615982055664e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.100759744644165,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 184.2744140625,
+        "value_abs_max": 2.0593347549438477
+      },
+      {
+        "layer": 3,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000152587890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00014495849609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 77.4318618774414,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 8.27014446258545e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 1.9708406925201416,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 98.76284790039062,
+        "value_abs_max": 3.7032697200775146
+      },
+      {
+        "layer": 4,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018310546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 100.42704772949219,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.0728836059570312e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.6010069847106934,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 111.89037322998047,
+        "value_abs_max": 3.8305177688598633
+      },
+      {
+        "layer": 5,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00022125244140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000213623046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 79.79969024658203,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.239776611328125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.938524007797241,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 105.99372100830078,
+        "value_abs_max": 3.8720831871032715
+      },
+      {
+        "layer": 6,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001964569091796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001964569091796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 79.84381103515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.1205673217773438e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.472668170928955,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 91.38724517822266,
+        "value_abs_max": 3.178961992263794
+      },
+      {
+        "layer": 7,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.7738037109375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.7738037109375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 57.791748046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.0503997802734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 3.147617816925049,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 70.67464447021484,
+        "value_abs_max": 7.438107490539551
+      },
+      {
+        "layer": 8,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011348724365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011348724365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 19.35249137878418,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00026702880859375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 27.676063537597656,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 26.70577049255371,
+        "value_abs_max": 32.248252868652344
+      },
+      {
+        "layer": 9,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00025081634521484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002498626708984375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 33.98167419433594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 9.059906005859375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 7.373728275299072,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 48.07849884033203,
+        "value_abs_max": 8.58137321472168
+      },
+      {
+        "layer": 10,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0004024505615234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00040149688720703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 64.36070251464844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0008525848388671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 38.28019332885742,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 78.55130767822266,
+        "value_abs_max": 35.82680130004883
+      },
+      {
+        "layer": 11,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00023031234741210938,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00023055076599121094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 31.177505493164062,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.001117706298828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 37.29617691040039,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.30689811706543,
+        "value_abs_max": 35.28185272216797
+      },
+      {
+        "layer": 12,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0006256103515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0006256103515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 38.5734748840332,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00272369384765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 74.8058853149414,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 62.37198257446289,
+        "value_abs_max": 77.20649719238281
+      },
+      {
+        "layer": 13,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00026047229766845703,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002605915069580078,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 24.344383239746094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0023193359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 82.33917999267578,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.096473693847656,
+        "value_abs_max": 79.36184692382812
+      },
+      {
+        "layer": 14,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00031375885009765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0003147125244140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.661603927612305,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.004791259765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 161.79190063476562,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 36.195281982421875,
+        "value_abs_max": 162.18701171875
+      },
+      {
+        "layer": 15,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0004673004150390625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000469207763671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 54.43440628051758,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00020766258239746094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 16.477251052856445,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 67.21232604980469,
+        "value_abs_max": 20.47023582458496
+      },
+      {
+        "layer": 16,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012445449829101562,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012445449829101562,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 28.766035079956055,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00017571449279785156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 15.829582214355469,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.876075744628906,
+        "value_abs_max": 24.96042251586914
+      },
+      {
+        "layer": 17,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00021266937255859375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00021314620971679688,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.71248435974121,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0002599954605102539,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 22.575122833251953,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 47.97793197631836,
+        "value_abs_max": 44.84809494018555
+      },
+      {
+        "layer": 18,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.147954940795898e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.147954940795898e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.539154052734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0002155303955078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 33.498931884765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.944488525390625,
+        "value_abs_max": 50.21046829223633
+      },
+      {
+        "layer": 19,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.58306884765625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.535385131835938e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.609933853149414,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0003299713134765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 31.960535049438477,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 29.196319580078125,
+        "value_abs_max": 52.384761810302734
+      },
+      {
+        "layer": 20,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001068115234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000102996826171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.73642349243164,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00028133392333984375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 30.770326614379883,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 27.752206802368164,
+        "value_abs_max": 53.68196487426758
+      },
+      {
+        "layer": 21,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.34600830078125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.587074279785156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0004611015319824219,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 45.44357681274414,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 34.95341873168945,
+        "value_abs_max": 89.09465026855469
+      },
+      {
+        "layer": 22,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 5.4836273193359375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 5.4836273193359375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 20.281213760375977,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00038909912109375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 43.13152313232422,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 22.195728302001953,
+        "value_abs_max": 155.18667602539062
+      },
+      {
+        "layer": 23,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011348724365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011348724365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.709318161010742,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00048828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 43.951820373535156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.471920013427734,
+        "value_abs_max": 144.02284240722656
+      },
+      {
+        "layer": 24,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00013256072998046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00013256072998046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 45.593990325927734,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000579833984375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 69.24925231933594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 51.91374206542969,
+        "value_abs_max": 190.96435546875
+      },
+      {
+        "layer": 25,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001575946807861328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001575946807861328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 37.501346588134766,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000946044921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 71.58882141113281,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.76731872558594,
+        "value_abs_max": 317.52783203125
+      },
+      {
+        "layer": 26,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.49826431274414e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.49826431274414e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 31.610435485839844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000885009765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 69.8804931640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.22528839111328,
+        "value_abs_max": 185.7826690673828
+      },
+      {
+        "layer": 27,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001068115234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000102996826171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 34.42881774902344,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0007610321044921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 88.8659896850586,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 41.69247817993164,
+        "value_abs_max": 116.63796997070312
+      }
+    ]
+  },
+  {
+    "chunk": 2,
+    "offset": 155,
+    "tokens": 135,
+    "layers": [
+      {
+        "layer": 0,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00014328956604003906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.62939453125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.5762786865234375e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 357.4197998046875,
+        "value_abs_max": 2.7675375938415527
+      },
+      {
+        "layer": 1,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0003509521484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00034332275390625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 19.60394287109375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 5.990266799926758e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.7594168186187744,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 146.22024536132812,
+        "value_abs_max": 1.1363433599472046
+      },
+      {
+        "layer": 2,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00041961669921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00041961669921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 129.31410217285156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 8.52346420288086e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.06217622756958,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 187.5224609375,
+        "value_abs_max": 2.0593347549438477
+      },
+      {
+        "layer": 3,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 78.47865295410156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.749768853187561e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.0077035427093506,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 105.7198715209961,
+        "value_abs_max": 3.448331832885742
+      },
+      {
+        "layer": 4,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00019073486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 115.9670639038086,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.2755393981933594e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 1.9800286293029785,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 121.26256561279297,
+        "value_abs_max": 4.779048919677734
+      },
+      {
+        "layer": 5,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00019073486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 86.17076110839844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.6450881958007812e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 3.0029635429382324,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 120.17735290527344,
+        "value_abs_max": 3.7202932834625244
+      },
+      {
+        "layer": 6,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000156402587890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000156402587890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 61.47804260253906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.2516975402832031e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.7142229080200195,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 92.05107116699219,
+        "value_abs_max": 3.546412229537964
+      },
+      {
+        "layer": 7,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001373291015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000133514404296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 66.40916442871094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.562999725341797e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 5.88738489151001,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 70.0365982055664,
+        "value_abs_max": 7.5537261962890625
+      },
+      {
+        "layer": 8,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.961822509765625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.009506225585938e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 21.219755172729492,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.000202178955078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 34.50759506225586,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.065698623657227,
+        "value_abs_max": 35.06306457519531
+      },
+      {
+        "layer": 9,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00014400482177734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00014591217041015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 34.76155471801758,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 7.2479248046875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 8.464190483093262,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 43.60531997680664,
+        "value_abs_max": 7.957624912261963
+      },
+      {
+        "layer": 10,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000308990478515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000308990478515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 64.03068542480469,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0005950927734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 41.63521957397461,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 78.52306365966797,
+        "value_abs_max": 41.436119079589844
+      },
+      {
+        "layer": 11,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00015783309936523438,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00015807151794433594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 31.41754722595215,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0007867813110351562,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 39.47093963623047,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.30689811706543,
+        "value_abs_max": 39.710880279541016
+      },
+      {
+        "layer": 12,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000453948974609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000453948974609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 41.181190490722656,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0019073486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 77.99137115478516,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 60.84151077270508,
+        "value_abs_max": 79.50772094726562
+      },
+      {
+        "layer": 13,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001747608184814453,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017464160919189453,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 24.582141876220703,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.001598358154296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 82.25613403320312,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.096473693847656,
+        "value_abs_max": 80.31275939941406
+      },
+      {
+        "layer": 14,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018596649169921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018787384033203125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.39528465270996,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00323486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 167.8056640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 39.467018127441406,
+        "value_abs_max": 167.30804443359375
+      },
+      {
+        "layer": 15,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0003108978271484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0003108978271484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 46.534828186035156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00017070770263671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 17.70580291748047,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 70.0462646484375,
+        "value_abs_max": 19.313032150268555
+      },
+      {
+        "layer": 16,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00015306472778320312,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00015354156494140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.197277069091797,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00012320652604103088,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 23.40608787536621,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.876075744628906,
+        "value_abs_max": 22.7665958404541
+      },
+      {
+        "layer": 17,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001544952392578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001544952392578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 30.77703857421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0002994537353515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 33.505393981933594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 43.500301361083984,
+        "value_abs_max": 43.53635787963867
+      },
+      {
+        "layer": 18,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.152557373046875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.152557373046875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.953433990478516,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0002899169921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 23.516525268554688,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.944488525390625,
+        "value_abs_max": 40.0354118347168
+      },
+      {
+        "layer": 19,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.58306884765625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.392333984375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.982467651367188,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0002498626708984375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 39.966697692871094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 29.196319580078125,
+        "value_abs_max": 48.68752670288086
+      },
+      {
+        "layer": 20,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001125335693359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011444091796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.27053451538086,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.000370025634765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 44.79106521606445,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 27.761873245239258,
+        "value_abs_max": 54.903011322021484
+      },
+      {
+        "layer": 21,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.668882608413696e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.668882608413696e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.481210708618164,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000537872314453125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 58.54411315917969,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 36.784568786621094,
+        "value_abs_max": 79.49938201904297
+      },
+      {
+        "layer": 22,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.35385513305664e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.35385513305664e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 18.81943130493164,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000400543212890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 71.07987213134766,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 22.195728302001953,
+        "value_abs_max": 183.23390197753906
+      },
+      {
+        "layer": 23,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00013065338134765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00013256072998046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.688724517822266,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00048732757568359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 64.57111358642578,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 34.64196014404297,
+        "value_abs_max": 122.61360168457031
+      },
+      {
+        "layer": 24,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00016307830810546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00016307830810546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 45.83454513549805,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000518798828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 80.90408325195312,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 51.91374206542969,
+        "value_abs_max": 176.5940704345703
+      },
+      {
+        "layer": 25,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 37.442138671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00067901611328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 111.85480499267578,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.76731872558594,
+        "value_abs_max": 217.7683563232422
+      },
+      {
+        "layer": 26,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.0108642578125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.0108642578125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 30.573673248291016,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00070953369140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 129.82289123535156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.22528839111328,
+        "value_abs_max": 177.72279357910156
+      },
+      {
+        "layer": 27,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.7738037109375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.392333984375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 32.82246398925781,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00102996826171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 118.05009460449219,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 42.087608337402344,
+        "value_abs_max": 157.86251831054688
+      }
+    ]
+  },
+  {
+    "chunk": 3,
+    "offset": 290,
+    "tokens": 135,
+    "layers": [
+      {
+        "layer": 0,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00020241737365722656,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 7.62939453125e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.5762786865234375e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 349.59466552734375,
+        "value_abs_max": 2.6472554206848145
+      },
+      {
+        "layer": 1,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000354766845703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000354766845703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 23.075836181640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 4.06801700592041e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.7167521715164185,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 143.25930786132812,
+        "value_abs_max": 1.1363433599472046
+      },
+      {
+        "layer": 2,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.0003027915954589844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002899169921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 131.51174926757812,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 6.586313247680664e-06,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.1165525913238525,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 184.2744140625,
+        "value_abs_max": 2.0593347549438477
+      },
+      {
+        "layer": 3,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00019073486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 77.87353515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.3165175914764404e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.000789165496826,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 96.81385040283203,
+        "value_abs_max": 3.623825788497925
+      },
+      {
+        "layer": 4,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018310546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00019073486328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 119.64363098144531,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.7777085304260254e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.48572039604187,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 113.11174011230469,
+        "value_abs_max": 3.8811018466949463
+      },
+      {
+        "layer": 5,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 90.93584442138672,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.3947486877441406e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 3.258441209793091,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 107.04737854003906,
+        "value_abs_max": 3.9674198627471924
+      },
+      {
+        "layer": 6,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000339508056640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00034046173095703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 61.3158073425293,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.4781951904296875e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.4890692234039307,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 83.33663940429688,
+        "value_abs_max": 3.769514560699463
+      },
+      {
+        "layer": 7,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000156402587890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000156402587890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 66.0442886352539,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 3.1948089599609375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 7.075995922088623,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 68.65792846679688,
+        "value_abs_max": 7.4642415046691895
+      },
+      {
+        "layer": 8,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000392913818359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000392913818359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 24.089630126953125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00029277801513671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 36.799400329589844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 27.38051986694336,
+        "value_abs_max": 37.064453125
+      },
+      {
+        "layer": 9,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00020122528076171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000202178955078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 32.83395767211914,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 9.185075759887695e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 10.617340087890625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 47.04966354370117,
+        "value_abs_max": 11.092617988586426
+      },
+      {
+        "layer": 10,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000667572021484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000667572021484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 63.99502182006836,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0010089874267578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 42.1992073059082,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 80.08638763427734,
+        "value_abs_max": 41.670997619628906
+      },
+      {
+        "layer": 11,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002689361572265625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002689361572265625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 28.819150924682617,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0012989044189453125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 38.21028137207031,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.30689811706543,
+        "value_abs_max": 39.59419250488281
+      },
+      {
+        "layer": 12,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000797271728515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00079345703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 39.87563705444336,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00321197509765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 78.91700744628906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 59.635589599609375,
+        "value_abs_max": 81.75659942626953
+      },
+      {
+        "layer": 13,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002745389938354492,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002745389938354492,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 24.594491958618164,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.002685546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 84.20403289794922,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.096473693847656,
+        "value_abs_max": 84.060546875
+      },
+      {
+        "layer": 14,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00037479400634765625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0003757476806640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 31.422203063964844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00559234619140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 175.4154052734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 36.58552932739258,
+        "value_abs_max": 173.94827270507812
+      },
+      {
+        "layer": 15,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0004978179931640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00049591064453125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 47.98542022705078,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0003833770751953125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 18.02235984802246,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 62.202484130859375,
+        "value_abs_max": 20.1892032623291
+      },
+      {
+        "layer": 16,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017595291137695312,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017595291137695312,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.522552490234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0002913475036621094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 30.54437828063965,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.876075744628906,
+        "value_abs_max": 21.555801391601562
+      },
+      {
+        "layer": 17,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0004367828369140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00043487548828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.098363876342773,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00041675567626953125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 33.6902961730957,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 41.50532531738281,
+        "value_abs_max": 41.06379699707031
+      },
+      {
+        "layer": 18,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011083483695983887,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011083483695983887,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.056222915649414,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00023889541625976562,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 37.05394744873047,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.944488525390625,
+        "value_abs_max": 47.241371154785156
+      },
+      {
+        "layer": 19,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000110626220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001125335693359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.844501495361328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0003657341003417969,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 43.00076675415039,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 29.196319580078125,
+        "value_abs_max": 45.75166702270508
+      },
+      {
+        "layer": 20,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000148773193359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001506805419921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.71160316467285,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0003204345703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 47.51774597167969,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 27.44799041748047,
+        "value_abs_max": 58.08963394165039
+      },
+      {
+        "layer": 21,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.918212890625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.918212890625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 24.783109664916992,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0005049705505371094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 66.97079467773438,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.21194076538086,
+        "value_abs_max": 80.7790298461914
+      },
+      {
+        "layer": 22,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.462501525878906e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 7.486343383789062e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 19.667001724243164,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0004730224609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 61.568031311035156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 22.195728302001953,
+        "value_abs_max": 153.89276123046875
+      },
+      {
+        "layer": 23,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00021457672119140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002155303955078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.75830078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.00047969818115234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 73.163330078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 33.22273254394531,
+        "value_abs_max": 143.9748992919922
+      },
+      {
+        "layer": 24,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00016689300537109375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00016689300537109375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 50.17302322387695,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000759124755859375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 92.5031967163086,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 51.91374206542969,
+        "value_abs_max": 191.07315063476562
+      },
+      {
+        "layer": 25,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001964569091796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001983642578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 37.28144073486328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0011272430419921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 132.11988830566406,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.76731872558594,
+        "value_abs_max": 315.8085632324219
+      },
+      {
+        "layer": 26,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.298324584960938e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.298324584960938e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 34.92477798461914,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.001094818115234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 108.33958435058594,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.22528839111328,
+        "value_abs_max": 181.95191955566406
+      },
+      {
+        "layer": 27,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012969970703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000133514404296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 33.028480529785156,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0008535385131835938,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 164.0905303955078,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 43.71327209472656,
+        "value_abs_max": 102.35124969482422
+      }
+    ]
+  },
+  {
+    "chunk": 4,
+    "offset": 425,
+    "tokens": 135,
+    "layers": [
+      {
+        "layer": 0,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.0005450248718261719,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": true,
+          "max_abs": 3.5762786865234375e-07,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 357.1610412597656,
+        "value_abs_max": 2.7675375938415527
+      },
+      {
+        "layer": 1,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.000591278076171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.000591278076171875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.02395248413086,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.2099742889404297e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 0.6989477872848511,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 136.7423553466797,
+        "value_abs_max": 1.1363433599472046
+      },
+      {
+        "layer": 2,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.0004291534423828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00043487548828125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 131.8879852294922,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 1.0989606380462646e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.117967367172241,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 184.2744140625,
+        "value_abs_max": 2.0593347549438477
+      },
+      {
+        "layer": 3,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00040435791015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00040435791015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 81.357666015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.2739171981811523e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.0073392391204834,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 100.40680694580078,
+        "value_abs_max": 3.9832165241241455
+      },
+      {
+        "layer": 4,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002918243408203125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002918243408203125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 121.39934539794922,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.1755695343017578e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.5277581214904785,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 108.74785614013672,
+        "value_abs_max": 4.584231853485107
+      },
+      {
+        "layer": 5,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000244140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002593994140625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 94.79452514648438,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.09808349609375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.8082962036132812,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 118.15481567382812,
+        "value_abs_max": 4.578501224517822
+      },
+      {
+        "layer": 6,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00023937225341796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00023937225341796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 61.65531921386719,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 2.104043960571289e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 2.7099854946136475,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 86.5204849243164,
+        "value_abs_max": 4.350294589996338
+      },
+      {
+        "layer": 7,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018024444580078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001373291015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 65.83737182617188,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 4.124641418457031e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 3.8744001388549805,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 69.29116821289062,
+        "value_abs_max": 6.557984828948975
+      },
+      {
+        "layer": 8,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00020503997802734375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00020599365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 23.251483917236328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00030040740966796875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 29.853214263916016,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 27.237136840820312,
+        "value_abs_max": 36.78030776977539
+      },
+      {
+        "layer": 9,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000133514404296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012969970703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 34.686004638671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 6.496906280517578e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 7.384507179260254,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 43.877994537353516,
+        "value_abs_max": 8.40297794342041
+      },
+      {
+        "layer": 10,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.000823974609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.000823974609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 65.98302459716797,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.000396728515625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 36.32786178588867,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 78.86236572265625,
+        "value_abs_max": 44.56751251220703
+      },
+      {
+        "layer": 11,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018346309661865234,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00018346309661865234,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 29.915040969848633,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0005044937133789062,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 35.238487243652344,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.30689811706543,
+        "value_abs_max": 39.60020065307617
+      },
+      {
+        "layer": 12,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000324249267578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000324249267578125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 42.610435485839844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00131988525390625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 73.42581939697266,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 61.098880767822266,
+        "value_abs_max": 78.0267333984375
+      },
+      {
+        "layer": 13,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012874603271484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00012874603271484375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.365585327148438,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.0011138916015625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 77.95454406738281,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 24.096473693847656,
+        "value_abs_max": 81.39956665039062
+      },
+      {
+        "layer": 14,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00029754638671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00029754638671875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 32.5103645324707,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00237274169921875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 160.88954162597656,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.94760513305664,
+        "value_abs_max": 166.05519104003906
+      },
+      {
+        "layer": 15,
+        "delta_vs_native_shift_K": {
+          "passed": false,
+          "max_abs": 0.0004978179931640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0002307891845703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 51.06731414794922,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00018215179443359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 15.57649040222168,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 66.45172119140625,
+        "value_abs_max": 22.09159278869629
+      },
+      {
+        "layer": 16,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001647472381591797,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001647472381591797,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 28.606876373291016,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00015401840209960938,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 23.7053165435791,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.876075744628906,
+        "value_abs_max": 21.729907989501953
+      },
+      {
+        "layer": 17,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000213623046875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000209808349609375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 27.263822555541992,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00038230419158935547,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 36.796974182128906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 43.42451095581055,
+        "value_abs_max": 44.408199310302734
+      },
+      {
+        "layer": 18,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011587142944335938,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.535385131835938e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.909526824951172,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00020885467529296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 27.86016082763672,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 28.944488525390625,
+        "value_abs_max": 43.648258209228516
+      },
+      {
+        "layer": 19,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00010877847671508789,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00010883808135986328,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.50438690185547,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.00027751922607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 29.332277297973633,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 29.196319580078125,
+        "value_abs_max": 53.632179260253906
+      },
+      {
+        "layer": 20,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001010894775390625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.393692016601562e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 26.050853729248047,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": true,
+          "max_abs": 0.000301361083984375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 45.51495361328125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 30.168792724609375,
+        "value_abs_max": 70.52222442626953
+      },
+      {
+        "layer": 21,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.912252426147461e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 8.893013000488281e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.185483932495117,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0005967617034912109,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 72.44390106201172,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 36.41706466674805,
+        "value_abs_max": 79.9656753540039
+      },
+      {
+        "layer": 22,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.72747802734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.72747802734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 19.468698501586914,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.0004035681486129761,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 45.268165588378906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 22.195728302001953,
+        "value_abs_max": 134.30654907226562
+      },
+      {
+        "layer": 23,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011348724365234375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00011396408081054688,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 25.705812454223633,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000682830810546875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 69.07041931152344,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 33.27954864501953,
+        "value_abs_max": 122.51709747314453
+      },
+      {
+        "layer": 24,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00017547607421875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 48.334312438964844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.000701904296875,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 88.17744445800781,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 51.91374206542969,
+        "value_abs_max": 184.72967529296875
+      },
+      {
+        "layer": 25,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00023055076599121094,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.000148773193359375,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 35.833045959472656,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.001071929931640625,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 93.18696594238281,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.76731872558594,
+        "value_abs_max": 219.6134490966797
+      },
+      {
+        "layer": 26,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.0001157522201538086,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00010538101196289062,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 33.92433166503906,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.001178741455078125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 89.26499938964844,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 35.22528839111328,
+        "value_abs_max": 180.97879028320312
+      },
+      {
+        "layer": 27,
+        "delta_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 0.00010645389556884766,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "rephase_vs_native_shift_K": {
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "native_shift_vs_full_K": {
+          "passed": false,
+          "max_abs": 33.89051055908203,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_shift_V": {
+          "passed": false,
+          "max_abs": 0.001251220703125,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "local_vs_full_V": {
+          "passed": false,
+          "max_abs": 132.6256561279297,
+          "atol": 0.0002,
+          "rtol": 0.0002
+        },
+        "key_abs_max": 45.77595138549805,
+        "value_abs_max": 222.930908203125
+      }
+    ]
+  }
+]

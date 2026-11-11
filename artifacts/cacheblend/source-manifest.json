@@ -1,0 +1,8 @@
+{
+  "artifacts/cacheblend/source-snapshot/run.py": "ef21feafa29bfafdddeb194b365d71bd7afb0068b4a74036fee6bb6897ac778f",
+  "artifacts/cacheblend/source-snapshot/core.py": "22fb5f43074c5d40d4906ed976eb6c4e4aa047989e57b47b47f26f916087350e",
+  "artifacts/cacheblend/source-snapshot/review.py": "4750b2a67c772498fd19b28ad39a87dece01411461e67ce560c9bb64eea5e9f2",
+  "artifacts/cacheblend/source-snapshot/prepare.py": "cfdb67412a1b9864de3957de533191c81e973a17f141ed98df54e3ea22d142a0",
+  "artifacts/cacheblend/source-snapshot/protocol.md": "d434dff3b6f2359b561a0ba735c25c34cd01064cac7685b9ba8124bfbc28acab",
+  "experiments/cacheblend/pilot.json": "e798b558624ec7b5366d40026c6c15f62d3435bcdda9db4addc94ffc0f1b5b5c"
+}

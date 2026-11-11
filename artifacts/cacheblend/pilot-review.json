@@ -1,0 +1,654 @@
+{
+  "recorded_utc": "2026-11-11T07:25:07.263418+00:00",
+  "complete": true,
+  "items": 40,
+  "config_pairs": 80,
+  "full_exact_correct_pairs": 8,
+  "naive_answer_changes": 79,
+  "naive_paired_gold_losses": 8,
+  "naive_paired_gold_gains": 1,
+  "coverage": [
+    {
+      "id": "musique:000",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:000",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:001",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:001",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:002",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:002",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:003",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:003",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:004",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:004",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:005",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:005",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:006",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:006",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:007",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:007",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:008",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:008",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:009",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:009",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:010",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:010",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:011",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:011",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:012",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:012",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:013",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:013",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:014",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:014",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:015",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:015",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:016",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:016",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:017",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:017",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:018",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:018",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "musique:019",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "musique:019",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:000",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:000",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:001",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:001",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:002",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:002",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:003",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:003",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:004",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:004",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:005",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:005",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:006",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:006",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:007",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:007",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:008",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:008",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:009",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:009",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:010",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:010",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:011",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:011",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:012",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:012",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:013",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:013",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:014",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:014",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:015",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:015",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:016",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:016",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:017",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:017",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:018",
+      "config": "4x128",
+      "gold_string_present": true,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:018",
+      "config": "8x128",
+      "gold_string_present": true,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    },
+    {
+      "id": "wikimqa:019",
+      "config": "4x128",
+      "gold_string_present": false,
+      "retained_contexts": 4,
+      "omitted_contexts": 6,
+      "truncated_contexts": 4
+    },
+    {
+      "id": "wikimqa:019",
+      "config": "8x128",
+      "gold_string_present": false,
+      "retained_contexts": 8,
+      "omitted_contexts": 2,
+      "truncated_contexts": 8
+    }
+  ],
+  "interpretation": "Gold scores characterize the fixed truncated retrieval contexts on Qwen3-1.7B. Exact string presence is a coverage heuristic, not proof of answerability. Preserve all items, including absent-answer and full-wrong cases. Changes in agreement or KL alone do not establish gold-answer improvement.",
+  "interpretable": true
+}

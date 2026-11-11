@@ -1,0 +1,11 @@
+{
+  "purpose": "fixed reference selection phase after complete baseline review",
+  "sha256": {
+    "experiments/cacheblend/core.py": "22fb5f43074c5d40d4906ed976eb6c4e4aa047989e57b47b47f26f916087350e",
+    "experiments/cacheblend/run.py": "ef21feafa29bfafdddeb194b365d71bd7afb0068b4a74036fee6bb6897ac778f",
+    "experiments/cacheblend/pilot.json": "e798b558624ec7b5366d40026c6c15f62d3435bcdda9db4addc94ffc0f1b5b5c",
+    "artifacts/cacheblend/baseline.jsonl": "31f8e5805639fef357a80127d0ddfdf215f7e355a2bdbaf70d779b19b748a647",
+    "artifacts/cacheblend/pilot-review.json": "865719199565c4d5c5f26ba73c35ba4bde498d36f5fe3bd3ab7a9c22800ae39f"
+  },
+  "recorded_utc": "2026-11-11T07:26:02.984903+00:00"
+}

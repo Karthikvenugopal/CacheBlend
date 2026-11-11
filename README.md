@@ -1,22 +1,18 @@
-# KV repair after document edits
+# CacheBlend mechanism and quality reproduction
 
-**Archived; method development stopped.** No further selector development or TinyLlama factual sweeps are planned. The code and all results are preserved in the [archive](archives/kvrepair-2026-11-09/README.md). The attention calculation is validated; the selector is rejected; factual repair efficacy remains inconclusive. This project has not demonstrated a successful repair method.
+The separately authorized CacheBlend reproduction uses cached Qwen3-1.7B on MPS float32/eager. See the [first milestone](docs/cacheblend-milestone.md), [fixed protocol and paper/source mapping](experiments/cacheblend/protocol.md), [implementation](experiments/cacheblend/core.py), and [raw milestone checks](artifacts/cacheblend/milestone.json). Inputs and all pilot configurations are frozen in `experiments/cacheblend/pilot.json`. This is a mechanism and answer-quality study; local timings do not reproduce serving speedups.
 
-The [reproduction-target assessment](docs/reproduction-target.md) identifies a small-model published candidate but recommends shelving development under current conditions. No new model was downloaded or experiment implemented. MPS is available outside the execution sandbox, as confirmed by a basic tensor test; historical results remain CPU measurements.
+The completed [pilot report](artifacts/cacheblend/report.md) preserves all 40 items, both configurations and 400 outputs. Selective recomputation reduced next-token divergence, but gold-quality gains were mixed. Internal learning only; no paper quality-preservation or serving-speedup result is claimed.
 
-The authorized [six-pair Qwen3-1.7B reproduction](docs/qwen-reproduction-results.md) downloaded the pinned checkpoint but stopped at its first native/cached numerical gate on MPS/BF16. Restricted agreement and generated-answer failures remain unestablished; generation was not run. All six case statuses and the bounded first-case investigation are retained. The author's model revision is unknown. Repair and selector development remain stopped.
+## Archived: KV repair after document edits
 
-The subsequent [three-configuration diagnosis](docs/endpoint-precision-diagnosis.md) found that the native MPS/BF16 path reproduces the discrepancy, while CPU and MPS float32 pass the unchanged float32 tolerance. MPS float32/eager is the recommended local candidate, with CPU float32 as reference. Only the first case was examined; no reproduction or repair experiments were resumed.
+**Closed and archived. Internal learning work only. Do not use this project in resumes or outreach.** It has not demonstrated a successful repair method, novelty or a practical speedup. No further experiments or selector development are planned.
 
-The later authorized [six-case float32 continuation](docs/qwen-float32-reproduction.md) is complete: 18/18 published restricted choices matched; unrestricted full answers were clearly correct on four cases and inconclusive on two. Four paired MPS reuse-induced wrong decisions were observed, with two cases additionally flagged for CPU–MPS logit differences. All within-backend full/cache checks passed unchanged tolerance. No selective repair was tested; method development remains stopped.
+Read the [concise closure note](docs/closure.md) for validated mechanisms, reproduced failures and their input limitations, the negative 16/32-token repair result, and untested questions. The [final archive](archives/kvrepair-final-2026-11-09/README.md) preserves the complete implementation and evidence; the earlier archive remains intact.
 
-The subsequent [bounded headroom diagnostic](docs/qwen-headroom-results.md) completed 399 actual partial repairs on two fixed interventions at 16/32-token budgets. None recovered the full answer; full-suffix controls did. The input audit also found that bank's padded amount is `3  0 USD`, qualifying its earlier intended-label interpretation. No repair mechanism or selector is proposed from this negative result.
+The [headroom diagnostic](docs/qwen-headroom-results.md) found no answer recovery in 399 fixed region choices. Full-suffix controls recovered the reference outputs. The delta selector remains rejected, and the validated attention calculation is preserved. Project-use instructions are recorded in [AGENTS.md](AGENTS.md).
 
-The following describes the preserved historical work and reproduction commands.
-
-Current status: the two-gate attention-output-change experiment is complete. The calculation passed, but the selector duplicated local repair on all held-out cases. See the [decision](docs/feasibility-assessment.md), [measurements](docs/feasibility-results.md), and [reproduction commands](experiments/feasibility/README.md). The validated original baselines are unchanged. A [bounded diagnostic](docs/selector-diagnosis.md) found correlated signals rather than an implementation fault; no replacement method was implemented.
-
-The subsequent [bounded oracle prerequisite screen](docs/oracle-bound-diagnostic.md) retained all 12 candidates and found no full-correct/reuse-wrong case. Oracle enumeration stopped at that gate; factual repair headroom remains unestablished. The selector stays rejected and the validated attention calculation is preserved.
+The following is retained historical foundation documentation. Its commands are reference material, not instructions to resume experiments. Hardware/results descriptions below refer to the first CPU increment; later MPS experiments and their limitations are covered in the closure-linked reports.
 
 A small inference research package studying whether unchanged text after an edit can reuse its KV cache. CacheBlend provides the conceptual starting point. Direct edit-repair prior work exists; this increment builds trustworthy reference paths and an explicitly approximate failure probe. It does not reproduce CacheBlend's fusion algorithm or claim a new repair mechanism.
 

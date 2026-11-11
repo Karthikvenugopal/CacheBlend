@@ -137,3 +137,25 @@ Change: audit the exact source cache intervention before inference. Discover air
 Evidence: random CPU/MPS functional checks pass. Target edit-only recomputation matches the source transplant within 2e-4, all-position K/V matches exactly, full-suffix controls recover native outputs, and old-cache ownership checks pass. Every airline support outputs `refund` (0/19 and 0/171 recover); every bank support outputs `Approve` (0/20 and 0/189 recover intended label/full output). Local repair also fails both budgets. All 409 control/trial sequences end at EOS. KL varies across every support and improves on some locations, but no answer improves. Total process wall 298.36 seconds, peak footprint 10.24 GiB; copy/repair/readout/generation/checkpoint costs retained.
 
 Decision: no answer-level headroom in this fixed region family/operator/budget range. Do not propose another mechanism, revive the rejected selector or expand the search. Bank's prior intended-label result is not a literal 8200→30 document edit. Preserve every outcome and prior source/result artifact; stop after reporting. Details: docs/qwen-headroom-results.md.
+
+## E15: final closure and internal archive
+
+User decision: close this research direction. Preserve implementation, results, failed runs and negative findings as internal learning work; do not use it in resumes or outreach, or represent it as a successful repair method.
+
+Change: add the concise closure note and persistent project-use instructions, mark the README closed, and create a complete final source/results archive with a file-hash manifest. Retain the earlier archive and all original evidence. No model inference, new tests, downloads, budgets, cases, selector work or repair development.
+
+Decision: closed. Untested questions are recorded as limitations, not next steps. Final assessment: docs/closure.md. Archive: archives/kvrepair-final-2026-11-09/.
+
+## E16: separately authorized CacheBlend reproduction
+
+The user authorized a new mechanism-and-quality reproduction on 2026-11-10. The edit-repair direction remains closed; its complete 206-file final archive was independently hash-verified and remains unchanged. New work is isolated under experiments/cacheblend and artifacts/cacheblend.
+
+Pinned arXiv 2405.16444v3 and the original author reference release at 55ad02675939f783a38d579393527d218a7fd581. Inspect the explicit paper/source mapping: the release uses a single zero-based layer-1 check, squared V-only deviation and .16 selection, unlike the paper's unspecified gradual filtering. Its suffix-length and bottom-right mask differences are documented and deliberately corrected in the Qwen3 adaptation. Zero selection still refreshes early layers and is separate from naive reuse.
+
+User confirmed access/download requirements before fetching the public prepared MuSiQue and 2WikiMQA JSON files. Freeze first 20 records from each and both 4x128 and 8x128 contexts before inference: 40 items, 80 item/config pairs, no answer-based filtering. Cached Qwen3-1.7B revision 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e only; MPS float32/eager, no cloud or new model downloads.
+
+The first milestone failed added raw-tensor gates. Preserve the failure and diagnosis: offset-only rotation loses accuracy for large Qwen keys, while deep native prefix V tensors also differ with total attention shape. Native-coefficient rephasing now passes per-layer direct pre-RoPE correction checks, first-layer K/V and first-prefix logits on both configurations. Custom full and naive endpoints match native computations; native replay, cache immutability and independent storage pass. Five deep prefix V comparisons remain flagged, not claimed numerically equivalent. The gate was refined after diagnosis with unchanged tolerances; this was not an unchanged preregistered collection procedure. Full-versus-naive pilot is collected next under the fixed protocol.
+
+E16 completion: all 40 fixed items × two configurations × five methods collected (400 outputs). Full-selection reference endpoints pass on both configurations. The final audit verifies every pair, frozen input hash, gold score, mandatory fresh suffix row and work count. All 206 archived edit-repair files and the archive checksum verify unchanged. No model download, cloud execution, item exclusion, workload tuning or extra selection rate occurred.
+
+Observed results: 16% V-HKVD uses 25.7%/24.0% QKV row work in 4x128/8x128 and reaches word F1 .203/.135, versus naive .135/.138 and full .209/.147. 32% uses 39.9%/38.5% QKV work and reaches .222/.143 F1. Next-token KL drops substantially under selection, but 32% answer agreement with full is only 50%/60%. Gold gains are mixed, full quality is weak (8/80 pair-level EM matches), and missing/truncated evidence limits interpretation. Zero selection retains 11.7%/9.5% QKV work and differs from naive. Do not represent this as the paper's quality-preservation or serving-speedup result. Preserve the native MPS deep-prefix tensor flags and the numerical gate correction. Complete report: artifacts/cacheblend/report.md. No additional experiments are queued.
