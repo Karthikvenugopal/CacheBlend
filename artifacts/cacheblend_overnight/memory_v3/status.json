@@ -1,0 +1,30 @@
+{
+  "status": "pressure_stopped",
+  "returncode": 2,
+  "completed_methods": [],
+  "elapsed_s": 45.22113490104675,
+  "worker_status": {
+    "status": "failed_or_stopped",
+    "error": "RuntimeError('Preflight stop requested/deadline/parent exit')",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py\", line 130, in main\n    run();save(OUT/'worker-status.json',{'status':'complete','elapsed_s':time.time()-START})\n    ~~~^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py\", line 55, in run\n    ACTIVE['item']=item['id'];MODEL,tok,weights=load(mark,guard)\n                                                ~~~~^^^^^^^^^^^^\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/loader.py\", line 31, in load\n    guard();mark('load:'+name)\n    ~~~~~^^\n  File \"/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py\", line 14, in guard\n    if STOP or (OUT/'stop-request.json').exists() or os.getppid()!=PARENT or time.time()-START>=21540:raise RuntimeError('Preflight stop requested/deadline/parent exit')\n                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Preflight stop requested/deadline/parent exit\n",
+    "active": {
+      "item": "wikimqa:025",
+      "phase": "load:model.layers.0.self_attn.k_norm.weight"
+    },
+    "partial_generated_ids": [],
+    "elapsed_s": 36.42961406707764
+  },
+  "process_peak_rss_bytes": 1517715456,
+  "sampled_mps_allocated_peak_bytes": 8126930944,
+  "sampled_mps_driver_peak_bytes": 8145813504,
+  "new_system_swapout_bytes": 6146686976,
+  "new_system_swapin_bytes": 443269120,
+  "sufficient_headroom_observed": false,
+  "headroom_concerns": [
+    "All five methods did not finish correctly",
+    "Memory pressure warning/critical or low system free percentage observed",
+    "New system swapouts exceeded128MiB or unavailable"
+  ],
+  "remaining_batch_authorized": false,
+  "memory_limits": "MPS peaks are sampled; RSS/MPS overlap. Swap counters are system-wide cumulative traffic."
+}

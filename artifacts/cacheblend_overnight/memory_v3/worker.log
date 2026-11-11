@@ -1,0 +1,17 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py", line 130, in main
+    run();save(OUT/'worker-status.json',{'status':'complete','elapsed_s':time.time()-START})
+    ~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py", line 55, in run
+    ACTIVE['item']=item['id'];MODEL,tok,weights=load(mark,guard)
+                                                ~~~~^^^^^^^^^^^^
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/loader.py", line 31, in load
+    guard();mark('load:'+name)
+    ~~~~~^^
+  File "/Users/karthik/Documents/Projects/CacheBlend/experiments/cacheblend_overnight/memory_v3/worker.py", line 14, in guard
+    if STOP or (OUT/'stop-request.json').exists() or os.getppid()!=PARENT or time.time()-START>=21540:raise RuntimeError('Preflight stop requested/deadline/parent exit')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Preflight stop requested/deadline/parent exit

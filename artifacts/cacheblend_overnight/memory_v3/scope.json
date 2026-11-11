@@ -1,0 +1,34 @@
+{
+  "frozen_sha256": "68030f866f02f8a51f3860efaffe053a90fa886d871d066ab454ad87ea99bb4b",
+  "item": "wikimqa:025",
+  "tokens": 1356,
+  "methods": [
+    [
+      "full",
+      "full",
+      1.0
+    ],
+    [
+      "naive",
+      "naive",
+      0.0
+    ],
+    [
+      "zero",
+      "reference",
+      0.0
+    ],
+    [
+      "hkvd_16",
+      "reference",
+      0.16
+    ],
+    [
+      "hkvd_32",
+      "reference",
+      0.32
+    ]
+  ],
+  "authorization": "one preflight only",
+  "original_core_sha256": "22fb5f43074c5d40d4906ed976eb6c4e4aa047989e57b47b47f26f916087350e"
+}
