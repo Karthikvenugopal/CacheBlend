@@ -25,3 +25,19 @@ Four subsequent commits group the archive/reproduction work. Author dates use re
 | Completed six-case float32 reproduction and utility audit | 2026-11-09 19:04:02 -0800 | artifacts/qwen_reproduction/float32_resume/continued/summary.json, completed_utc |
 
 Downloaded checkpoint weights and their local download cache are excluded through `.models/`. The tracked `.pt` files contain small diagnostic logits/activation traces, not the model parameters. All original BF16 failures, partial runs, collection corrections and final outcomes are preserved.
+
+## GitHub backup and remaining milestones
+
+On 2026-11-20 the user authorized committing the remaining retained work in development order and pushing the project to GitHub. This supersedes earlier statements withholding commit/push permission, solely for this backup. It does not reopen experiments. Historical run reports and their scope statements remain unchanged.
+
+The existing twelve commits are preserved without rewriting their dates or contents. The last two cover the bounded repair-headroom negative result (`376169d`) and the CacheBlend mechanism/fixed quality pilot (`6713d78`). Three additional commits group the previously untracked final files by their recorded development stages:
+
+| Group | Author date (UTC) | Timestamp evidence |
+|---|---|---|
+| Frozen overnight diagnostic and pressure-stopped preflight | 2026-11-11 08:01:36 +0000 | `artifacts/cacheblend_overnight/run-state.json` start_epoch + `status.json` elapsed_s |
+| Annotation audit, corrected frozen-v2 set and memory diagnosis | 2026-11-11 15:25:24 +0000 | `artifacts/cacheblend_overnight/review_v2/review-manifest.json` recorded_utc |
+| Storage refactor and single pressure-stopped memory preflight | 2026-11-11 16:03:35 +0000 | `artifacts/cacheblend_overnight/memory_v3/run-state.json` start_epoch + `status.json` elapsed_s |
+
+These author dates identify the recorded milestones, truncated to whole seconds; they do not claim each retained file already had its final content at that instant. Some reports were finalized shortly after the recorded run. Committer dates record the actual commit creation times. Intermediate source revisions cannot be recovered from the final files. A separate present-day documentation commit records this provenance and links the retained outcomes from the README.
+
+The GitHub backup defaults to a private repository because this remains internal learning work. Raw failures, incomplete runs, annotation caveats and negative results are included. Model weights, the virtual environment and caches remain excluded.

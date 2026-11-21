@@ -4,6 +4,8 @@ The separately authorized CacheBlend reproduction uses cached Qwen3-1.7B on MPS 
 
 The completed [pilot report](artifacts/cacheblend/report.md) preserves all 40 items, both configurations and 400 outputs. Selective recomputation reduced next-token divergence, but gold-quality gains were mixed. Internal learning only; no paper quality-preservation or serving-speedup result is claimed.
 
+Subsequent work is preserved in the [stopped overnight evaluation](artifacts/cacheblend_overnight/report.md), [annotation review](artifacts/cacheblend_overnight/review_v2/annotation-audit.md), and [single memory preflight report](artifacts/cacheblend_overnight/memory_v3/report.md). Both preflights stopped on memory pressure before any method outputs completed. The annotations are agent-created and not human-validated. No remaining-item batch or retry is authorized. See [history provenance](docs/version-history.md) for how the retained work was grouped into commits.
+
 ## Archived: KV repair after document edits
 
 **Closed and archived. Internal learning work only. Do not use this project in resumes or outreach.** It has not demonstrated a successful repair method, novelty or a practical speedup. No further experiments or selector development are planned.
@@ -56,4 +58,4 @@ Recorded timings include cache copies, splicing and model calls, but exclude tok
 
 Tests cover no edit, early/middle/late edits, synthetic and real tokenizer boundaries, explicit insertion/deletion rejection, cache contents, independent storage, order independence and greedy agreement. Random-weight tests check mechanisms; opt-in pretrained tests check numerical behavior on the cached model. See [test output](artifacts/local-tests.txt).
 
-The [experiment log](docs/experiment-log.md) records decisions. The standalone [local-window sweep](docs/next-experiment.md) remains paused; the authorized feasibility pilot used local repair only as a fixed-budget control. Its factual comparison is inconclusive because clean TinyLlama failed the dependent questions under the frozen protocol. Local commits were subsequently authorized; see the [history provenance](docs/version-history.md). Nothing was pushed, published or run on cloud compute.
+The [experiment log](docs/experiment-log.md) records decisions. The standalone [local-window sweep](docs/next-experiment.md) remains paused; the authorized feasibility pilot used local repair only as a fixed-budget control. Its factual comparison is inconclusive because clean TinyLlama failed the dependent questions under the frozen protocol. Local commits were subsequently authorized; see the [history provenance](docs/version-history.md). At that stage nothing had been pushed or published. The user subsequently authorized GitHub backup on 2026-11-20; no cloud execution or further experiment is authorized.
